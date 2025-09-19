@@ -89,46 +89,42 @@ class StudentUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class StudentDeleteView(DeleteView):
-    model = Student
-    success_url = reverse_lazy('student_list')
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from .models import Student
+import json
 
-    def delete(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        self.object.delete()
+# Single Delete (POST instead of DELETE)
+def student_delete(request, pk):
+    if request.method == 'POST':
+        student = get_object_or_404(Student, pk=pk)
+        student.delete()
         return JsonResponse({'status': 'success'})
+    return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)
 
 
-@csrf_exempt
+# Bulk Delete
 def bulk_delete_students(request):
     if request.method == 'POST':
         try:
-            student_ids = json.loads(request.body).get('student_ids', [])
+            data = json.loads(request.body)
+            student_ids = data.get('student_ids', [])
             deleted_count = 0
 
             for student_id in student_ids:
                 try:
-                    student = Student.objects.get(id=student_id)
+                    student = Student.objects.get(pk=student_id)
                     student.delete()
                     deleted_count += 1
                 except Student.DoesNotExist:
                     continue
 
-            return JsonResponse({
-                'status': 'success',
-                'message': f'Successfully deleted {deleted_count} students'
-            })
-
+            return JsonResponse({'status': 'success', 'message': f'Successfully deleted {deleted_count} students'})
         except Exception as e:
-            return JsonResponse({
-                'status': 'error',
-                'message': str(e)
-            }, status=500)
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
-    return JsonResponse({
-        'status': 'error',
-        'message': 'Invalid request method'
-    }, status=400)
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
 
 
 def import_students(request):
@@ -267,12 +263,17 @@ def send_certificate(request, student_id):
 
 @require_GET
 def get_specializations(request):
-    """
-    Return specializations for a selected organization (AJAX)
-    """
     org = request.GET.get('organization')
-    specializations = CertificateTemplate.objects.filter(
+    specs = CertificateTemplate.objects.filter(
         organization=org
     ).values_list('specialization', flat=True).distinct()
 
-    return JsonResponse({'specializations': list(specializations)})
+    courses = CertificateTemplate.objects.filter(
+        organization=org
+    ).values_list('course', flat=True).distinct()
+
+    return JsonResponse({
+        'specializations': list(specs),
+        'courses': list(courses)
+    })
+

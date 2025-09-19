@@ -8,6 +8,7 @@ class Student(models.Model):
     mobile = models.CharField(max_length=15, blank=True, null=True)
     specialization = models.CharField(max_length=255)
     organization = models.CharField(max_length=255)
+    course = models.CharField(max_length=225)
     institution = models.CharField(max_length=255, default="Quality Thought Institution")
     start_date = models.DateField()
     end_date = models.DateField()
@@ -36,6 +37,7 @@ class Student(models.Model):
             matching_template = CertificateTemplate.objects.filter(
                 specialization__iexact=self.specialization.strip(),
                 organization__iexact=self.organization.strip(),
+                course__iexact=self.course.strip(),
                 is_active=True
             ).first()
             

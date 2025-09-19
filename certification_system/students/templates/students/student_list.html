@@ -42,6 +42,7 @@
                         <th>Email</th>
                         <th width="100">Mobile</th>
                         <th>Specialization</th>
+                        <th>Course</th>
                         <th>Organization</th>
                         <th width="150">Institution</th>
                         <th width="90">Start Date</th>
@@ -61,48 +62,34 @@
                         <td>{{ student.email }}</td>
                         <td>{{ student.mobile|default:"-" }}</td>
                         <td>{{ student.specialization }}</td>
+                        <td>{{ student.course }}</td>
                         <td>{{ student.organization }}</td>
                         <td>{{ student.institution }}</td>
                         <td>{{ student.start_date|date:"d/m/y" }}</td>
                         <td>{{ student.end_date|date:"d/m/y" }}</td>
-                        <!-- students/templates/students/student_list.html -->
-<!-- students/templates/students/student_list.html -->
-<td class="text-center">
-    <div class="btn-group" role="group">
-        <a href="{% url 'student_edit' student.pk %}" class="btn btn-sm btn-outline-primary" title="Edit">
-            <i class="fas fa-edit"></i>
-        </a>
-        <button class="btn btn-sm btn-outline-danger delete-btn" data-id="{{ student.pk }}" title="Delete">
-            <i class="fas fa-trash"></i>
-        </button>
-        
-        <!-- Download certificate button -->
-        {% if student.template and student.template.is_active %}
-        <a href="{% url 'download_certificate' student.id %}" class="btn btn-sm btn-success" title="Download Certificate">
-            <i class="fas fa-download"></i>
-        </a>
-        {% else %}
-        <button class="btn btn-sm btn-outline-secondary" title="No Template Available" disabled>
-            <i class="fas fa-ban"></i>
-        </button>
-        {% endif %}
-    </div>
-</td>
+                        <td class="text-center">
+                            <div class="btn-group" role="group">
+                                <a href="{% url 'student_edit' student.pk %}" class="btn btn-sm btn-outline-primary" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <button class="btn btn-sm btn-outline-danger delete-btn" data-id="{{ student.pk }}" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                {% if student.template and student.template.is_active %}
+                                <a href="{% url 'download_certificate' student.id %}" class="btn btn-sm btn-success" title="Download Certificate">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                {% else %}
+                                <button class="btn btn-sm btn-outline-secondary" title="No Template Available" disabled>
+                                    <i class="fas fa-ban"></i>
+                                </button>
+                                {% endif %}
+                            </div>
+                        </td>
                     </tr>
                     {% empty %}
                     <tr>
-                        <td colspan="12" class="text-center py-3">No students found. <a href="{% url 'student_create' %}">Add your first student</a></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td colspan="13" class="text-center py-3">No students found. <a href="{% url 'student_create' %}">Add your first student</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -111,27 +98,23 @@
     </div>
 </div>
 
-<!-- Progress Modal for Certificate Sending -->
+<!-- Progress Modal for Sending Certificates -->
 <div class="modal fade" id="progressModal" tabindex="-1" aria-labelledby="progressModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="progressModalLabel">Sending Certificates</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title">Sending Certificates</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <div class="text-center mb-3">
-                    <div class="spinner-border text-success" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
+                    <div class="spinner-border text-success" role="status"></div>
                 </div>
                 <div class="progress mb-3">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
                          role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <div class="text-center">
-                    <span id="progress-text">Processing... 0%</span>
-                </div>
+                <div class="text-center"><span id="progress-text">Processing... 0%</span></div>
                 <div id="status-messages" class="mt-3 small"></div>
             </div>
             <div class="modal-footer">
@@ -146,22 +129,18 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteProgressModalLabel">Deleting Students</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title">Deleting Students</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <div class="text-center mb-3">
-                    <div class="spinner-border text-danger" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
+                    <div class="spinner-border text-danger" role="status"></div>
                 </div>
                 <div class="progress mb-3">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" 
                          role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <div class="text-center">
-                    <span id="delete-progress-text">Processing... 0%</span>
-                </div>
+                <div class="text-center"><span id="delete-progress-text">Processing... 0%</span></div>
                 <div id="delete-status-messages" class="mt-3 small"></div>
             </div>
             <div class="modal-footer">
@@ -175,279 +154,116 @@
 {% block extra_js %}
 <script>
 $(document).ready(function() {
-    // Initialize DataTable with compact settings
+    const csrftoken = '{{ csrf_token }}';
+
+    // DataTable init
     $('#students-table').DataTable({
-        "pageLength": 25,
-        "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
-        "columnDefs": [
-            { "orderable": false, "targets": [0, 1, 11] }, // Disable sorting on checkbox, S.No and Actions columns
-            { "className": "dt-body-center", "targets": [0, 1, 11] } // Center align checkbox, S.No and Actions
+        pageLength: 25,
+        lengthMenu: [[10,25,50,100,-1],[10,25,50,100,"All"]],
+        columnDefs: [
+            { orderable: false, targets: [0,1,12] },
+            { className: "dt-body-center", targets: [0,1,12] }
         ],
-        "language": {
-            "search": "Filter:",
-            "lengthMenu": "Show _MENU_ entries",
-            "info": "Showing _START_ to _END_ of _TOTAL_ entries",
-            "infoEmpty": "Showing 0 to 0 of 0 entries",
-            "infoFiltered": "(filtered from _MAX_ total entries)",
-            "paginate": {
-                "first": "First",
-                "last": "Last",
-                "next": "Next",
-                "previous": "Previous"
-            }
-        },
-        "dom": '<"row"<"col-sm-12 col-md-6"l><"col-sm-12 col-md-6"f>>rt<"row"<"col-sm-12 col-md-5"i><"col-sm-12 col-md-7"p>>',
-        "responsive": true,
-        "autoWidth": false
+        responsive: true,
+        autoWidth: false
     });
-    
-    // Select all functionality
-    $('#selectAll').click(function() {
-        $('.student-checkbox').prop('checked', this.checked);
-        updateBulkButtons();
-    });
-    
-    // Update bulk buttons when checkboxes change
-    $('.student-checkbox').change(function() {
-        updateBulkButtons();
-    });
-    
+
+    // Bulk buttons update
     function updateBulkButtons() {
         const selectedCount = $('.student-checkbox:checked').length;
         $('#bulkDeleteBtn').prop('disabled', selectedCount === 0);
         $('#bulkSendBtn').prop('disabled', selectedCount === 0);
-        
-        if (selectedCount > 0) {
-            $('#bulkDeleteBtn').html(`<i class="fas fa-trash me-1"></i> Delete (${selectedCount})`);
-            $('#bulkSendBtn').html(`<i class="fas fa-paper-plane me-1"></i> Send (${selectedCount})`);
-        } else {
-            $('#bulkDeleteBtn').html('<i class="fas fa-trash me-1"></i> Delete Selected');
-            $('#bulkSendBtn').html('<i class="fas fa-paper-plane me-1"></i> Send Certificates');
-        }
+        $('#bulkDeleteBtn').html(selectedCount > 0 ? `<i class="fas fa-trash me-1"></i> Delete (${selectedCount})` : '<i class="fas fa-trash me-1"></i> Delete Selected');
+        $('#bulkSendBtn').html(selectedCount > 0 ? `<i class="fas fa-paper-plane me-1"></i> Send (${selectedCount})` : '<i class="fas fa-paper-plane me-1"></i> Send Certificates');
     }
-    
-    // Bulk delete students
-    $('#bulkDeleteBtn').click(function() {
-        const selectedStudents = [];
-        $('.student-checkbox:checked').each(function() {
-            selectedStudents.push($(this).val());
-        });
-        
-        if (selectedStudents.length > 0) {
-            if (confirm(`Are you sure you want to delete ${selectedStudents.length} selected students? This action cannot be undone.`)) {
-                bulkDeleteStudents(selectedStudents);
-            }
-        }
+
+    $('#selectAll').click(function() {
+        $('.student-checkbox').prop('checked', this.checked);
+        updateBulkButtons();
     });
-    
-    function bulkDeleteStudents(studentIds) {
+    $('.student-checkbox').change(updateBulkButtons);
+
+    // Single delete
+    $('.delete-btn').click(function() {
+        const studentId = $(this).data('id');
+        if (!confirm('Are you sure you want to delete this student?')) return;
+
+        $.post(`/students/${studentId}/delete/`, {}, function(resp){
+            if(resp.status === 'success') location.reload();
+            else alert('Error deleting student.');
+        });
+    });
+
+    // Bulk delete
+    $('#bulkDeleteBtn').click(function() {
+        const studentIds = $('.student-checkbox:checked').map(function(){ return $(this).val(); }).get();
+        if(!studentIds.length || !confirm(`Delete ${studentIds.length} students?`)) return;
+
         const deleteModal = new bootstrap.Modal(document.getElementById('deleteProgressModal'));
         deleteModal.show();
-        
         const progressBar = $('#deleteProgressModal .progress-bar');
         const progressText = $('#delete-progress-text');
         const statusMessages = $('#delete-status-messages');
-        
         let processed = 0;
-        const total = studentIds.length;
-        
         statusMessages.empty();
-        
-        // Process each student
-        studentIds.forEach((studentId, index) => {
+
+        studentIds.forEach((id, index) => {
             setTimeout(() => {
                 $.ajax({
-                    url: `/students/${studentId}/delete/`,
-                    type: 'DELETE',
-                    headers: {
-                        'X-CSRFToken': '{{ csrf_token }}'
-                    },
-                    success: function(response) {
+                    url: "{% url 'bulk_delete_students' %}",
+                    type: 'POST',
+                    headers: { 'X-CSRFToken': csrftoken },
+                    contentType: 'application/json',
+                    data: JSON.stringify({ student_ids: [id] }),
+                    success: function(resp){
                         processed++;
-                        const percentage = Math.round((processed / total) * 100);
-                        
-                        progressBar.css('width', percentage + '%');
-                        progressBar.attr('aria-valuenow', percentage);
-                        progressText.text(`Deleting... ${percentage}%`);
-                        
-                        // Add status message
-                        statusMessages.append(
-                            `<div class="text-success"><i class="fas fa-check-circle"></i> Deleted student ID: ${studentId}</div>`
-                        );
-                        
-                        // Scroll to bottom of status messages
-                        statusMessages.scrollTop(statusMessages[0].scrollHeight);
-                        
-                        // If all processed, show completion and reload
-                        if (processed === total) {
-                            progressBar.removeClass('progress-bar-animated');
-                            progressText.html('<strong class="text-success">Completed! 100%</strong>');
-                            statusMessages.append('<div class="text-success mt-2"><strong>All students deleted successfully!</strong></div>');
-                            
-                            // Reload page after 2 seconds
-                            setTimeout(function() {
-                                location.reload();
-                            }, 2000);
-                        }
+                        const perc = Math.round((processed/studentIds.length)*100);
+                        progressBar.css('width', perc + '%').attr('aria-valuenow', perc);
+                        progressText.text(`Deleting... ${perc}%`);
+                        statusMessages.append(`<div class="text-success">Deleted student ID: ${id}</div>`);
+                        if(processed === studentIds.length) setTimeout(()=>location.reload(),1000);
                     },
-                    error: function(xhr) {
-                        processed++;
-                        const percentage = Math.round((processed / total) * 100);
-                        
-                        progressBar.css('width', percentage + '%');
-                        progressBar.attr('aria-valuenow', percentage);
-                        progressText.text(`Deleting... ${percentage}%`);
-                        
-                        // Add error message
-                        statusMessages.append(
-                            `<div class="text-danger"><i class="fas fa-exclamation-circle"></i> Failed to delete student ID: ${studentId}</div>`
-                        );
-                        
-                        // Scroll to bottom of status messages
-                        statusMessages.scrollTop(statusMessages[0].scrollHeight);
-                        
-                        // If all processed, show completion with errors
-                        if (processed === total) {
-                            progressBar.removeClass('progress-bar-animated');
-                            progressBar.addClass('bg-warning');
-                            progressText.html('<strong class="text-warning">Completed with errors! 100%</strong>');
-                            statusMessages.append('<div class="text-warning mt-2"><strong>Process completed with some errors.</strong></div>');
-                            
-                            // Offer to reload page
-                            statusMessages.append('<div class="mt-2"><button class="btn btn-sm btn-primary" onclick="location.reload()">Refresh Page</button></div>');
-                        }
-                    }
+                    error: function(){ processed++; statusMessages.append(`<div class="text-danger">Failed student ID: ${id}</div>`); }
                 });
-            }, index * 300); // Stagger requests by 300ms
+            }, index*300);
         });
-    }
-    
-    // Bulk send certificates
-    $('#bulkSendBtn').click(function() {
-        const selectedStudents = [];
-        $('.student-checkbox:checked').each(function() {
-            selectedStudents.push($(this).val());
-        });
-        
-        if (selectedStudents.length > 0) {
-            if (confirm(`Send certificates to ${selectedStudents.length} selected students?`)) {
-                sendBulkCertificates(selectedStudents);
-            }
-        }
     });
-    
-    function sendBulkCertificates(studentIds) {
+
+    // Bulk send certificates
+    $('#bulkSendBtn').click(function(){
+        const studentIds = $('.student-checkbox:checked').map(function(){ return $(this).val(); }).get();
+        if(!studentIds.length || !confirm(`Send certificates to ${studentIds.length} students?`)) return;
+
         const progressModal = new bootstrap.Modal(document.getElementById('progressModal'));
         progressModal.show();
-        
         const progressBar = $('#progressModal .progress-bar');
         const progressText = $('#progress-text');
         const statusMessages = $('#status-messages');
-        
         let processed = 0;
-        const total = studentIds.length;
-        
         statusMessages.empty();
-        
-        // Process each student
-        studentIds.forEach((studentId, index) => {
-            setTimeout(() => {
+
+        studentIds.forEach((id,index)=>{
+            setTimeout(()=>{
                 $.ajax({
-                    url: `/students/${studentId}/send-certificate/`,
-                    type: 'POST',
-                    headers: {
-                        'X-CSRFToken': '{{ csrf_token }}'
-                    },
-                    success: function(response) {
+                    url:`/students/${id}/send-certificate/`,
+                    type:'POST',
+                    headers:{'X-CSRFToken':csrftoken},
+                    success:function(resp){
                         processed++;
-                        const percentage = Math.round((processed / total) * 100);
-                        
-                        progressBar.css('width', percentage + '%');
-                        progressBar.attr('aria-valuenow', percentage);
-                        progressText.text(`Processing... ${percentage}%`);
-                        
-                        // Add status message
-                        statusMessages.append(
-                            `<div class="text-success"><i class="fas fa-check-circle"></i> Sent to ${response.student_name}</div>`
-                        );
-                        
-                        // Scroll to bottom of status messages
-                        statusMessages.scrollTop(statusMessages[0].scrollHeight);
-                        
-                        // If all processed, show completion
-                        if (processed === total) {
-                            progressBar.removeClass('progress-bar-animated');
-                            progressText.html('<strong class="text-success">Completed! 100%</strong>');
-                            statusMessages.append('<div class="text-success mt-2"><strong>All certificates sent successfully!</strong></div>');
-                        }
+                        const perc = Math.round((processed/studentIds.length)*100);
+                        progressBar.css('width',perc+'%').attr('aria-valuenow',perc);
+                        progressText.text(`Processing... ${perc}%`);
+                        statusMessages.append(`<div class="text-success">Sent to ${resp.student_name}</div>`);
                     },
-                    error: function(xhr) {
+                    error:function(){
                         processed++;
-                        const percentage = Math.round((processed / total) * 100);
-                        
-                        progressBar.css('width', percentage + '%');
-                        progressBar.attr('aria-valuenow', percentage);
-                        progressText.text(`Processing... ${percentage}%`);
-                        
-                        // Add error message
-                        statusMessages.append(
-                            `<div class="text-danger"><i class="fas fa-exclamation-circle"></i> Failed to send to student ID: ${studentId}</div>`
-                        );
-                        
-                        // Scroll to bottom of status messages
-                        statusMessages.scrollTop(statusMessages[0].scrollHeight);
-                        
-                        // If all processed, show completion with errors
-                        if (processed === total) {
-                            progressBar.removeClass('progress-bar-animated');
-                            progressBar.addClass('bg-warning');
-                            progressText.html('<strong class="text-warning">Completed with errors! 100%</strong>');
-                            statusMessages.append('<div class="text-warning mt-2"><strong>Process completed with some errors.</strong></div>');
-                        }
+                        statusMessages.append(`<div class="text-danger">Failed student ID: ${id}</div>`);
                     }
                 });
-            }, index * 500); // Stagger requests by 500ms
+            }, index*500);
         });
-    }
-    
-    // Single delete student
-    $('.delete-btn').click(function() {
-        const studentId = $(this).data('id');
-        if (confirm('Are you sure you want to delete this student?')) {
-            $.ajax({
-                url: `/students/${studentId}/delete/`,
-                type: 'DELETE',
-                headers: {
-                    'X-CSRFToken': '{{ csrf_token }}'
-                },
-                success: function(response) {
-                    if (response.status === 'success') {
-                        location.reload();
-                    }
-                },
-                error: function() {
-                    alert('Error deleting student. Please try again.');
-                }
-            });
-        }
     });
-    
-    // Generate certificate (single)
-    $('.generate-cert-btn').click(function() {
-        const studentId = $(this).data('id');
-        if (confirm('Generate certificate for this student?')) {
-            alert('Certificate generation functionality will be implemented here.');
-        }
-    });
-});
-// Add to student_list.html's JavaScript section
-$(document).on('click', '.download-cert-btn', function(e) {
-    e.preventDefault();
-    const url = $(this).attr('href');
-    if (confirm('Generate and download certificate for this student?')) {
-        window.location.href = url;
-    }
+
 });
 </script>
 {% endblock %}
-

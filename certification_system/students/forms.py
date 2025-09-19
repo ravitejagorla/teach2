@@ -23,9 +23,9 @@ class StudentForm(forms.ModelForm):
 
         # Handle optional course field (only if it exists in the model)
         try:
-            course_values = CertificateTemplate.objects.order_by('course').values_list('course', flat=True).distinct()
+            course = CertificateTemplate.objects.order_by('course').values_list('course', flat=True).distinct()
         except Exception:
-            course_values = []  # fallback if course field doesn't exist
+            course = []  # fallback if course field doesn't exist
 
         # Dropdown for Organization
         self.fields['organization'] = forms.ChoiceField(
@@ -47,7 +47,7 @@ class StudentForm(forms.ModelForm):
 
         # Dropdown for Course (only if values exist)
         self.fields['course'] = forms.ChoiceField(
-            choices=[('', 'Select Course')] + [(c, c) for c in course_values if c],
+            choices=[('', 'Select Course')] + [(c, c) for c in course if c],
             required=True
         )
 
