@@ -1,0 +1,65 @@
+<div class="modal-header">
+    <h5 class="modal-title">
+        {% if is_update %}Edit Certificate Template{% else %}Add Certificate Template{% endif %}
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<div class="modal-body">
+    <form id="templateForm" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="{{ form.name.id_for_label }}" class="form-label">Name</label>
+                {{ form.name }}
+                {% if form.name.errors %}
+                    <div class="text-danger">{{ form.name.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="{{ form.specialization.id_for_label }}" class="form-label">Specialization</label>
+                {{ form.specialization }}
+                {% if form.specialization.errors %}
+                    <div class="text-danger">{{ form.specialization.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="{{ form.organization.id_for_label }}" class="form-label">Organization</label>
+                {{ form.organization }}
+                {% if form.organization.errors %}
+                    <div class="text-danger">{{ form.organization.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="{{ form.template_type.id_for_label }}" class="form-label">Template Type</label>
+                {{ form.template_type }}
+                {% if form.template_type.errors %}
+                    <div class="text-danger">{{ form.template_type.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="{{ form.template_file.id_for_label }}" class="form-label">Template File</label>
+                {{ form.template_file }}
+                {% if form.template_file.errors %}
+                    <div class="text-danger">{{ form.template_file.errors }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <div class="form-check mt-4">
+                    {{ form.is_active }}
+                    <label class="form-check-label" for="{{ form.is_active.id_for_label }}">Active</label>
+                    {% if form.is_active.errors %}
+                        <div class="text-danger">{{ form.is_active.errors }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="submit" form="templateForm" class="btn btn-primary">
+        {% if is_update %}Update{% else %}Create{% endif %}
+    </button>
+</div>

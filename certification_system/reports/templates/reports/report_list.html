@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3 mb-0">Email Reports</h1>
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-around">
+                    <a href="{% url 'report_list' %}" class="btn {% if status_filter == 'all' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        All <span class="badge bg-secondary">{{ total_count }}</span>
+                    </a>
+                    <a href="{% url 'report_success' %}" class="btn {% if status_filter == 'success' %}btn-success{% else %}btn-outline-success{% endif %}">
+                        Success <span class="badge bg-secondary">{{ success_count }}</span>
+                    </a>
+                    <a href="{% url 'report_failed' %}" class="btn {% if status_filter == 'failed' %}btn-danger{% else %}btn-outline-danger{% endif %}">
+                        Failed <span class="badge bg-secondary">{{ failed_count }}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover data-table">
+                <thead>
+                    <tr>
+                        <th>Certificate ID</th>
+                        <th>Student Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Sent At</th>
+                        <th>Error Message</th>
+                        <th>Retry Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for report in reports %}
+                    <tr>
+                        <td>{{ report.student.certificate_id }}</td>
+                        <td>{{ report.student.full_name }}</td>
+                        <td>{{ report.student.email }}</td>
+                        <td>
+                            {% if report.status == 'success' %}
+                                <span class="badge bg-success">Success</span>
+                            {% else %}
+                                <span class="badge bg-danger">Failed</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ report.sent_at|date:"M d, Y H:i" }}</td>
+                        <td>{{ report.error_message|default:"-" }}</td>
+                        <td>{{ report.retry_count }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-center">No reports found.</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // Check if the table already has a DataTable instance
+    if ($.fn.DataTable.isDataTable('.data-table')) {
+        // Destroy the existing instance
+        $('.data-table').DataTable().destroy();
+    }
+    // Initialize DataTable
+    $('.data-table').DataTable({
+        "pageLength": 10,
+        "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+        "order": [[4, "desc"]]
+    });
+});
+</script>
+{% endblock %}

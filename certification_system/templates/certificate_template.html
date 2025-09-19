@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Certificate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 8.5in;
+            height: 11in;
+        }
+        .certificate {
+            border: 20px solid #0C4DA2;
+            padding: 40px;
+            text-align: center;
+            height: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .header {
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #0C4DA2;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 60px;
+        }
+        .recipient {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        .message {
+            font-size: 18px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            font-size: 16px;
+        }
+        .signature {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="header">
+            <div class="title">CERTIFICATE OF COMPLETION</div>
+            <div class="subtitle">{% if student.template %}{{ student.template.course }}{% else %}{{ student.specialization }}{% endif %}</div>
+        </div>
+        
+        <div class="recipient">
+            This certifies that <strong>{{ student.full_name }}</strong>
+        </div>
+        
+        <div class="message">
+            has successfully completed the {{ student.specialization }} course<br>
+            offered by {% if student.template %}{{ student.template.organization }}{% else %}{{ student.organization }}{% endif %}<br>
+            from {{ student.start_date }} to {{ student.end_date }}
+        </div>
+        
+        <div class="footer">
+            <div>Issued on: {% now "F j, Y" %}</div>
+            <div class="signature">
+                <div>_________________________</div>
+                <div>Director, Quality Thought Institution</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
