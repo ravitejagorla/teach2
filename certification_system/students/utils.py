@@ -1,67 +1,58 @@
-from io import BytesIO
 import os
 import io
-import tempfile
-from datetime import datetime
 import threading
-from PIL import Image
+from datetime import datetime
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter, landscape, portrait
 from reportlab.lib.colors import Color
 from django.conf import settings
-from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from reports.models import EmailReport
-from xhtml2pdf import pisa
 
 
 class EmailThread(threading.Thread):
+    """
+    Threaded email sender to avoid blocking requests.
+    Logs success or failure in EmailReport.
+    """
     def __init__(self, email, student):
+        threading.Thread.__init__(self)
         self.email = email
         self.student = student
-        threading.Thread.__init__(self)
 
     def run(self):
         try:
             self.email.send()
-            # Log success
-            EmailReport.objects.create(
-                student=self.student,
-                status='success'
-            )
-            return True
+            EmailReport.objects.create(student=self.student, status='success')
         except Exception as e:
-            # Log failure
-            EmailReport.objects.create(
-                student=self.student,
-                status='failed',
-                error_message=str(e)
-            )
-            return False
+            EmailReport.objects.create(student=self.student, status='failed', error_message=str(e))
 
 
 def generate_certificate(student):
     """
-    Generate a certificate PDF for the student using the provided template.
-    Positions are dynamically chosen based on template name.
+    Generate a PDF certificate based on the student's assigned template.
     """
     if not student.template or not student.template.is_active:
         return None
 
+    # Ensure template file exists
+    if not student.template.template_file or not default_storage.exists(student.template.template_file.name):
+        print(f"Template file missing for {student.full_name}")
+        return None
+
     try:
         buffer = io.BytesIO()
-        template_path = student.template.template_file.path
-
+        template_file_path = student.template.template_file.path
         page_size = landscape(letter) if student.template.template_type == 'landscape' else portrait(letter)
         c = canvas.Canvas(buffer, pagesize=page_size)
         width, height = page_size
 
         # Draw template background
-        if template_path.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
+        if template_file_path.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
             try:
-                c.drawImage(template_path, 0, 0, width=width, height=height)
+                c.drawImage(template_file_path, 0, 0, width=width, height=height)
             except Exception as e:
                 print(f"Error loading image template: {e}")
                 c.setFillColorRGB(1, 1, 1)
@@ -70,18 +61,16 @@ def generate_certificate(student):
             c.setFillColorRGB(1, 1, 1)
             c.rect(0, 0, width, height, fill=1)
 
-        # Scaling functions (for 1130x1600 base template)
+        # Scaling functions (base template: 1130x1600)
         template_width, template_height = 1130, 1600
+        scale_x = lambda x: (x / template_width) * width
+        scale_y = lambda y: height - (y / template_height) * height
 
-        def scale_x(x): return (x / template_width) * width
-        def scale_y(y): return height - (y / template_height) * height
-
-        # --- Choose coordinates based on template name ---
-        template_name = student.template.name.lower()  # assuming .name exists
-
+        # Choose coordinates based on template name
+        template_name = student.template.name.lower()
         if "qualitythought" in template_name:
-            name_x, name_y = scale_x(565), scale_y(620)
-            course_x, course_y = scale_x(565), scale_y(720)
+            name_x, name_y = scale_x(565), scale_y(670)
+            course_x, course_y = scale_x(565), scale_y(770)
             start_x, start_y = scale_x(140), scale_y(1100)
             end_x, end_y = scale_x(140), scale_y(1160)
             cert_x, cert_y = scale_x(140), scale_y(1200)
@@ -98,30 +87,34 @@ def generate_certificate(student):
             end_x, end_y = scale_x(140), scale_y(1140)
             cert_x, cert_y = scale_x(140), scale_y(1180)
 
-        # --- Draw content ---
+        # Draw content
         c.setFont("Helvetica-Bold", 28)
         c.setFillColor(Color(0, 0, 0, 1))
         c.drawCentredString(name_x, name_y, student.full_name)
 
         c.setFont("Helvetica", 20)
-        c.drawCentredString(course_x, course_y, f"To be recognized as a {student.specialization}")
+        c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
 
         c.setFont("Helvetica-Bold", 14)
         c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
         c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
         c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
 
-        # Timestamp for audit
+        # Timestamp
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         c.setFont("Helvetica-Oblique", 10)
         c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
 
-        # Save PDF
         c.save()
         pdf_content = buffer.getvalue()
         buffer.close()
 
-        cert_filename = f"certificates/{student.certificate_id}_{student.full_name.replace(' ', '_')}.pdf"
+        # Ensure certificates directory exists
+        cert_dir = "certificates"
+        if not default_storage.exists(cert_dir):
+            default_storage.makedirs(cert_dir)
+
+        cert_filename = f"{cert_dir}/{student.certificate_id}_{student.full_name.replace(' ', '_')}.pdf"
         cert_path = default_storage.save(cert_filename, ContentFile(pdf_content))
         return cert_path
 
@@ -134,21 +127,21 @@ def generate_certificate(student):
 
 def generate_simple_certificate(student):
     """
-    Generate a simple text-based certificate (fallback option)
+    Fallback PDF certificate without a template.
     """
     try:
         buffer = io.BytesIO()
         c = canvas.Canvas(buffer, pagesize=letter)
         width, height = letter
 
-        # Background and border
+        # Background
         c.setFillColorRGB(0.95, 0.95, 0.95)
         c.rect(0, 0, width, height, fill=1)
         c.setStrokeColorRGB(0, 0, 0)
         c.setLineWidth(2)
         c.rect(20, 20, width-40, height-40, stroke=1, fill=0)
 
-        # Title and content
+        # Title
         c.setFont("Helvetica-Bold", 24)
         c.drawCentredString(width/2, height-100, "CERTIFICATE OF COMPLETION")
         c.line(50, height-120, width-50, height-120)
@@ -178,7 +171,12 @@ def generate_simple_certificate(student):
         pdf_content = buffer.getvalue()
         buffer.close()
 
-        cert_filename = f"certificates/{student.certificate_id}_{student.full_name.replace(' ', '_')}.pdf"
+        # Ensure certificates directory exists
+        cert_dir = "certificates"
+        if not default_storage.exists(cert_dir):
+            default_storage.makedirs(cert_dir)
+
+        cert_filename = f"{cert_dir}/{student.certificate_id}_{student.full_name.replace(' ', '_')}.pdf"
         cert_path = default_storage.save(cert_filename, ContentFile(pdf_content))
         return cert_path
 
@@ -190,7 +188,11 @@ def generate_simple_certificate(student):
 
 
 def send_certificate_email(student, certificate_path):
-    if not certificate_path:
+    """
+    Send the certificate PDF to the student's email in a separate thread.
+    """
+    if not certificate_path or not default_storage.exists(certificate_path):
+        print(f"Certificate file missing for {student.full_name}")
         return False
 
     subject = f"Your Certificate - {student.specialization}"
@@ -210,16 +212,16 @@ Quality Thought Institution
     )
 
     try:
-        with open(certificate_path, 'rb') as f:
+        # Attach PDF using default_storage
+        with default_storage.open(certificate_path, 'rb') as f:
             email.attach(f'certificate_{student.certificate_id}.pdf', f.read(), 'application/pdf')
 
+        # Send email in a thread
         email_thread = EmailThread(email, student)
         email_thread.start()
         return True
+
     except Exception as e:
-        EmailReport.objects.create(
-            student=student,
-            status='failed',
-            error_message=str(e)
-        )
+        print(f"Error sending email: {e}")
+        EmailReport.objects.create(student=student, status='failed', error_message=str(e))
         return False

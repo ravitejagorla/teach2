@@ -55,3 +55,6 @@ class StudentForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             if not field.widget.attrs.get('class'):
                 field.widget.attrs['class'] = 'form-control'
+                
+class ImportCSVForm(forms.Form):
+    file = forms.FileField(required=True, label="Select CSV file")

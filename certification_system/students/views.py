@@ -1,6 +1,10 @@
+import json
+import csv
+from datetime import datetime
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.http import JsonResponse, HttpResponse
 from django.contrib import messages
 from django.db.models import Q
@@ -8,14 +12,16 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET
 from django.conf import settings
 from django.core.files.storage import default_storage
-import json
-import csv
 
 from .models import Student
-from .forms import StudentForm
+from .forms import StudentForm, ImportCSVForm
 from templates_app.models import CertificateTemplate
+from .utils import generate_certificate, send_certificate_email, generate_simple_certificate
 
 
+# -----------------------------
+# Student Views
+# -----------------------------
 class StudentListView(ListView):
     model = Student
     template_name = 'students/student_list.html'
@@ -46,7 +52,6 @@ class StudentCreateView(CreateView):
     success_url = reverse_lazy('student_list')
 
     def form_valid(self, form):
-        # Auto-assign template based on organization + specialization
         organization = form.cleaned_data.get("organization")
         specialization = form.cleaned_data.get("specialization")
         template = CertificateTemplate.objects.filter(
@@ -71,7 +76,6 @@ class StudentUpdateView(UpdateView):
     success_url = reverse_lazy('student_list')
 
     def form_valid(self, form):
-        # Auto-update template when student data changes
         organization = form.cleaned_data.get("organization")
         specialization = form.cleaned_data.get("specialization")
         template = CertificateTemplate.objects.filter(
@@ -89,13 +93,9 @@ class StudentUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
-from django.shortcuts import get_object_or_404
-from .models import Student
-import json
-
-# Single Delete (POST instead of DELETE)
+# -----------------------------
+# Single Delete
+# -----------------------------
 def student_delete(request, pk):
     if request.method == 'POST':
         student = get_object_or_404(Student, pk=pk)
@@ -104,7 +104,10 @@ def student_delete(request, pk):
     return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)
 
 
+# -----------------------------
 # Bulk Delete
+# -----------------------------
+@csrf_exempt
 def bulk_delete_students(request):
     if request.method == 'POST':
         try:
@@ -127,84 +130,92 @@ def bulk_delete_students(request):
     return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
 
 
+# -----------------------------
+# CSV Import
+# -----------------------------
+@csrf_exempt
 def import_students(request):
-    from .forms import ImportForm  # Import here to avoid circular import issue
-    if request.method == 'POST':
-        form = ImportForm(request.POST, request.FILES)
+    if request.method == "POST":
+        form = ImportCSVForm(request.POST, request.FILES)
         if form.is_valid():
-            organization = form.cleaned_data['organization']
-
+            csv_file = request.FILES['file']
             try:
-                csv_file = request.FILES['file']
                 decoded_file = csv_file.read().decode('utf-8').splitlines()
-                reader = csv.reader(decoded_file)
-
-                next(reader, None)  # skip header row
+                reader = csv.DictReader(decoded_file)
                 imported_count = 0
 
                 for row in reader:
-                    if len(row) >= 7:
-                        specialization = row[3]
-                        matching_template = CertificateTemplate.objects.filter(
-                            specialization=specialization,
-                            organization=organization,
-                            is_active=True
-                        ).first()
+                    if not row.get('Full Name') or not row.get('Mobile'):
+                        continue
 
-                        student = Student(
-                            full_name=row[0],
-                            email=row[1],
-                            mobile=row[2] if len(row) > 2 and row[2] else None,
-                            specialization=specialization,
-                            organization=organization,
-                            institution=row[5] if len(row) > 5 else "Quality Thought Institution",
-                            start_date=row[6],
-                            end_date=row[7] if len(row) > 7 else row[6],
-                            template=matching_template
-                        )
-                        student.save()
-                        imported_count += 1
+                    try:
+                        start_date = datetime.strptime(row['Start Date'], '%m/%d/%Y').date()
+                        end_date = datetime.strptime(row['End Date'], '%m/%d/%Y').date()
+                    except Exception:
+                        continue
 
-                messages.success(request, f'Successfully imported {imported_count} students!')
+                    template = CertificateTemplate.objects.filter(
+                        organization=row.get('Organization'),
+                        specialization=row.get('Specialization'),
+                        course=row.get('Course'),
+                        is_active=True
+                    ).first()
+
+                    Student.objects.create(
+                        full_name=row.get('Full Name'),
+                        email=row.get('Email'),
+                        mobile=row.get('Mobile'),
+                        specialization=row.get('Specialization', ''),
+                        course=row.get('Course', ''),
+                        organization=row.get('Organization', ''),
+                        institution=row.get('Institution', ''),
+                        start_date=start_date,
+                        end_date=end_date,
+                        template=template
+                    )
+                    imported_count += 1
+
+                messages.success(request, f"Successfully imported {imported_count} students!")
                 return redirect('student_list')
+
             except Exception as e:
-                messages.error(request, f'Error importing students: {str(e)}')
+                messages.error(request, f"Error importing CSV: {str(e)}")
     else:
-        form = ImportForm()
+        form = ImportCSVForm()
 
     return render(request, 'students/import.html', {'form': form})
 
 
+# -----------------------------
+# CSV Export
+# -----------------------------
 def export_students(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="students.csv"'
     writer = csv.writer(response)
+    writer.writerow(['Full Name', 'Email', 'Mobile', 'Specialization', 'Course', 'Organization', 'Institution', 'Start Date', 'End Date'])
 
-    writer.writerow(['Full Name', 'Email', 'Mobile', 'Specialization', 'Organization', 'Institution', 'Start Date', 'End Date'])
     students = Student.objects.all()
-
     for student in students:
         writer.writerow([
             student.full_name,
             student.email,
             student.mobile or '',
             student.specialization,
+            student.course,
             student.organization,
             student.institution,
             student.start_date,
             student.end_date
         ])
-
     return response
 
 
+# -----------------------------
+# Download Certificate
+# -----------------------------
 def download_certificate(request, student_id):
-    from .utils import generate_certificate, generate_simple_certificate
     student = get_object_or_404(Student, id=student_id)
-
-    if not student.template or not student.template.is_active:
-        messages.error(request, 'No valid certificate template assigned to this student.')
-        return redirect('student_list')
 
     certificate_path = generate_certificate(student)
     if not certificate_path:
@@ -215,7 +226,6 @@ def download_certificate(request, student_id):
         return redirect('student_list')
 
     filename = f"{student.certificate_id}_{student.full_name}.pdf"
-
     try:
         with default_storage.open(certificate_path, 'rb') as f:
             response = HttpResponse(f.read(), content_type='application/pdf')
@@ -226,9 +236,11 @@ def download_certificate(request, student_id):
         return redirect('student_list')
 
 
+# -----------------------------
+# Send Single Certificate
+# -----------------------------
 @csrf_exempt
 def send_certificate(request, student_id):
-    from .utils import generate_certificate
     if request.method == 'POST':
         try:
             student = Student.objects.get(id=student_id)
@@ -241,9 +253,11 @@ def send_certificate(request, student_id):
                 })
 
             certificate_path = generate_certificate(student)
+            if not certificate_path:
+                certificate_path = generate_simple_certificate(student)
 
             if certificate_path:
-                success = True  # Placeholder for send email function
+                success = send_certificate_email(student, certificate_path)
                 if success:
                     return JsonResponse({
                         'status': 'success',
@@ -261,19 +275,47 @@ def send_certificate(request, student_id):
             return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
 
 
+# -----------------------------
+# Bulk Send Certificates
+# -----------------------------
+@csrf_exempt
+def bulk_send_certificates(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            student_ids = data.get('student_ids', [])
+            results = []
+
+            for student_id in student_ids:
+                try:
+                    student = Student.objects.get(pk=student_id)
+                    certificate_path = generate_certificate(student)
+                    if not certificate_path:
+                        certificate_path = generate_simple_certificate(student)
+
+                    if certificate_path and send_certificate_email(student, certificate_path):
+                        results.append({'id': student_id, 'status': 'success', 'student_name': student.full_name})
+                    else:
+                        results.append({'id': student_id, 'status': 'failed'})
+                except Student.DoesNotExist:
+                    results.append({'id': student_id, 'status': 'failed'})
+
+            return JsonResponse({'status': 'success', 'results': results})
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+
+
+# -----------------------------
+# Get Specializations and Courses (AJAX)
+# -----------------------------
 @require_GET
 def get_specializations(request):
     org = request.GET.get('organization')
-    specs = CertificateTemplate.objects.filter(
-        organization=org
-    ).values_list('specialization', flat=True).distinct()
-
-    courses = CertificateTemplate.objects.filter(
-        organization=org
-    ).values_list('course', flat=True).distinct()
-
+    specs = CertificateTemplate.objects.filter(organization=org).values_list('specialization', flat=True).distinct()
+    courses = CertificateTemplate.objects.filter(organization=org).values_list('course', flat=True).distinct()
     return JsonResponse({
         'specializations': list(specs),
         'courses': list(courses)
     })
-

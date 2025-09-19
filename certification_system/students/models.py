@@ -1,5 +1,12 @@
 from django.db import models
+import random
+from django.utils import timezone
 from templates_app.models import CertificateTemplate
+
+def generate_certification_id():
+    today = timezone.now().strftime("%Y%m%d")
+    random_hex = ''.join(random.choices("0123456789ABCDEF", k=4))
+    return f"{today}{random_hex}"
 
 class Student(models.Model):
     certificate_id = models.CharField(max_length=20, unique=True, editable=False)
@@ -22,17 +29,9 @@ class Student(models.Model):
     
     def save(self, *args, **kwargs):
         if not self.certificate_id:
-            last_student = Student.objects.order_by('-id').first()
-            if last_student and last_student.certificate_id:
-                try:
-                    last_id = int(last_student.certificate_id.split('202500')[-1])
-                except (ValueError, IndexError):
-                    last_id = 0
-            else:
-                last_id = 0
-            self.certificate_id = f"202500{last_id + 1:04d}"
+            self.certificate_id = generate_certification_id()
+        super().save(*args, **kwargs)
         
-        # Auto-assign template based on specialization and organization
         if not self.template:
             matching_template = CertificateTemplate.objects.filter(
                 specialization__iexact=self.specialization.strip(),
