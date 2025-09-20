@@ -1,23 +1,54 @@
-import json
 import csv
+import json
+import logging
 from datetime import datetime
 
-from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView, UpdateView
-from django.http import JsonResponse, HttpResponse
+from django.conf import settings
 from django.contrib import messages
 from django.db.models import Q
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_GET
-from django.conf import settings
+from django.views.decorators.http import require_GET, require_POST
+from django.views.generic import ListView, CreateView, UpdateView
 from django.core.files.storage import default_storage
 
 from .models import Student
 from .forms import StudentForm, ImportCSVForm
 from templates_app.models import CertificateTemplate
-from .utils import generate_certificate, send_certificate_email, generate_simple_certificate
+from .utils import generate_certificate, generate_simple_certificate, send_certificate_email
 
+logger = logging.getLogger(__name__)
+
+# -----------------------------
+# Helper Functions
+# -----------------------------
+def assign_template(student_or_form, organization, specialization):
+    """Assign the first active template for the given organization and specialization."""
+    template = CertificateTemplate.objects.filter(
+        organization=organization,
+        specialization=specialization,
+        is_active=True
+    ).first()
+    if template:
+        student_or_form.template = template
+    return template
+
+def generate_and_send_certificate(student):
+    """Generate a certificate and send via email. Returns a status dict."""
+    try:
+        certificate_path = generate_certificate(student) or generate_simple_certificate(student)
+        if not certificate_path:
+            return {'status': 'failed', 'message': 'Certificate generation failed'}
+
+        if send_certificate_email(student, certificate_path):
+            return {'status': 'success', 'student_name': student.full_name}
+        else:
+            return {'status': 'failed', 'message': 'Email sending failed'}
+    except Exception as e:
+        logger.exception(f"Error sending certificate for student {student.id}")
+        return {'status': 'failed', 'message': 'Unexpected error'}
 
 # -----------------------------
 # Student Views
@@ -52,19 +83,7 @@ class StudentCreateView(CreateView):
     success_url = reverse_lazy('student_list')
 
     def form_valid(self, form):
-        organization = form.cleaned_data.get("organization")
-        specialization = form.cleaned_data.get("specialization")
-        template = CertificateTemplate.objects.filter(
-            organization=organization,
-            specialization=specialization,
-            is_active=True
-        ).first()
-
-        if template:
-            form.instance.template = template
-        else:
-            messages.warning(self.request, "No active certificate template found for this combination.")
-
+        assign_template(form.instance, form.cleaned_data.get("organization"), form.cleaned_data.get("specialization"))
         messages.success(self.request, 'Student created successfully!')
         return super().form_valid(form)
 
@@ -76,62 +95,37 @@ class StudentUpdateView(UpdateView):
     success_url = reverse_lazy('student_list')
 
     def form_valid(self, form):
-        organization = form.cleaned_data.get("organization")
-        specialization = form.cleaned_data.get("specialization")
-        template = CertificateTemplate.objects.filter(
-            organization=organization,
-            specialization=specialization,
-            is_active=True
-        ).first()
-
-        if template:
-            form.instance.template = template
-        else:
-            messages.warning(self.request, "No active certificate template found for this combination.")
-
+        assign_template(form.instance, form.cleaned_data.get("organization"), form.cleaned_data.get("specialization"))
         messages.success(self.request, 'Student updated successfully!')
         return super().form_valid(form)
 
 
 # -----------------------------
-# Single Delete
+# Delete Views
 # -----------------------------
+@require_POST
 def student_delete(request, pk):
-    if request.method == 'POST':
-        student = get_object_or_404(Student, pk=pk)
-        student.delete()
-        return JsonResponse({'status': 'success'})
-    return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)
+    student = get_object_or_404(Student, pk=pk)
+    student.delete()
+    return JsonResponse({'status': 'success'})
 
 
-# -----------------------------
-# Bulk Delete
-# -----------------------------
 @csrf_exempt
 def bulk_delete_students(request):
-    if request.method == 'POST':
-        try:
-            data = json.loads(request.body)
-            student_ids = data.get('student_ids', [])
-            deleted_count = 0
-
-            for student_id in student_ids:
-                try:
-                    student = Student.objects.get(pk=student_id)
-                    student.delete()
-                    deleted_count += 1
-                except Student.DoesNotExist:
-                    continue
-
-            return JsonResponse({'status': 'success', 'message': f'Successfully deleted {deleted_count} students'})
-        except Exception as e:
-            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-
-    return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+    if request.method != 'POST':
+        return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+    try:
+        data = json.loads(request.body)
+        student_ids = data.get('student_ids', [])
+        deleted_count, _ = Student.objects.filter(id__in=student_ids).delete()
+        return JsonResponse({'status': 'success', 'message': f'Successfully deleted {deleted_count} students'})
+    except Exception:
+        logger.exception("Bulk delete error")
+        return JsonResponse({'status': 'error', 'message': 'Internal server error'}, status=500)
 
 
 # -----------------------------
-# CSV Import
+# CSV Import/Export
 # -----------------------------
 @csrf_exempt
 def import_students(request):
@@ -142,12 +136,11 @@ def import_students(request):
             try:
                 decoded_file = csv_file.read().decode('utf-8').splitlines()
                 reader = csv.DictReader(decoded_file)
-                imported_count = 0
+                students_to_create = []
 
                 for row in reader:
                     if not row.get('Full Name') or not row.get('Mobile'):
                         continue
-
                     try:
                         start_date = datetime.strptime(row['Start Date'], '%m/%d/%Y').date()
                         end_date = datetime.strptime(row['End Date'], '%m/%d/%Y').date()
@@ -161,7 +154,7 @@ def import_students(request):
                         is_active=True
                     ).first()
 
-                    Student.objects.create(
+                    students_to_create.append(Student(
                         full_name=row.get('Full Name'),
                         email=row.get('Email'),
                         mobile=row.get('Mobile'),
@@ -172,31 +165,27 @@ def import_students(request):
                         start_date=start_date,
                         end_date=end_date,
                         template=template
-                    )
-                    imported_count += 1
+                    ))
 
-                messages.success(request, f"Successfully imported {imported_count} students!")
+                Student.objects.bulk_create(students_to_create)
+                messages.success(request, f"Successfully imported {len(students_to_create)} students!")
                 return redirect('student_list')
 
-            except Exception as e:
-                messages.error(request, f"Error importing CSV: {str(e)}")
+            except Exception:
+                logger.exception("CSV import error")
+                messages.error(request, "Error importing CSV.")
     else:
         form = ImportCSVForm()
-
     return render(request, 'students/import.html', {'form': form})
 
 
-# -----------------------------
-# CSV Export
-# -----------------------------
 def export_students(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="students.csv"'
     writer = csv.writer(response)
     writer.writerow(['Full Name', 'Email', 'Mobile', 'Specialization', 'Course', 'Organization', 'Institution', 'Start Date', 'End Date'])
 
-    students = Student.objects.all()
-    for student in students:
+    for student in Student.objects.all():
         writer.writerow([
             student.full_name,
             student.email,
@@ -212,110 +201,71 @@ def export_students(request):
 
 
 # -----------------------------
-# Download Certificate
+# Certificate Views
 # -----------------------------
+@require_POST
+def send_certificate(request, student_id):
+    student = get_object_or_404(Student, id=student_id)
+    cert_path = generate_certificate(student) or generate_simple_certificate(student)
+    if not cert_path:
+        return JsonResponse({"status": "failed", "message": "Certificate generation failed."})
+
+    email_sent = send_certificate_email(student, cert_path)
+    if email_sent:
+        return JsonResponse({"status": "success", "student_name": student.full_name})
+    else:
+        return JsonResponse({"status": "failed", "message": "Email sending failed."})
+
+
+@csrf_exempt
+def bulk_send_certificates(request):
+    if request.method != 'POST':
+        return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+    try:
+        data = json.loads(request.body)
+        student_ids = data.get('student_ids', [])
+        students = Student.objects.filter(id__in=student_ids)
+        student_map = {s.id: s for s in students}
+
+        results = []
+        for student_id in student_ids:
+            student = student_map.get(student_id)
+            if student:
+                results.append({'id': student_id, **generate_and_send_certificate(student)})
+            else:
+                results.append({'id': student_id, 'status': 'failed', 'message': 'Student not found'})
+
+        return JsonResponse({'status': 'success', 'results': results})
+    except Exception:
+        logger.exception("bulk_send_certificates error")
+        return JsonResponse({'status': 'error', 'message': 'Internal server error'}, status=500)
+
+
 def download_certificate(request, student_id):
     student = get_object_or_404(Student, id=student_id)
-
-    certificate_path = generate_certificate(student)
-    if not certificate_path:
-        certificate_path = generate_simple_certificate(student)
-
-    if not certificate_path:
+    cert_path = generate_certificate(student) or generate_simple_certificate(student)
+    if not cert_path:
         messages.error(request, 'Failed to generate certificate.')
         return redirect('student_list')
 
     filename = f"{student.certificate_id}_{student.full_name}.pdf"
     try:
-        with default_storage.open(certificate_path, 'rb') as f:
+        with default_storage.open(cert_path, 'rb') as f:
             response = HttpResponse(f.read(), content_type='application/pdf')
             response['Content-Disposition'] = f'attachment; filename="{filename}"'
             return response
-    except Exception as e:
-        messages.error(request, f'Error downloading certificate: {str(e)}')
+    except Exception:
+        logger.exception("Certificate download error")
+        messages.error(request, 'Error downloading certificate.')
         return redirect('student_list')
 
 
 # -----------------------------
-# Send Single Certificate
-# -----------------------------
-@csrf_exempt
-def send_certificate(request, student_id):
-    if request.method == 'POST':
-        try:
-            student = Student.objects.get(id=student_id)
-
-            if settings.DEBUG:
-                return JsonResponse({
-                    'status': 'success',
-                    'message': 'Certificate sent successfully (simulated)',
-                    'student_name': student.full_name
-                })
-
-            certificate_path = generate_certificate(student)
-            if not certificate_path:
-                certificate_path = generate_simple_certificate(student)
-
-            if certificate_path:
-                success = send_certificate_email(student, certificate_path)
-                if success:
-                    return JsonResponse({
-                        'status': 'success',
-                        'message': 'Certificate sent successfully',
-                        'student_name': student.full_name
-                    })
-                else:
-                    return JsonResponse({'status': 'error', 'message': 'Failed to send certificate'}, status=500)
-            else:
-                return JsonResponse({'status': 'error', 'message': 'Failed to generate certificate'}, status=500)
-
-        except Student.DoesNotExist:
-            return JsonResponse({'status': 'error', 'message': 'Student not found'}, status=404)
-        except Exception as e:
-            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-
-
-# -----------------------------
-# Bulk Send Certificates
-# -----------------------------
-@csrf_exempt
-def bulk_send_certificates(request):
-    if request.method == 'POST':
-        try:
-            data = json.loads(request.body)
-            student_ids = data.get('student_ids', [])
-            results = []
-
-            for student_id in student_ids:
-                try:
-                    student = Student.objects.get(pk=student_id)
-                    certificate_path = generate_certificate(student)
-                    if not certificate_path:
-                        certificate_path = generate_simple_certificate(student)
-
-                    if certificate_path and send_certificate_email(student, certificate_path):
-                        results.append({'id': student_id, 'status': 'success', 'student_name': student.full_name})
-                    else:
-                        results.append({'id': student_id, 'status': 'failed'})
-                except Student.DoesNotExist:
-                    results.append({'id': student_id, 'status': 'failed'})
-
-            return JsonResponse({'status': 'success', 'results': results})
-        except Exception as e:
-            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
-
-    return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
-
-
-# -----------------------------
-# Get Specializations and Courses (AJAX)
+# AJAX: Get Specializations and Courses
 # -----------------------------
 @require_GET
 def get_specializations(request):
     org = request.GET.get('organization')
-    specs = CertificateTemplate.objects.filter(organization=org).values_list('specialization', flat=True).distinct()
-    courses = CertificateTemplate.objects.filter(organization=org).values_list('course', flat=True).distinct()
-    return JsonResponse({
-        'specializations': list(specs),
-        'courses': list(courses)
-    })
+    specs = CertificateTemplate.objects.filter(organization=org, is_active=True).values_list('specialization', flat=True).distinct()
+    courses = CertificateTemplate.objects.filter(organization=org, is_active=True).values_list('course', flat=True).distinct()
+    return JsonResponse({'specializations': list(specs), 'courses': list(courses)})

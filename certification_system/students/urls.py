@@ -1,4 +1,3 @@
-# students/urls.py
 from django.urls import path
 from . import views
 
@@ -12,4 +11,5 @@ urlpatterns = [
     path('<int:student_id>/download-certificate/', views.download_certificate, name='download_certificate'),
     path('<int:pk>/delete/', views.student_delete, name='student_delete'),
     path('students/bulk-delete/', views.bulk_delete_students, name='bulk_delete_students'),
+    path('students/bulk-send/', views.bulk_send_certificates, name='bulk_send_certificates'),
 ]

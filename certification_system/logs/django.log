@@ -1,0 +1,1554 @@
+[INFO] 2025-09-20 14:48:54,560 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:48:54,560 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 14:49:01,775 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 14:49:01,775 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 14:49:01,835 django.server "GET /students/ HTTP/1.1" 200 23532
+[INFO] 2025-09-20 14:49:01,835 django.server "GET /students/ HTTP/1.1" 200 23532
+[INFO] 2025-09-20 14:49:20,953 django.server "POST /students/5/send-certificate/ HTTP/1.1" 200 112
+[INFO] 2025-09-20 14:49:20,953 django.server "POST /students/5/send-certificate/ HTTP/1.1" 200 112
+[INFO] 2025-09-20 14:49:21,465 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 100
+[INFO] 2025-09-20 14:49:21,465 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 100
+[INFO] 2025-09-20 14:49:21,949 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 103
+[INFO] 2025-09-20 14:49:21,949 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 103
+[INFO] 2025-09-20 14:49:22,449 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 101
+[INFO] 2025-09-20 14:49:22,449 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 101
+[INFO] 2025-09-20 14:49:22,964 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 103
+[INFO] 2025-09-20 14:49:22,964 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 103
+[INFO] 2025-09-20 14:52:44,707 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:52:44,707 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:52:46,882 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:52:46,882 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:52:58,295 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:52:58,295 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:52:59,721 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:52:59,721 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:53:01,740 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:53:01,740 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:53:03,485 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:53:03,485 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:53:26,071 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:53:26,071 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:53:27,494 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:53:27,494 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:53:31,364 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:53:31,364 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 14:53:32,767 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:53:32,767 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 14:54:03,020 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 14:54:03,020 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 14:54:03,054 django.server "GET /students/ HTTP/1.1" 200 23532
+[INFO] 2025-09-20 14:54:03,054 django.server "GET /students/ HTTP/1.1" 200 23532
+[INFO] 2025-09-20 14:54:08,871 django.server "POST /students/5/send-certificate/ HTTP/1.1" 200 112
+[INFO] 2025-09-20 14:54:08,871 django.server "POST /students/5/send-certificate/ HTTP/1.1" 200 112
+[INFO] 2025-09-20 14:55:56,744 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-20 14:55:56,744 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-20 14:55:58,342 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:55:58,342 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:58:32,617 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-20 14:58:32,617 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-20 14:58:34,058 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:58:34,058 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:59:23,092 django.utils.autoreload D:\cert\certification_system\students\urls.py changed, reloading.
+[INFO] 2025-09-20 14:59:23,092 django.utils.autoreload D:\cert\certification_system\students\urls.py changed, reloading.
+[INFO] 2025-09-20 14:59:24,659 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 14:59:24,659 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 14:59:27,163 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 14:59:27,163 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 14:59:27,216 django.server "GET /students/ HTTP/1.1" 200 23532
+[INFO] 2025-09-20 14:59:27,216 django.server "GET /students/ HTTP/1.1" 200 23532
+[INFO] 2025-09-20 14:59:34,977 django.server "POST /students/5/send-certificate/ HTTP/1.1" 200 56
+[INFO] 2025-09-20 14:59:34,977 django.server "POST /students/5/send-certificate/ HTTP/1.1" 200 56
+[INFO] 2025-09-20 14:59:35,303 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 14:59:35,303 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 14:59:36,094 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 14:59:36,094 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 14:59:36,221 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 14:59:36,221 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 14:59:36,860 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-20 14:59:36,860 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-20 14:59:37,608 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 14:59:37,608 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 14:59:40,963 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-20 14:59:41,730 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-20 14:59:42,421 students.utils Email successfully sent to raviteja9182@gmail.com
+[INFO] 2025-09-20 14:59:43,242 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-20 14:59:44,013 students.utils Email successfully sent to kalyan@gmail.com
+[INFO] 2025-09-20 14:59:48,241 students.utils Email successfully sent to rt.gorla7@gmail.com
+[WARNING] 2025-09-20 15:01:31,030 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:01:31,030 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:01:31,096 django.server "GET /students/11/edit/ HTTP/1.1" 200 9651
+[INFO] 2025-09-20 15:01:31,096 django.server "GET /students/11/edit/ HTTP/1.1" 200 9651
+[INFO] 2025-09-20 15:01:53,113 django.server "POST /students/11/edit/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 15:01:53,113 django.server "POST /students/11/edit/ HTTP/1.1" 302 0
+[WARNING] 2025-09-20 15:01:53,130 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:01:53,130 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:01:53,151 django.server "GET /students/ HTTP/1.1" 200 23907
+[INFO] 2025-09-20 15:01:53,151 django.server "GET /students/ HTTP/1.1" 200 23907
+[WARNING] 2025-09-20 15:02:00,096 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:02:00,096 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:02:00,096 django.server "GET /students/11/edit/ HTTP/1.1" 200 9653
+[INFO] 2025-09-20 15:02:00,096 django.server "GET /students/11/edit/ HTTP/1.1" 200 9653
+[INFO] 2025-09-20 15:02:08,414 django.server "POST /students/11/edit/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 15:02:08,414 django.server "POST /students/11/edit/ HTTP/1.1" 302 0
+[WARNING] 2025-09-20 15:02:08,438 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:02:08,438 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:02:08,452 django.server "GET /students/ HTTP/1.1" 200 23904
+[INFO] 2025-09-20 15:02:08,452 django.server "GET /students/ HTTP/1.1" 200 23904
+[INFO] 2025-09-20 15:02:24,195 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 15:02:24,195 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 15:02:33,409 students.utils Email successfully sent to saigoli4129@gmail.com
+[WARNING] 2025-09-20 15:03:52,631 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:03:52,631 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:03:52,646 django.server "GET /reports/ HTTP/1.1" 200 9109
+[INFO] 2025-09-20 15:03:52,646 django.server "GET /reports/ HTTP/1.1" 200 9109
+[WARNING] 2025-09-20 15:05:34,300 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:05:34,300 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:05:34,318 django.server "GET /reports/ HTTP/1.1" 200 9109
+[INFO] 2025-09-20 15:05:34,318 django.server "GET /reports/ HTTP/1.1" 200 9109
+[WARNING] 2025-09-20 15:05:39,016 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:05:39,016 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:05:39,021 django.server "GET /students/ HTTP/1.1" 200 23531
+[INFO] 2025-09-20 15:05:39,021 django.server "GET /students/ HTTP/1.1" 200 23531
+[WARNING] 2025-09-20 15:05:46,426 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:05:46,426 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:05:46,433 django.server "GET /students/7/edit/ HTTP/1.1" 200 9648
+[INFO] 2025-09-20 15:05:46,433 django.server "GET /students/7/edit/ HTTP/1.1" 200 9648
+[INFO] 2025-09-20 15:05:55,952 django.server "POST /students/7/edit/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 15:05:55,952 django.server "POST /students/7/edit/ HTTP/1.1" 302 0
+[WARNING] 2025-09-20 15:05:55,972 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:05:55,972 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:05:55,991 django.server "GET /students/ HTTP/1.1" 200 23924
+[INFO] 2025-09-20 15:05:55,991 django.server "GET /students/ HTTP/1.1" 200 23924
+[INFO] 2025-09-20 15:06:05,284 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 15:06:05,284 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 15:06:12,644 students.utils Email successfully sent to kalyanrrrrrrrrrrrrrrrrrrrr@gmail.com
+[WARNING] 2025-09-20 15:06:37,750 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:06:37,750 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:06:37,750 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:06:37,750 django.server "GET /reports/ HTTP/1.1" 200 9674
+[WARNING] 2025-09-20 15:08:46,807 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:08:46,807 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:08:46,852 django.server "GET /reports/success/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:08:46,852 django.server "GET /reports/success/ HTTP/1.1" 200 9674
+[WARNING] 2025-09-20 15:08:49,996 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:08:49,996 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:08:50,002 django.server "GET /reports/failed/ HTTP/1.1" 200 5759
+[INFO] 2025-09-20 15:08:50,002 django.server "GET /reports/failed/ HTTP/1.1" 200 5759
+[WARNING] 2025-09-20 15:08:52,190 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:08:52,190 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:08:52,229 django.server "GET /reports/success/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:08:52,229 django.server "GET /reports/success/ HTTP/1.1" 200 9674
+[WARNING] 2025-09-20 15:09:29,858 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:09:29,858 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:09:29,906 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:09:29,906 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:11:39,009 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:11:39,009 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:11:41,473 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:11:41,473 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 15:11:49,256 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:11:49,256 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:11:49,304 django.request Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\reports\views.py", line 38, in get_queryset
+    return qs.order_by('-created_at')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1722, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 2291, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: error_message, id, last_retry, retry_count, sent_at, status, student, student_id
+[ERROR] 2025-09-20 15:11:49,304 django.request Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\reports\views.py", line 38, in get_queryset
+    return qs.order_by('-created_at')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1722, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 2291, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'created_at' into field. Choices are: error_message, id, last_retry, retry_count, sent_at, status, student, student_id
+[ERROR] 2025-09-20 15:11:49,312 django.server "GET /reports/ HTTP/1.1" 500 100135
+[ERROR] 2025-09-20 15:11:49,312 django.server "GET /reports/ HTTP/1.1" 500 100135
+[INFO] 2025-09-20 15:12:24,159 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:12:24,159 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:12:26,220 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:12:26,220 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 15:12:30,089 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:12:30,089 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:12:30,131 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:12:30,131 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:15:02,681 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:15:02,681 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:15:04,379 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:15:04,379 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:16:09,635 django.utils.autoreload D:\cert\certification_system\reports\models.py changed, reloading.
+[INFO] 2025-09-20 15:16:09,635 django.utils.autoreload D:\cert\certification_system\reports\models.py changed, reloading.
+[INFO] 2025-09-20 15:16:11,040 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:16:11,040 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 15:16:55,544 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:16:55,544 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:16:55,592 django.request Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\reports\views.py", line 37, in get_queryset
+    return qs.order_by('-sent_at')
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1722, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 2291, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sent_at' into field. Choices are: email, id, message, status, student, student_id, timestamp
+[ERROR] 2025-09-20 15:16:55,592 django.request Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\reports\views.py", line 37, in get_queryset
+    return qs.order_by('-sent_at')
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1722, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 2291, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'sent_at' into field. Choices are: email, id, message, status, student, student_id, timestamp
+[ERROR] 2025-09-20 15:16:55,596 django.server "GET /reports/ HTTP/1.1" 500 99279
+[ERROR] 2025-09-20 15:16:55,596 django.server "GET /reports/ HTTP/1.1" 500 99279
+[INFO] 2025-09-20 15:17:35,032 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:17:35,032 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:17:36,490 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:17:36,490 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 15:17:45,060 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:17:45,060 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:17:45,245 django.server "GET /reports/ HTTP/1.1" 500 100044
+[ERROR] 2025-09-20 15:17:45,245 django.server "GET /reports/ HTTP/1.1" 500 100044
+[INFO] 2025-09-20 15:18:16,099 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:18:16,099 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:18:17,603 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:18:17,603 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 15:18:19,412 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:19,412 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:18:19,457 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:18:19,457 django.server "GET /reports/ HTTP/1.1" 200 9674
+[WARNING] 2025-09-20 15:18:23,562 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:23,562 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:18:23,582 django.server "GET /students/ HTTP/1.1" 200 23551
+[INFO] 2025-09-20 15:18:23,582 django.server "GET /students/ HTTP/1.1" 200 23551
+[WARNING] 2025-09-20 15:18:30,665 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:30,665 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:18:30,682 django.request Internal Server Error: /students/5/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509205D4E_Gorla_Ravi_Teja_nLGs2Wx.pdf'
+[ERROR] 2025-09-20 15:18:30,682 django.request Internal Server Error: /students/5/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509205D4E_Gorla_Ravi_Teja_nLGs2Wx.pdf'
+[ERROR] 2025-09-20 15:18:30,812 django.server "POST /students/5/send-certificate/ HTTP/1.1" 500 87574
+[ERROR] 2025-09-20 15:18:30,812 django.server "POST /students/5/send-certificate/ HTTP/1.1" 500 87574
+[WARNING] 2025-09-20 15:18:30,846 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:30,846 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:18:30,865 django.request Internal Server Error: /students/6/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920F790_sai_AfnqokD.pdf'
+[ERROR] 2025-09-20 15:18:30,865 django.request Internal Server Error: /students/6/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920F790_sai_AfnqokD.pdf'
+[ERROR] 2025-09-20 15:18:30,865 django.server "POST /students/6/send-certificate/ HTTP/1.1" 500 87466
+[ERROR] 2025-09-20 15:18:30,865 django.server "POST /students/6/send-certificate/ HTTP/1.1" 500 87466
+[WARNING] 2025-09-20 15:18:31,467 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:31,467 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:18:31,496 django.request Internal Server Error: /students/7/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509204E9D_kalyan_V9lRAQl.pdf'
+[ERROR] 2025-09-20 15:18:31,496 django.request Internal Server Error: /students/7/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509204E9D_kalyan_V9lRAQl.pdf'
+[ERROR] 2025-09-20 15:18:31,496 django.server "POST /students/7/send-certificate/ HTTP/1.1" 500 87493
+[ERROR] 2025-09-20 15:18:31,496 django.server "POST /students/7/send-certificate/ HTTP/1.1" 500 87493
+[WARNING] 2025-09-20 15:18:31,812 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:31,812 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:18:31,847 django.request Internal Server Error: /students/8/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920F8FB_Anusha_eGYvZ3c.pdf'
+[ERROR] 2025-09-20 15:18:31,847 django.request Internal Server Error: /students/8/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920F8FB_Anusha_eGYvZ3c.pdf'
+[ERROR] 2025-09-20 15:18:31,847 django.server "POST /students/8/send-certificate/ HTTP/1.1" 500 87493
+[ERROR] 2025-09-20 15:18:31,847 django.server "POST /students/8/send-certificate/ HTTP/1.1" 500 87493
+[WARNING] 2025-09-20 15:18:32,408 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:32,408 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:18:32,429 django.request Internal Server Error: /students/10/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920856F_ravi_na7K4lm.pdf'
+[ERROR] 2025-09-20 15:18:32,429 django.request Internal Server Error: /students/10/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920856F_ravi_na7K4lm.pdf'
+[ERROR] 2025-09-20 15:18:32,429 django.server "POST /students/10/send-certificate/ HTTP/1.1" 500 87489
+[ERROR] 2025-09-20 15:18:32,429 django.server "POST /students/10/send-certificate/ HTTP/1.1" 500 87489
+[WARNING] 2025-09-20 15:18:33,063 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:33,063 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:18:33,094 django.request Internal Server Error: /students/11/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509206665_Sai_7SY9vqs.pdf'
+[ERROR] 2025-09-20 15:18:33,094 django.request Internal Server Error: /students/11/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509206665_Sai_7SY9vqs.pdf'
+[ERROR] 2025-09-20 15:18:33,097 django.server "POST /students/11/send-certificate/ HTTP/1.1" 500 87480
+[ERROR] 2025-09-20 15:18:33,097 django.server "POST /students/11/send-certificate/ HTTP/1.1" 500 87480
+[WARNING] 2025-09-20 15:18:47,560 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:47,560 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:18:47,580 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:18:47,580 django.server "GET /reports/ HTTP/1.1" 200 9674
+[WARNING] 2025-09-20 15:18:50,649 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:50,649 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:18:50,663 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:18:50,663 django.server "GET /reports/ HTTP/1.1" 200 9674
+[WARNING] 2025-09-20 15:18:52,812 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:18:52,812 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:18:52,823 django.server "GET /students/ HTTP/1.1" 200 23551
+[INFO] 2025-09-20 15:18:52,823 django.server "GET /students/ HTTP/1.1" 200 23551
+[WARNING] 2025-09-20 15:19:03,080 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:03,080 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:19:03,097 django.request Internal Server Error: /students/5/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509205D4E_Gorla_Ravi_Teja_N4LWSVl.pdf'
+[ERROR] 2025-09-20 15:19:03,097 django.request Internal Server Error: /students/5/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509205D4E_Gorla_Ravi_Teja_N4LWSVl.pdf'
+[ERROR] 2025-09-20 15:19:03,112 django.server "POST /students/5/send-certificate/ HTTP/1.1" 500 87574
+[ERROR] 2025-09-20 15:19:03,112 django.server "POST /students/5/send-certificate/ HTTP/1.1" 500 87574
+[WARNING] 2025-09-20 15:19:03,463 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:03,463 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:19:03,495 django.request Internal Server Error: /students/6/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920F790_sai_yGvlbfC.pdf'
+[ERROR] 2025-09-20 15:19:03,495 django.request Internal Server Error: /students/6/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920F790_sai_yGvlbfC.pdf'
+[ERROR] 2025-09-20 15:19:03,497 django.server "POST /students/6/send-certificate/ HTTP/1.1" 500 87466
+[ERROR] 2025-09-20 15:19:03,497 django.server "POST /students/6/send-certificate/ HTTP/1.1" 500 87466
+[WARNING] 2025-09-20 15:19:04,163 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:04,163 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:19:04,196 django.request Internal Server Error: /students/7/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509204E9D_kalyan_3HBlunL.pdf'
+[ERROR] 2025-09-20 15:19:04,196 django.request Internal Server Error: /students/7/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509204E9D_kalyan_3HBlunL.pdf'
+[ERROR] 2025-09-20 15:19:04,198 django.server "POST /students/7/send-certificate/ HTTP/1.1" 500 87493
+[ERROR] 2025-09-20 15:19:04,198 django.server "POST /students/7/send-certificate/ HTTP/1.1" 500 87493
+[WARNING] 2025-09-20 15:19:04,413 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:04,413 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:19:04,430 django.request Internal Server Error: /students/8/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920F8FB_Anusha_jF4C4HH.pdf'
+[ERROR] 2025-09-20 15:19:04,430 django.request Internal Server Error: /students/8/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920F8FB_Anusha_jF4C4HH.pdf'
+[ERROR] 2025-09-20 15:19:04,430 django.server "POST /students/8/send-certificate/ HTTP/1.1" 500 87493
+[ERROR] 2025-09-20 15:19:04,430 django.server "POST /students/8/send-certificate/ HTTP/1.1" 500 87493
+[WARNING] 2025-09-20 15:19:05,030 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:05,030 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:19:05,064 django.request Internal Server Error: /students/10/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920856F_ravi_1D4vIZS.pdf'
+[ERROR] 2025-09-20 15:19:05,064 django.request Internal Server Error: /students/10/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\20250920856F_ravi_1D4vIZS.pdf'
+[ERROR] 2025-09-20 15:19:05,064 django.server "POST /students/10/send-certificate/ HTTP/1.1" 500 87489
+[ERROR] 2025-09-20 15:19:05,064 django.server "POST /students/10/send-certificate/ HTTP/1.1" 500 87489
+[WARNING] 2025-09-20 15:19:05,846 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:05,846 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 15:19:05,864 django.request Internal Server Error: /students/11/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509206665_Sai_bzkpv56.pdf'
+[ERROR] 2025-09-20 15:19:05,864 django.request Internal Server Error: /students/11/send-certificate/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 213, in send_certificate
+    email_sent = send_certificate_email(student, cert_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\utils.py", line 347, in send_certificate_email
+    email.attach_file(certificate_path)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 361, in attach_file
+    with path.open("rb") as file:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'certificates\\202509206665_Sai_bzkpv56.pdf'
+[ERROR] 2025-09-20 15:19:05,880 django.server "POST /students/11/send-certificate/ HTTP/1.1" 500 87480
+[ERROR] 2025-09-20 15:19:05,880 django.server "POST /students/11/send-certificate/ HTTP/1.1" 500 87480
+[WARNING] 2025-09-20 15:19:16,247 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:16,247 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:19:16,264 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:19:16,264 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:19:24,258 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:19:24,258 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:19:26,162 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:19:26,162 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:19:36,423 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:19:36,423 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:19:37,933 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:19:37,933 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 15:19:42,415 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:42,415 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:19:42,459 django.server "GET /reports/ HTTP/1.1" 200 9674
+[INFO] 2025-09-20 15:19:42,459 django.server "GET /reports/ HTTP/1.1" 200 9674
+[WARNING] 2025-09-20 15:19:44,885 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:19:44,885 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:19:44,901 django.server "GET /students/ HTTP/1.1" 200 23551
+[INFO] 2025-09-20 15:19:44,901 django.server "GET /students/ HTTP/1.1" 200 23551
+[INFO] 2025-09-20 15:19:49,498 django.server "POST /students/5/send-certificate/ HTTP/1.1" 200 56
+[INFO] 2025-09-20 15:19:49,498 django.server "POST /students/5/send-certificate/ HTTP/1.1" 200 56
+[INFO] 2025-09-20 15:19:49,830 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 15:19:49,830 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 15:19:50,632 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 15:19:50,632 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 15:19:50,748 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 15:19:50,748 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 15:19:51,381 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-20 15:19:51,381 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-20 15:19:52,232 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 15:19:52,232 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 15:19:55,418 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-20 15:19:56,214 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-20 15:19:57,380 students.utils Email successfully sent to raviteja9182@gmail.com
+[INFO] 2025-09-20 15:19:58,199 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-20 15:19:59,099 students.utils Email successfully sent to kalyanrrrrrrrrrrrrrrrrrrrr@gmail.com
+[INFO] 2025-09-20 15:20:02,214 students.utils Email successfully sent to saigoli4129@gmail.com
+[WARNING] 2025-09-20 15:20:10,107 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:20:10,107 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:20:10,124 django.server "GET /students/ HTTP/1.1" 200 23551
+[INFO] 2025-09-20 15:20:10,124 django.server "GET /students/ HTTP/1.1" 200 23551
+[WARNING] 2025-09-20 15:20:15,359 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:20:15,359 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:20:15,364 django.server "GET /templates/ HTTP/1.1" 200 15457
+[INFO] 2025-09-20 15:20:15,364 django.server "GET /templates/ HTTP/1.1" 200 15457
+[WARNING] 2025-09-20 15:20:17,369 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:20:17,369 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:20:17,381 django.server "GET /reports/ HTTP/1.1" 200 10748
+[INFO] 2025-09-20 15:20:17,381 django.server "GET /reports/ HTTP/1.1" 200 10748
+[INFO] 2025-09-20 15:30:46,556 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:30:46,556 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:30:48,148 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:30:48,148 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:30:58,061 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:30:58,061 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:31:00,635 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:31:00,635 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:31:13,464 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:31:13,464 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-20 15:31:14,934 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:31:14,934 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 15:48:09,931 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:48:09,931 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:48:09,990 django.server "GET /students/ HTTP/1.1" 200 23551
+[INFO] 2025-09-20 15:48:09,990 django.server "GET /students/ HTTP/1.1" 200 23551
+[WARNING] 2025-09-20 15:48:11,629 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:48:11,629 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:48:11,629 django.server "GET /templates/ HTTP/1.1" 200 15457
+[INFO] 2025-09-20 15:48:11,629 django.server "GET /templates/ HTTP/1.1" 200 15457
+[WARNING] 2025-09-20 15:48:15,124 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 15:48:15,124 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 15:48:15,142 django.server "GET /reports/ HTTP/1.1" 200 10748
+[INFO] 2025-09-20 15:48:15,142 django.server "GET /reports/ HTTP/1.1" 200 10748
+[INFO] 2025-09-20 15:49:23,162 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:49:23,162 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:49:24,696 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:49:24,696 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:49:42,049 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:49:42,049 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:49:43,563 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:49:43,563 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:49:45,331 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:49:45,331 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 15:49:46,755 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 15:49:46,755 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:03:33,362 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:03:33,362 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:03:34,963 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:03:34,963 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 16:03:46,028 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:03:46,028 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:03:46,132 django.server "GET /reports/ HTTP/1.1" 200 10748
+[INFO] 2025-09-20 16:03:46,132 django.server "GET /reports/ HTTP/1.1" 200 10748
+[WARNING] 2025-09-20 16:03:50,779 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:03:50,779 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:03:50,794 django.server "GET /templates/ HTTP/1.1" 200 15457
+[INFO] 2025-09-20 16:03:50,794 django.server "GET /templates/ HTTP/1.1" 200 15457
+[WARNING] 2025-09-20 16:03:52,264 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:03:52,264 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:03:52,313 django.server "GET /reports/ HTTP/1.1" 200 10748
+[INFO] 2025-09-20 16:03:52,313 django.server "GET /reports/ HTTP/1.1" 200 10748
+[INFO] 2025-09-20 16:05:30,094 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:05:30,094 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:05:32,083 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:05:32,083 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 16:05:32,558 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:05:32,558 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:05:32,575 django.server "GET /reports/ HTTP/1.1" 200 10748
+[INFO] 2025-09-20 16:05:32,575 django.server "GET /reports/ HTTP/1.1" 200 10748
+[WARNING] 2025-09-20 16:12:30,044 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:12:30,044 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 16:12:30,278 django.request Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'report_delete' not found. 'report_delete' is not a valid view function or pattern name.
+[ERROR] 2025-09-20 16:12:30,278 django.request Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'report_delete' not found. 'report_delete' is not a valid view function or pattern name.
+[ERROR] 2025-09-20 16:12:30,283 django.server "GET /reports/ HTTP/1.1" 500 187123
+[ERROR] 2025-09-20 16:12:30,283 django.server "GET /reports/ HTTP/1.1" 500 187123
+[INFO] 2025-09-20 16:15:49,342 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:15:49,342 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:15:50,787 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:15:50,787 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:16:07,655 django.utils.autoreload D:\cert\certification_system\reports\urls.py changed, reloading.
+[INFO] 2025-09-20 16:16:07,655 django.utils.autoreload D:\cert\certification_system\reports\urls.py changed, reloading.
+[INFO] 2025-09-20 16:16:09,135 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:16:09,135 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 16:16:12,420 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:16:12,420 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:16:12,472 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:16:12,472 django.server "GET /reports/ HTTP/1.1" 200 18386
+[WARNING] 2025-09-20 16:16:34,774 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:16:34,774 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 16:16:34,802 django.request Internal Server Error: /reports/14/download/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\reports\views.py", line 44, in report_download
+    certificate_file = report.student.certificate_file.path  # adjust based on your model
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Student' object has no attribute 'certificate_file'. Did you mean: 'certificate_id'?
+[ERROR] 2025-09-20 16:16:34,802 django.request Internal Server Error: /reports/14/download/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\reports\views.py", line 44, in report_download
+    certificate_file = report.student.certificate_file.path  # adjust based on your model
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Student' object has no attribute 'certificate_file'. Did you mean: 'certificate_id'?
+[ERROR] 2025-09-20 16:16:34,810 django.server "GET /reports/14/download/ HTTP/1.1" 500 69140
+[ERROR] 2025-09-20 16:16:34,810 django.server "GET /reports/14/download/ HTTP/1.1" 500 69140
+[INFO] 2025-09-20 16:19:45,682 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:19:45,682 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:19:47,254 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:19:47,254 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 16:19:54,791 django.request Not Found: /reports/14/download/
+[WARNING] 2025-09-20 16:19:54,791 django.request Not Found: /reports/14/download/
+[WARNING] 2025-09-20 16:19:54,791 django.server "GET /reports/14/download/ HTTP/1.1" 404 27
+[WARNING] 2025-09-20 16:19:54,791 django.server "GET /reports/14/download/ HTTP/1.1" 404 27
+[WARNING] 2025-09-20 16:19:58,957 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:19:58,957 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:19:59,027 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:19:59,027 django.server "GET /reports/ HTTP/1.1" 200 18386
+[WARNING] 2025-09-20 16:20:01,752 django.request Not Found: /reports/14/download/
+[WARNING] 2025-09-20 16:20:01,752 django.request Not Found: /reports/14/download/
+[WARNING] 2025-09-20 16:20:01,753 django.server "GET /reports/14/download/ HTTP/1.1" 404 27
+[WARNING] 2025-09-20 16:20:01,753 django.server "GET /reports/14/download/ HTTP/1.1" 404 27
+[INFO] 2025-09-20 16:21:47,553 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:21:47,553 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:21:48,925 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:21:48,925 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 16:22:02,518 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:22:02,518 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:22:02,561 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:22:02,561 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:22:04,916 django.server "GET /reports/14/download/ HTTP/1.1" 200 833888
+[INFO] 2025-09-20 16:22:04,916 django.server "GET /reports/14/download/ HTTP/1.1" 200 833888
+[INFO] 2025-09-20 16:22:40,860 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:22:40,860 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:22:42,330 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:22:42,330 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 16:23:18,731 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:23:18,731 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:23:18,767 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:23:18,767 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:23:21,332 django.server "GET /reports/14/download/ HTTP/1.1" 200 833888
+[INFO] 2025-09-20 16:23:21,332 django.server "GET /reports/14/download/ HTTP/1.1" 200 833888
+[INFO] 2025-09-20 16:23:32,736 django.server "GET /reports/14/resend/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 16:23:32,736 django.server "GET /reports/14/resend/ HTTP/1.1" 302 0
+[WARNING] 2025-09-20 16:23:32,748 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:23:32,748 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:23:32,781 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:23:32,781 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:25:13,276 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:25:13,276 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:25:15,405 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:25:15,405 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 16:25:23,204 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:25:23,204 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:25:23,251 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:25:23,251 django.server "GET /reports/ HTTP/1.1" 200 18386
+[WARNING] 2025-09-20 16:25:26,895 django.request Not Found: /reports/14/resend/
+[WARNING] 2025-09-20 16:25:26,895 django.request Not Found: /reports/14/resend/
+[WARNING] 2025-09-20 16:25:26,898 django.server "GET /reports/14/resend/ HTTP/1.1" 404 48
+[WARNING] 2025-09-20 16:25:26,898 django.server "GET /reports/14/resend/ HTTP/1.1" 404 48
+[WARNING] 2025-09-20 16:26:22,597 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:26:22,597 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:26:22,629 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:26:22,629 django.server "GET /reports/ HTTP/1.1" 200 18386
+[WARNING] 2025-09-20 16:26:30,250 django.request Not Found: /reports/11/resend/
+[WARNING] 2025-09-20 16:26:30,250 django.request Not Found: /reports/11/resend/
+[WARNING] 2025-09-20 16:26:30,250 django.server "GET /reports/11/resend/ HTTP/1.1" 404 48
+[WARNING] 2025-09-20 16:26:30,250 django.server "GET /reports/11/resend/ HTTP/1.1" 404 48
+[WARNING] 2025-09-20 16:26:40,873 django.request Not Found: /reports/14/resend/
+[WARNING] 2025-09-20 16:26:40,873 django.request Not Found: /reports/14/resend/
+[WARNING] 2025-09-20 16:26:40,874 django.server "GET /reports/14/resend/ HTTP/1.1" 404 48
+[WARNING] 2025-09-20 16:26:40,874 django.server "GET /reports/14/resend/ HTTP/1.1" 404 48
+[INFO] 2025-09-20 16:29:40,567 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:29:40,567 django.utils.autoreload D:\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-09-20 16:29:42,890 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 16:29:42,890 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 16:29:48,666 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:29:48,666 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:29:48,708 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:29:48,708 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:29:51,495 django.server "GET /reports/14/download/ HTTP/1.1" 200 833888
+[INFO] 2025-09-20 16:29:51,495 django.server "GET /reports/14/download/ HTTP/1.1" 200 833888
+[INFO] 2025-09-20 16:30:05,453 django.server "GET /reports/14/resend/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 16:30:05,453 django.server "GET /reports/14/resend/ HTTP/1.1" 302 0
+[WARNING] 2025-09-20 16:30:05,472 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:30:05,472 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:30:05,519 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:30:05,519 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:31:11,201 django.server "GET /reports/11/resend/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 16:31:11,201 django.server "GET /reports/11/resend/ HTTP/1.1" 302 0
+[WARNING] 2025-09-20 16:31:11,217 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:31:11,217 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:31:11,259 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:31:11,259 django.server "GET /reports/ HTTP/1.1" 200 18386
+[INFO] 2025-09-20 16:31:44,205 django.server "GET /reports/13/delete/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 16:31:44,205 django.server "GET /reports/13/delete/ HTTP/1.1" 302 0
+[WARNING] 2025-09-20 16:31:44,226 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:31:44,226 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:31:44,256 django.server "GET /reports/ HTTP/1.1" 200 18375
+[INFO] 2025-09-20 16:31:44,256 django.server "GET /reports/ HTTP/1.1" 200 18375
+[WARNING] 2025-09-20 16:35:31,193 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:35:31,193 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:35:31,212 django.server "GET /reports/ HTTP/1.1" 200 18536
+[INFO] 2025-09-20 16:35:31,212 django.server "GET /reports/ HTTP/1.1" 200 18536
+[WARNING] 2025-09-20 16:36:41,825 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:36:41,825 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:36:41,858 django.server "GET /reports/ HTTP/1.1" 200 18536
+[INFO] 2025-09-20 16:36:41,858 django.server "GET /reports/ HTTP/1.1" 200 18536
+[WARNING] 2025-09-20 16:38:25,560 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:38:25,560 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:38:25,583 django.server "GET /reports/ HTTP/1.1" 200 18424
+[INFO] 2025-09-20 16:38:25,583 django.server "GET /reports/ HTTP/1.1" 200 18424
+[WARNING] 2025-09-20 16:39:07,758 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:39:07,758 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:39:07,780 django.server "GET /students/ HTTP/1.1" 200 23600
+[INFO] 2025-09-20 16:39:07,780 django.server "GET /students/ HTTP/1.1" 200 23600
+[WARNING] 2025-09-20 16:40:22,144 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:40:22,144 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:40:22,145 django.server "GET /templates/ HTTP/1.1" 200 15506
+[INFO] 2025-09-20 16:40:22,145 django.server "GET /templates/ HTTP/1.1" 200 15506
+[INFO] 2025-09-20 16:40:28,233 django.server "GET /templates/6/detail/ HTTP/1.1" 200 1611
+[INFO] 2025-09-20 16:40:28,233 django.server "GET /templates/6/detail/ HTTP/1.1" 200 1611
+[INFO] 2025-09-20 16:40:28,246 django.server "GET /media/certificate_templates/ihub_cc_Hq7nnRD.jpg HTTP/1.1" 200 666402
+[INFO] 2025-09-20 16:40:28,246 django.server "GET /media/certificate_templates/ihub_cc_Hq7nnRD.jpg HTTP/1.1" 200 666402
+[INFO] 2025-09-20 16:42:45,778 django.server "GET /templates/create/ HTTP/1.1" 200 2757
+[INFO] 2025-09-20 16:42:45,778 django.server "GET /templates/create/ HTTP/1.1" 200 2757
+[INFO] 2025-09-20 16:43:24,379 django.server "GET /templates/6/detail/ HTTP/1.1" 200 1611
+[INFO] 2025-09-20 16:43:24,379 django.server "GET /templates/6/detail/ HTTP/1.1" 200 1611
+[WARNING] 2025-09-20 16:43:38,900 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:43:38,900 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:43:38,934 django.server "GET /students/ HTTP/1.1" 200 23600
+[INFO] 2025-09-20 16:43:38,934 django.server "GET /students/ HTTP/1.1" 200 23600
+[WARNING] 2025-09-20 16:43:47,934 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:43:47,934 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:43:47,955 django.server "GET /students/create/ HTTP/1.1" 200 9596
+[INFO] 2025-09-20 16:43:47,955 django.server "GET /students/create/ HTTP/1.1" 200 9596
+[WARNING] 2025-09-20 16:43:59,485 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:43:59,485 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:43:59,516 django.server "GET /students/ HTTP/1.1" 200 23600
+[INFO] 2025-09-20 16:43:59,516 django.server "GET /students/ HTTP/1.1" 200 23600
+[WARNING] 2025-09-20 16:44:11,777 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:44:11,777 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:44:11,792 django.server "GET /students/5/edit/ HTTP/1.1" 200 9709
+[INFO] 2025-09-20 16:44:11,792 django.server "GET /students/5/edit/ HTTP/1.1" 200 9709
+[WARNING] 2025-09-20 16:44:17,698 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:44:17,698 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:44:17,733 django.server "GET /students/ HTTP/1.1" 200 23600
+[INFO] 2025-09-20 16:44:17,733 django.server "GET /students/ HTTP/1.1" 200 23600
+[INFO] 2025-09-20 16:44:24,153 django.server "POST /students/5/delete/ HTTP/1.1" 200 21
+[INFO] 2025-09-20 16:44:24,153 django.server "POST /students/5/delete/ HTTP/1.1" 200 21
+[WARNING] 2025-09-20 16:44:24,201 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:44:24,201 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:44:24,232 django.server "GET /students/ HTTP/1.1" 200 21901
+[INFO] 2025-09-20 16:44:24,232 django.server "GET /students/ HTTP/1.1" 200 21901
+[INFO] 2025-09-20 16:44:29,913 django.server "GET /students/6/download-certificate/ HTTP/1.1" 200 250813
+[INFO] 2025-09-20 16:44:29,913 django.server "GET /students/6/download-certificate/ HTTP/1.1" 200 250813
+[WARNING] 2025-09-20 16:45:08,480 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:45:08,480 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:45:08,491 django.server "GET /templates/ HTTP/1.1" 200 15506
+[INFO] 2025-09-20 16:45:08,491 django.server "GET /templates/ HTTP/1.1" 200 15506
+[INFO] 2025-09-20 16:45:11,288 django.server "GET /templates/6/detail/ HTTP/1.1" 200 1611
+[INFO] 2025-09-20 16:45:11,288 django.server "GET /templates/6/detail/ HTTP/1.1" 200 1611
+[WARNING] 2025-09-20 16:45:27,016 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:45:27,016 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:45:27,044 django.server "GET /students/ HTTP/1.1" 200 21901
+[INFO] 2025-09-20 16:45:27,044 django.server "GET /students/ HTTP/1.1" 200 21901
+[INFO] 2025-09-20 16:45:35,539 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 16:45:35,539 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 16:45:41,682 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-20 16:46:17,226 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 16:46:17,226 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 16:46:18,281 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 16:46:18,281 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 16:46:18,339 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 16:46:18,339 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-20 16:46:18,941 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-20 16:46:18,941 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-20 16:46:19,851 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 16:46:19,851 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-20 16:46:23,477 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-20 16:46:24,167 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-20 16:46:24,899 students.utils Email successfully sent to raviteja9182@gmail.com
+[INFO] 2025-09-20 16:46:26,210 students.utils Email successfully sent to kalyanrrrrrrrrrrrrrrrrrrrr@gmail.com
+[INFO] 2025-09-20 16:46:30,227 students.utils Email successfully sent to saigoli4129@gmail.com
+[WARNING] 2025-09-20 16:46:43,909 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 16:46:43,909 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 16:46:43,956 django.server "GET /reports/ HTTP/1.1" 200 18398
+[INFO] 2025-09-20 16:46:43,956 django.server "GET /reports/ HTTP/1.1" 200 18398
+[WARNING] 2025-09-20 17:05:43,626 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 17:05:43,626 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 17:05:43,657 django.server "GET /students/ HTTP/1.1" 200 21901
+[INFO] 2025-09-20 17:05:43,657 django.server "GET /students/ HTTP/1.1" 200 21901
+[WARNING] 2025-09-20 17:05:46,762 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 17:05:46,762 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 17:05:46,769 django.server "GET /templates/ HTTP/1.1" 200 15506
+[INFO] 2025-09-20 17:05:46,769 django.server "GET /templates/ HTTP/1.1" 200 15506
+[INFO] 2025-09-20 17:06:15,745 django.server "GET /templates/3/detail/ HTTP/1.1" 200 1607
+[INFO] 2025-09-20 17:06:15,745 django.server "GET /templates/3/detail/ HTTP/1.1" 200 1607
+[INFO] 2025-09-20 17:06:15,761 django.server "GET /media/certificate_templates/rs_coi.jpg HTTP/1.1" 200 121053
+[INFO] 2025-09-20 17:06:15,761 django.server "GET /media/certificate_templates/rs_coi.jpg HTTP/1.1" 200 121053
+[WARNING] 2025-09-20 17:07:23,463 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 17:07:23,463 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-20 17:07:23,492 django.request Internal Server Error: /templates/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'scholarships'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'scholarships' is not a registered namespace
+[ERROR] 2025-09-20 17:07:23,492 django.request Internal Server Error: /templates/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'scholarships'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'scholarships' is not a registered namespace
+[ERROR] 2025-09-20 17:07:23,495 django.server "GET /templates/ HTTP/1.1" 500 147647
+[ERROR] 2025-09-20 17:07:23,495 django.server "GET /templates/ HTTP/1.1" 500 147647
+[INFO] 2025-09-20 17:08:11,405 django.server "GET /templates/ HTTP/1.1" 200 15532
+[INFO] 2025-09-20 17:08:11,405 django.server "GET /templates/ HTTP/1.1" 200 15532
+[INFO] 2025-09-20 17:08:14,403 django.server "GET /reports/ HTTP/1.1" 200 18424
+[INFO] 2025-09-20 17:08:14,403 django.server "GET /reports/ HTTP/1.1" 200 18424
+[WARNING] 2025-09-20 17:09:35,129 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 17:09:35,129 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 17:09:35,163 django.server "GET /reports/ HTTP/1.1" 200 18338
+[INFO] 2025-09-20 17:09:35,163 django.server "GET /reports/ HTTP/1.1" 200 18338
+[WARNING] 2025-09-20 17:11:11,637 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 17:11:11,637 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 17:11:11,645 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 17:11:11,645 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-20 17:11:11,669 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 17:11:11,669 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 17:11:11,681 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-20 17:11:11,681 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[WARNING] 2025-09-20 17:11:29,468 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 17:11:29,468 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 17:11:29,535 django.server "POST /login/?next=/dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 17:11:29,535 django.server "POST /login/?next=/dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 17:11:29,599 django.server "GET /dashboard/ HTTP/1.1" 200 4810
+[INFO] 2025-09-20 17:11:29,599 django.server "GET /dashboard/ HTTP/1.1" 200 4810
+[INFO] 2025-09-20 17:11:42,065 django.server "GET /dashboard/ HTTP/1.1" 200 4491
+[INFO] 2025-09-20 17:11:42,065 django.server "GET /dashboard/ HTTP/1.1" 200 4491
+[INFO] 2025-09-20 17:11:52,877 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:11:52,877 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:12:10,982 django.server "GET /reports/success/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:12:10,982 django.server "GET /reports/success/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:12:15,082 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:12:15,082 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:12:17,332 django.server "GET /reports/failed/ HTTP/1.1" 200 5475
+[INFO] 2025-09-20 17:12:17,332 django.server "GET /reports/failed/ HTTP/1.1" 200 5475
+[INFO] 2025-09-20 17:12:22,789 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:12:22,789 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:14:29,551 django.server "GET /reports/20/resend/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 17:14:29,551 django.server "GET /reports/20/resend/ HTTP/1.1" 302 0
+[INFO] 2025-09-20 17:14:29,650 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:14:29,650 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:15:16,818 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:15:16,818 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:15:18,056 django.server "GET /templates/ HTTP/1.1" 200 15450
+[INFO] 2025-09-20 17:15:18,056 django.server "GET /templates/ HTTP/1.1" 200 15450
+[INFO] 2025-09-20 17:15:20,441 django.server "GET /students/ HTTP/1.1" 200 21845
+[INFO] 2025-09-20 17:15:20,441 django.server "GET /students/ HTTP/1.1" 200 21845
+[INFO] 2025-09-20 17:21:09,281 django.server "GET /templates/ HTTP/1.1" 200 15450
+[INFO] 2025-09-20 17:21:09,281 django.server "GET /templates/ HTTP/1.1" 200 15450
+[INFO] 2025-09-20 17:21:13,526 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:21:13,526 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:21:15,456 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:21:15,456 django.server "GET /reports/ HTTP/1.1" 200 18342

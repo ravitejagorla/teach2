@@ -10,6 +10,9 @@ from django.core.mail import EmailMessage
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from reports.models import EmailReport
+import logging
+logger = logging.getLogger(__name__)
+
 
 
 class EmailThread(threading.Thread):
@@ -291,41 +294,66 @@ def generate_simple_certificate(student):
         return None
 
 
+class EmailSenderThread(threading.Thread):
+    """
+    Thread to send email asynchronously without blocking the request.
+    """
+    def __init__(self, email, student):
+        super().__init__()
+        self.email = email
+        self.student = student
+
+    def run(self):
+        try:
+            self.email.send(fail_silently=False)
+            EmailReport.objects.create(student=self.student, status='success')
+            logger.info(f"Email successfully sent to {self.student.email}")
+        except Exception as e:
+            EmailReport.objects.create(student=self.student, status='failed', error_message=str(e))
+            logger.exception(f"Failed to send email to {self.student.email}")
+
 def send_certificate_email(student, certificate_path):
     """
-    Send the certificate PDF to the student's email in a separate thread.
+    Send a certificate PDF to a student via email.
+    
+    Args:
+        student: Student instance
+        certificate_path: Path to PDF file (relative to default storage)
+    
+    Returns:
+        bool: True if email thread started, False otherwise
     """
     if not certificate_path or not default_storage.exists(certificate_path):
-        print(f"Certificate file missing for {student.full_name}")
+        logger.error(f"Certificate file missing for {student.full_name} at {certificate_path}")
         return False
 
     subject = f"Your Certificate - {student.specialization}"
     message = f"""
 Dear {student.full_name},
 
-Please find attached your certificate for {student.specialization}.
+Congratulations! Please find attached your certificate for {student.specialization}.
 
 Best regards,
-Quality Thought Institution
+{student.institution}
 """
+
     email = EmailMessage(
-        subject,
-        message,
-        settings.DEFAULT_FROM_EMAIL,
-        [student.email]
+        subject=subject,
+        body=message,
+        from_email=settings.DEFAULT_FROM_EMAIL,
+        to=[student.email]
     )
 
     try:
-        # Attach PDF using default_storage
+        # Attach PDF
         with default_storage.open(certificate_path, 'rb') as f:
             email.attach(f'certificate_{student.certificate_id}.pdf', f.read(), 'application/pdf')
 
-        # Send email in a thread
-        email_thread = EmailThread(email, student)
-        email_thread.start()
+        # Send email in a separate thread
+        EmailSenderThread(email, student).start()
         return True
 
     except Exception as e:
-        print(f"Error sending email: {e}")
+        logger.exception(f"Failed to start email thread for {student.email}")
         EmailReport.objects.create(student=student, status='failed', error_message=str(e))
         return False
