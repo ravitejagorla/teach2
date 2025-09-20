@@ -16,13 +16,13 @@ class Student(models.Model):
     specialization = models.CharField(max_length=255)
     organization = models.CharField(max_length=255)
     course = models.CharField(max_length=225)
-    institution = models.CharField(max_length=255, default="Quality Thought Institution")
+    institution = models.CharField(max_length=255)
     start_date = models.DateField()
     end_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     template = models.ForeignKey(CertificateTemplate, on_delete=models.SET_NULL, null=True, blank=True)
-    certificate_generated = models.BooleanField(default=False)  # Add this field
+    certificate_generated = models.BooleanField(default=False)
     
     def __str__(self):
         return f"{self.full_name} ({self.certificate_id})"
@@ -30,20 +30,20 @@ class Student(models.Model):
     def save(self, *args, **kwargs):
         if not self.certificate_id:
             self.certificate_id = generate_certification_id()
-        super().save(*args, **kwargs)
-        
+
+        # Assign template automatically if not already set
         if not self.template:
             matching_template = CertificateTemplate.objects.filter(
-                specialization__iexact=self.specialization.strip(),
                 organization__iexact=self.organization.strip(),
-                course__iexact=self.course.strip(),
+                name__iexact=self.institution.strip(),
                 is_active=True
             ).first()
-            
+
             if matching_template:
                 self.template = matching_template
-        
+
         super().save(*args, **kwargs)
+
     
     def has_template(self):
         """Check if student has a valid template assigned"""

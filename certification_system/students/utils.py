@@ -67,22 +67,40 @@ def generate_certificate(student):
         scale_y = lambda y: height - (y / template_height) * height
 
         # Choose coordinates based on template name
-        template_name = student.template.name.lower()
-        if "qualitythought" in template_name:
-            name_x, name_y = scale_x(565), scale_y(670)
-            course_x, course_y = scale_x(565), scale_y(770)
+        template_name = student.template.name.lower() + " " + student.template.organization.lower()
+        if "quality thought certificate of participation" in template_name:
+            name_x, name_y = scale_x(565), scale_y(620)
+            course_x, course_y = scale_x(565), scale_y(690)
             start_x, start_y = scale_x(140), scale_y(1100)
             end_x, end_y = scale_x(140), scale_y(1160)
             cert_x, cert_y = scale_x(140), scale_y(1200)
-        elif "ramanasoft" in template_name:
-            name_x, name_y = scale_x(560), scale_y(600)
-            course_x, course_y = scale_x(560), scale_y(680)
-            start_x, start_y = scale_x(150), scale_y(1050)
-            end_x, end_y = scale_x(150), scale_y(1100)
-            cert_x, cert_y = scale_x(150), scale_y(1150)
+        elif "quality thought certificate of completion" in template_name:
+            name_x, name_y = scale_x(565), scale_y(620)
+            course_x, course_y = scale_x(565), scale_y(690)
+            start_x, start_y = scale_x(140), scale_y(1100)
+            end_x, end_y = scale_x(140), scale_y(1160)
+            cert_x, cert_y = scale_x(140), scale_y(1200)
+        elif "quality thought certificate of appreciation" in template_name:
+            name_x, name_y = scale_x(565), scale_y(620)
+            course_x, course_y = scale_x(565), scale_y(690)
+            start_x, start_y = scale_x(140), scale_y(1100)
+            end_x, end_y = scale_x(140), scale_y(1160)
+            cert_x, cert_y = scale_x(140), scale_y(1200)
+        elif "ramanasoft certificate of internship" in template_name:
+            name_x, name_y = scale_x(560), scale_y(620)
+            course_x, course_y = scale_x(560), scale_y(690)
+            start_x, start_y = scale_x(400), scale_y(1150)
+            end_x, end_y = scale_x(400), scale_y(1200)
+            cert_x, cert_y = scale_x(400), scale_y(1250)
+        elif "ihub certificate of completion" in template_name:
+            name_x, name_y = scale_x(565), scale_y(620)
+            course_x, course_y = scale_x(565), scale_y(690)
+            start_x, start_y = scale_x(140), scale_y(1100)
+            end_x, end_y = scale_x(140), scale_y(1160)
+            cert_x, cert_y = scale_x(140), scale_y(1200)
         else:
-            name_x, name_y = scale_x(565), scale_y(650)
-            course_x, course_y = scale_x(565), scale_y(750)
+            name_x, name_y = scale_x(565), scale_y(620)
+            course_x, course_y = scale_x(565), scale_y(690)
             start_x, start_y = scale_x(140), scale_y(1080)
             end_x, end_y = scale_x(140), scale_y(1140)
             cert_x, cert_y = scale_x(140), scale_y(1180)
@@ -101,9 +119,9 @@ def generate_certificate(student):
         c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
 
         # Timestamp
-        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        c.setFont("Helvetica-Oblique", 10)
-        c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
+        # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # c.setFont("Helvetica-Oblique", 10)
+        # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
 
         c.save()
         pdf_content = buffer.getvalue()
