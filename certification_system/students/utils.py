@@ -71,57 +71,143 @@ def generate_certificate(student):
         if "quality thought certificate of participation" in template_name:
             name_x, name_y = scale_x(565), scale_y(620)
             course_x, course_y = scale_x(565), scale_y(690)
-            start_x, start_y = scale_x(140), scale_y(1100)
-            end_x, end_y = scale_x(140), scale_y(1160)
-            cert_x, cert_y = scale_x(140), scale_y(1200)
+            start_x, start_y = scale_x(110), scale_y(1100)
+            end_x, end_y = scale_x(110), scale_y(1150)
+            cert_x, cert_y = scale_x(110), scale_y(1200)
+            # Draw content
+            c.setFont("Helvetica-Bold", 28)
+            c.setFillColor(Color(0, 0, 0, 1))
+            c.drawCentredString(name_x, name_y, student.full_name)
+
+            c.setFont("Helvetica", 20)
+            c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
+
+            c.setFont("Helvetica-Bold", 14)
+            c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
+            c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
+            c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
+
+            # Timestamp
+            # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            # c.setFont("Helvetica-Oblique", 10)
+            # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
         elif "quality thought certificate of completion" in template_name:
             name_x, name_y = scale_x(565), scale_y(620)
             course_x, course_y = scale_x(565), scale_y(690)
-            start_x, start_y = scale_x(140), scale_y(1100)
-            end_x, end_y = scale_x(140), scale_y(1160)
-            cert_x, cert_y = scale_x(140), scale_y(1200)
+            start_x, start_y = scale_x(110), scale_y(1100)
+            end_x, end_y = scale_x(110), scale_y(1150)
+            cert_x, cert_y = scale_x(110), scale_y(1200)
+            # Draw content
+            c.setFont("Helvetica-Bold", 28)
+            c.setFillColor(Color(0, 0, 0, 1))   
+            c.drawCentredString(name_x, name_y, student.full_name)
+
+            c.setFont("Helvetica", 20)  
+            c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
+
+            c.setFont("Helvetica-Bold", 14)
+            c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
+            c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m   /%Y')}")
+            c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
+
+            # Timestamp
+            # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            # c.setFont("Helvetica-Oblique", 10)
+            # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
         elif "quality thought certificate of appreciation" in template_name:
             name_x, name_y = scale_x(565), scale_y(620)
             course_x, course_y = scale_x(565), scale_y(690)
-            start_x, start_y = scale_x(140), scale_y(1100)
-            end_x, end_y = scale_x(140), scale_y(1160)
-            cert_x, cert_y = scale_x(140), scale_y(1200)
+            start_x, start_y = scale_x(110), scale_y(1100)
+            end_x, end_y = scale_x(110), scale_y(1150)
+            cert_x, cert_y = scale_x(110), scale_y(1200)
+            # Draw content
+            c.setFont("Helvetica-Bold", 28)
+            c.setFillColor(Color(0, 0, 0, 1))
+            c.drawCentredString(name_x, name_y, student.full_name)
+
+            c.setFont("Helvetica", 20)
+            c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
+
+            c.setFont("Helvetica-Bold", 14)
+            c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
+            c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
+            c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
+
+            # Timestamp
+            # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            # c.setFont("Helvetica-Oblique", 10)
+            # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
         elif "ramanasoft certificate of internship" in template_name:
             name_x, name_y = scale_x(560), scale_y(620)
             course_x, course_y = scale_x(560), scale_y(690)
             start_x, start_y = scale_x(400), scale_y(1150)
             end_x, end_y = scale_x(400), scale_y(1200)
             cert_x, cert_y = scale_x(400), scale_y(1250)
-        elif "ihub certificate of completion" in template_name:
-            name_x, name_y = scale_x(565), scale_y(620)
-            course_x, course_y = scale_x(565), scale_y(690)
-            start_x, start_y = scale_x(140), scale_y(1100)
-            end_x, end_y = scale_x(140), scale_y(1160)
-            cert_x, cert_y = scale_x(140), scale_y(1200)
+            # Draw content
+            c.setFont("Helvetica-Bold", 28)
+            c.setFillColor(Color(0, 0, 0, 1))
+            c.drawCentredString(name_x, name_y, student.full_name)
+
+            c.setFont("Helvetica", 20)
+            c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
+
+            c.setFont("Helvetica-Bold", 14)
+            c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
+            c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
+            c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
+
+            # Timestamp
+            # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            # c.setFont("Helvetica-Oblique", 10)
+            # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
+        elif "ihub certificate of completions" in template_name:
+            name_x, name_y = scale_x(565), scale_y(780)
+            course_x, course_y = scale_x(565), scale_y(990)
+            start_x, start_y = scale_x(140), scale_y(1230)
+            end_x, end_y = scale_x(140), scale_y(1280)
+            cert_x, cert_y = scale_x(140), scale_y(1330)
+            # Draw content
+            c.setFont("Helvetica-Bold", 28)
+            c.setFillColor(Color(0, 0, 0, 1))
+            c.drawCentredString(name_x, name_y, student.full_name)
+
+            c.setFont("Helvetica", 18)
+            c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
+
+            c.setFont("Helvetica-Bold", 12)
+            c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
+            c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
+            c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
+
+            # Timestamp
+            # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            # c.setFont("Helvetica-Oblique", 10)
+            # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
         else:
             name_x, name_y = scale_x(565), scale_y(620)
             course_x, course_y = scale_x(565), scale_y(690)
             start_x, start_y = scale_x(140), scale_y(1080)
             end_x, end_y = scale_x(140), scale_y(1140)
             cert_x, cert_y = scale_x(140), scale_y(1180)
-
-        # Draw content
-        c.setFont("Helvetica-Bold", 28)
-        c.setFillColor(Color(0, 0, 0, 1))
-        c.drawCentredString(name_x, name_y, student.full_name)
-
-        c.setFont("Helvetica", 20)
-        c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
-
-        c.setFont("Helvetica-Bold", 14)
-        c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
-        c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
-        c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
-
-        # Timestamp
-        # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        # c.setFont("Helvetica-Oblique", 10)
-        # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
+            # Draw content
+            c.setFont("Helvetica-Bold", 28)
+            c.setFillColor(Color(0, 0, 0, 1))
+            c.drawCentredString(name_x, name_y, student.full_name)
+    
+            c.setFont("Helvetica", 20)
+            c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
+    
+            c.setFont("Helvetica-Bold", 14)
+            c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
+            c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
+            c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
+    
+            # Timestamp
+            # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            # c.setFont("Helvetica-Oblique", 10)
+            # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
+    
+        
 
         c.save()
         pdf_content = buffer.getvalue()
