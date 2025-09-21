@@ -269,3 +269,53 @@ def get_specializations(request):
     specs = CertificateTemplate.objects.filter(organization=org, is_active=True).values_list('specialization', flat=True).distinct()
     courses = CertificateTemplate.objects.filter(organization=org, is_active=True).values_list('course', flat=True).distinct()
     return JsonResponse({'specializations': list(specs), 'courses': list(courses)})
+
+# views.py
+from django.core.mail import send_mail
+from django.conf import settings
+
+class StudentSelfRegisterView(CreateView):
+    model = Student
+    form_class = StudentForm
+    template_name = 'students/student_self_register.html'
+    success_url = reverse_lazy('student_self_register')
+
+    def form_valid(self, form):
+        # Assign template automatically
+        assign_template(
+            form.instance,
+            form.cleaned_data.get("organization"),
+            form.cleaned_data.get("specialization")
+        )
+
+        response = super().form_valid(form)
+
+        
+        self.notify_admin(form.instance)
+
+        messages.success(self.request, "Your details have been submitted successfully!")
+        return response
+
+    def notify_admin(self, student):
+        try:
+            subject = "New Student Registration"
+            message = (
+                f"A new student has registered.\n\n"
+                f"Name: {student.full_name}\n"
+                f"Email: {student.email}\n"
+                f"Mobile: {student.mobile}\n"
+                f"Organization: {student.organization}\n"
+                f"Specialization: {student.specialization}\n"
+                f"Course: {student.course}\n"
+                f"Start Date: {student.start_date}\n"
+                f"End Date: {student.end_date}\n"
+            )
+            send_mail(
+                subject,
+                message,
+                settings.DEFAULT_FROM_EMAIL,
+                [settings.ADMIN_EMAIL],       
+                fail_silently=True
+            )
+        except Exception as e:
+            logger.exception("Failed to send admin notification email")

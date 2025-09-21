@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'students',
     'templates_app',
     'reports',
+    'widget_tweaks',
     # Optional:
     # 'crispy_forms',
     # 'crispy_bootstrap5',
