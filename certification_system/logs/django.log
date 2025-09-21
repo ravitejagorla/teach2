@@ -1552,3 +1552,9 @@ django.urls.exceptions.NoReverseMatch: 'scholarships' is not a registered namesp
 [INFO] 2025-09-20 17:21:13,526 django.server "GET /reports/ HTTP/1.1" 200 18342
 [INFO] 2025-09-20 17:21:15,456 django.server "GET /reports/ HTTP/1.1" 200 18342
 [INFO] 2025-09-20 17:21:15,456 django.server "GET /reports/ HTTP/1.1" 200 18342
+[INFO] 2025-09-20 17:23:25,500 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-20 17:23:25,500 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-20 17:23:29,977 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-20 17:23:29,977 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-20 17:23:30,045 django.server "GET /reports/ HTTP/1.1" 200 18338
+[INFO] 2025-09-20 17:23:30,045 django.server "GET /reports/ HTTP/1.1" 200 18338
