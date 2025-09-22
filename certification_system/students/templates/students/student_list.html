@@ -47,7 +47,7 @@
                         <th width="150">Institution</th>
                         <th width="90">Start Date</th>
                         <th width="90">End Date</th>
-                        <th width="120" class="text-center">Actions</th>
+                        <th width="160" class="text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -75,10 +75,13 @@
                                 <button class="btn btn-sm btn-outline-danger delete-btn" data-id="{{ student.pk }}" title="Delete">
                                     <i class="fas fa-trash"></i>
                                 </button>
+
                                 {% if student.template and student.template.is_active %}
-                                <a href="{% url 'download_certificate' student.id %}" class="btn btn-sm btn-success" title="Download Certificate">
+                                <button class="btn btn-sm btn-success download-btn" 
+                                        data-student-id="{{ student.id }}" 
+                                        title="Download Certificate or Template">
                                     <i class="fas fa-download"></i>
-                                </a>
+                                </button>
                                 {% else %}
                                 <button class="btn btn-sm btn-outline-secondary" title="No Template Available" disabled>
                                     <i class="fas fa-ban"></i>
@@ -149,6 +152,24 @@
         </div>
     </div>
 </div>
+
+<!-- Modal for Download Choice -->
+<div class="modal fade" id="downloadChoiceModal" tabindex="-1" aria-labelledby="downloadChoiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Download Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Choose the type of download:</p>
+        <button id="downloadGenerated" class="btn btn-success me-2">Generated Certificate PDF</button>
+        <button id="downloadManual" class="btn btn-info">Manual Template</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 
 {% block extra_js %}
@@ -272,6 +293,29 @@ $(document).ready(function() {
             '#status-messages',                         // status messages selector
             'Sent to STUDENT_NAME'                       // success message
         );
+    });
+
+    // Download choice modal logic
+    let selectedStudentId = null;
+
+    $(document).on('click', '.download-btn', function() {
+        selectedStudentId = $(this).data('student-id');
+        const modal = new bootstrap.Modal(document.getElementById('downloadChoiceModal'));
+        modal.show();
+    });
+
+    $('#downloadGenerated').click(function() {
+        if (!selectedStudentId) return;
+        window.location.href = "{% url 'download_certificate' 0 %}".replace('0', selectedStudentId) + '?type=auto';
+        selectedStudentId = null;
+        bootstrap.Modal.getInstance(document.getElementById('downloadChoiceModal')).hide();
+    });
+
+    $('#downloadManual').click(function() {
+        if (!selectedStudentId) return;
+        window.location.href = "{% url 'mt' 0 %}".replace('0', selectedStudentId) + '?type=manual';
+        selectedStudentId = null;
+        bootstrap.Modal.getInstance(document.getElementById('downloadChoiceModal')).hide();
     });
 });
 </script>

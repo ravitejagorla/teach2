@@ -6,7 +6,7 @@ from datetime import datetime
 from django.conf import settings
 from django.contrib import messages
 from django.db.models import Q
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse, HttpResponse, FileResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
@@ -14,6 +14,7 @@ from django.views.decorators.http import require_GET, require_POST
 from django.views.generic import ListView, CreateView, UpdateView
 from django.core.files.storage import default_storage
 from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 from .models import Student
 from .forms import StudentForm, ImportCSVForm
@@ -37,12 +38,14 @@ def assign_template(student_or_form, organization, specialization):
         student_or_form.template = template
     return template
 
+def is_gmail(email):
+    """Check if email is a Gmail address."""
+    return email and email.lower().endswith("@gmail.com")
 
 def generate_and_send_certificate(student):
     """Generate a certificate and send via email. Returns a status dict."""
     try:
-        # ✅ Gmail-only restriction
-        if not student.email or not student.email.lower().endswith("@gmail.com"):
+        if not is_gmail(student.email):
             EmailReport.objects.create(
                 student=student,
                 status='failed',
@@ -50,8 +53,8 @@ def generate_and_send_certificate(student):
             )
             return {'status': 'failed', 'message': 'Only Gmail addresses are allowed'}
 
-        certificate_path = generate_certificate(student) or generate_simple_certificate(student)
-        if not certificate_path:
+        cert_path = generate_certificate(student) or generate_simple_certificate(student)
+        if not cert_path:
             EmailReport.objects.create(
                 student=student,
                 status='failed',
@@ -59,7 +62,7 @@ def generate_and_send_certificate(student):
             )
             return {'status': 'failed', 'message': 'Certificate generation failed'}
 
-        if send_certificate_email(student, certificate_path):
+        if send_certificate_email(student, cert_path):
             EmailReport.objects.create(student=student, status='success')
             return {'status': 'success', 'student_name': student.full_name}
         else:
@@ -103,7 +106,6 @@ class StudentListView(ListView):
         context['search_query'] = self.request.GET.get('search', '')
         return context
 
-
 class StudentCreateView(CreateView):
     model = Student
     form_class = StudentForm
@@ -114,7 +116,6 @@ class StudentCreateView(CreateView):
         assign_template(form.instance, form.cleaned_data.get("organization"), form.cleaned_data.get("specialization"))
         messages.success(self.request, 'Student created successfully!')
         return super().form_valid(form)
-
 
 class StudentUpdateView(UpdateView):
     model = Student
@@ -127,7 +128,6 @@ class StudentUpdateView(UpdateView):
         messages.success(self.request, 'Student updated successfully!')
         return super().form_valid(form)
 
-
 # -----------------------------
 # Delete Views
 # -----------------------------
@@ -136,7 +136,6 @@ def student_delete(request, pk):
     student = get_object_or_404(Student, pk=pk)
     student.delete()
     return JsonResponse({'status': 'success'})
-
 
 @csrf_exempt
 def bulk_delete_students(request):
@@ -150,7 +149,6 @@ def bulk_delete_students(request):
     except Exception:
         logger.exception("Bulk delete error")
         return JsonResponse({'status': 'error', 'message': 'Internal server error'}, status=500)
-
 
 # -----------------------------
 # CSV Import/Export
@@ -206,7 +204,6 @@ def import_students(request):
         form = ImportCSVForm()
     return render(request, 'students/import.html', {'form': form})
 
-
 def export_students(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="students.csv"'
@@ -227,7 +224,6 @@ def export_students(request):
         ])
     return response
 
-
 # -----------------------------
 # Certificate Views
 # -----------------------------
@@ -235,7 +231,7 @@ def export_students(request):
 def send_certificate(request, student_id):
     student = get_object_or_404(Student, id=student_id)
 
-    if not student.email or not student.email.lower().endswith("@gmail.com"):
+    if not is_gmail(student.email):
         EmailReport.objects.create(
             student=student,
             status='failed',
@@ -264,7 +260,6 @@ def send_certificate(request, student_id):
         )
         return JsonResponse({"status": "failed", "message": "Email sending failed."})
 
-
 @csrf_exempt
 def bulk_send_certificates(request):
     if request.method != 'POST':
@@ -288,7 +283,6 @@ def bulk_send_certificates(request):
         logger.exception("bulk_send_certificates error")
         return JsonResponse({'status': 'error', 'message': 'Internal server error'}, status=500)
 
-
 def download_certificate(request, student_id):
     student = get_object_or_404(Student, id=student_id)
     cert_path = generate_certificate(student) or generate_simple_certificate(student)
@@ -298,15 +292,15 @@ def download_certificate(request, student_id):
 
     filename = f"{student.certificate_id}_{student.full_name}.pdf"
     try:
-        with default_storage.open(cert_path, 'rb') as f:
-            response = HttpResponse(f.read(), content_type='application/pdf')
-            response['Content-Disposition'] = f'attachment; filename="{filename}"'
-            return response
+        return FileResponse(
+            default_storage.open(cert_path, 'rb'),
+            as_attachment=True,
+            filename=filename
+        )
     except Exception:
         logger.exception("Certificate download error")
         messages.error(request, 'Error downloading certificate.')
         return redirect('student_list')
-
 
 # -----------------------------
 # AJAX: Get Specializations and Courses
@@ -317,7 +311,6 @@ def get_specializations(request):
     specs = CertificateTemplate.objects.filter(organization=org, is_active=True).values_list('specialization', flat=True).distinct()
     courses = CertificateTemplate.objects.filter(organization=org, is_active=True).values_list('course', flat=True).distinct()
     return JsonResponse({'specializations': list(specs), 'courses': list(courses)})
-
 
 # -----------------------------
 # Student Self-Register View
@@ -342,7 +335,7 @@ class StudentSelfRegisterView(CreateView):
     def notify_admin(self, student):
         try:
             admin_email = settings.ADMIN_EMAIL
-            if not admin_email.lower().endswith("@gmail.com"):
+            if not is_gmail(admin_email):
                 logger.warning(f"Admin email {admin_email} is not a Gmail address. Skipping notification.")
                 return
             subject = "New Student Registration"
@@ -360,3 +353,36 @@ class StudentSelfRegisterView(CreateView):
             send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [admin_email], fail_silently=True)
         except Exception:
             logger.exception("Failed to send admin notification email")
+
+# -----------------------------
+# MT View: Download Certificate or Manual Template
+# -----------------------------
+def mt(request, pk):
+    student = get_object_or_404(Student, pk=pk)
+    download_type = request.GET.get('type', 'auto')  # 'auto' for PDF, 'manual' for HTML template
+
+    if download_type == 'manual':
+        # Download HTML template
+        html_content = render_to_string('certificate_template.html', {'student': student})
+        response = HttpResponse(html_content, content_type='text/html')
+        filename = f"{student.full_name}_manual_template.html"
+        response['Content-Disposition'] = f'attachment; filename="{filename}"'
+        return response
+    else:
+        # Download generated PDF certificate
+        cert_path = generate_certificate(student) or generate_simple_certificate(student)
+        if not cert_path:
+            messages.error(request, 'Failed to generate certificate.')
+            return redirect('student_list')
+
+        filename = f"{student.certificate_id}_{student.full_name}.pdf"
+        try:
+            return FileResponse(
+                default_storage.open(cert_path, 'rb'),
+                as_attachment=True,
+                filename=filename
+            )
+        except Exception:
+            logger.exception("Certificate download error")
+            messages.error(request, 'Error downloading certificate.')
+            return redirect('student_list')

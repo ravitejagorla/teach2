@@ -2223,3 +2223,64 @@ AttributeError: 'Settings' object has no attribute 'ADMIN_EMAIL'
 [INFO] 2025-09-22 07:24:59,899 django.server "GET /reports/ HTTP/1.1" 200 63967
 [INFO] 2025-09-22 07:25:05,444 students.utils Email successfully sent to rt.gorla7@gmail.com
 [INFO] 2025-09-22 07:25:06,594 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-22 09:03:16,280 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-22 09:03:16,280 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-22 09:03:20,639 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-22 09:03:20,639 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-09-22 09:03:20,733 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 09:03:20,733 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 09:03:20,740 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-22 09:03:20,740 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-22 09:03:20,837 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 09:03:20,837 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 09:03:20,974 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-22 09:03:20,974 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[WARNING] 2025-09-22 09:03:21,616 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-22 09:03:21,616 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-22 09:03:21,616 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-22 09:03:21,616 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-22 09:03:25,160 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 09:03:25,160 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 09:03:25,213 django.server "GET /students/ HTTP/1.1" 200 26357
+[INFO] 2025-09-22 09:03:25,213 django.server "GET /students/ HTTP/1.1" 200 26357
+[INFO] 2025-09-22 09:03:29,773 django.server "GET /students/mt/6?type=manual HTTP/1.1" 200 2111
+[INFO] 2025-09-22 09:03:29,773 django.server "GET /students/mt/6?type=manual HTTP/1.1" 200 2111
+[WARNING] 2025-09-22 09:05:55,656 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 09:05:55,656 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 09:05:55,660 django.server "GET /students/ HTTP/1.1" 200 26357
+[INFO] 2025-09-22 09:05:55,660 django.server "GET /students/ HTTP/1.1" 200 26357
+[INFO] 2025-09-22 09:07:11,794 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-22 09:07:11,794 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-22 09:07:22,238 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-22 09:08:12,347 django.server "GET /students/mt/7?type=manual HTTP/1.1" 200 2111
+[INFO] 2025-09-22 09:08:12,347 django.server "GET /students/mt/7?type=manual HTTP/1.1" 200 2111
+[INFO] 2025-09-22 09:09:08,693 django.server "GET /students/mt/6?type=auto HTTP/1.1" 200 250813
+[INFO] 2025-09-22 09:09:08,693 django.server "GET /students/mt/6?type=auto HTTP/1.1" 200 250813
+[WARNING] 2025-09-22 09:11:58,999 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 09:11:58,999 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 09:11:59,025 django.server "GET /students/ HTTP/1.1" 200 26317
+[INFO] 2025-09-22 09:11:59,025 django.server "GET /students/ HTTP/1.1" 200 26317
+[WARNING] 2025-09-22 09:12:07,299 django.request Not Found: /students/6/download
+[WARNING] 2025-09-22 09:12:07,299 django.request Not Found: /students/6/download
+[WARNING] 2025-09-22 09:12:07,301 django.server "GET /students/6/download?type=manual HTTP/1.1" 404 7487
+[WARNING] 2025-09-22 09:12:07,301 django.server "GET /students/6/download?type=manual HTTP/1.1" 404 7487
+[WARNING] 2025-09-22 09:12:43,079 django.request Not Found: /students/6/download
+[WARNING] 2025-09-22 09:12:43,079 django.request Not Found: /students/6/download
+[WARNING] 2025-09-22 09:12:43,079 django.server "GET /students/6/download?type=auto HTTP/1.1" 404 7485
+[WARNING] 2025-09-22 09:12:43,079 django.server "GET /students/6/download?type=auto HTTP/1.1" 404 7485
+[WARNING] 2025-09-22 09:15:33,836 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 09:15:33,836 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 09:15:33,859 django.server "GET /students/ HTTP/1.1" 200 26379
+[INFO] 2025-09-22 09:15:33,859 django.server "GET /students/ HTTP/1.1" 200 26379
+[INFO] 2025-09-22 09:15:39,905 django.server "GET /students/6/download-certificate/?type=manual HTTP/1.1" 200 250813
+[INFO] 2025-09-22 09:15:39,905 django.server "GET /students/6/download-certificate/?type=manual HTTP/1.1" 200 250813
+[INFO] 2025-09-22 09:15:51,636 django.server "GET /students/6/download-certificate/?type=auto HTTP/1.1" 200 250813
+[INFO] 2025-09-22 09:15:51,636 django.server "GET /students/6/download-certificate/?type=auto HTTP/1.1" 200 250813
+[INFO] 2025-09-22 09:16:04,935 django.server "GET /students/7/download-certificate/?type=auto HTTP/1.1" 200 625199
+[INFO] 2025-09-22 09:16:04,935 django.server "GET /students/7/download-certificate/?type=auto HTTP/1.1" 200 625199
+[WARNING] 2025-09-22 09:17:10,421 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 09:17:10,421 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 09:17:10,421 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-22 09:17:10,421 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-22 09:17:15,839 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 2107
+[INFO] 2025-09-22 09:17:15,839 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 2107

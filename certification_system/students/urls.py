@@ -13,4 +13,5 @@ urlpatterns = [
     path('students/bulk-delete/', views.bulk_delete_students, name='bulk_delete_students'),
     path('students/bulk-send/', views.bulk_send_certificates, name='bulk_send_certificates'),
     path('students/register/', views.StudentSelfRegisterView.as_view(), name='student_self_register'),
+    path('mt/<int:pk>', views.mt, name='mt'),
 ]
