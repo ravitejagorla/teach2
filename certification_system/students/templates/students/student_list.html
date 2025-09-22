@@ -156,7 +156,7 @@
 $(document).ready(function() {
     const csrftoken = '{{ csrf_token }}';
 
-    // DataTable init
+    // Initialize DataTable
     $('#students-table').DataTable({
         pageLength: 25,
         lengthMenu: [[10,25,50,100,-1],[10,25,50,100,"All"]],
@@ -168,19 +168,21 @@ $(document).ready(function() {
         autoWidth: false
     });
 
-    // Bulk buttons update
+    // Update bulk action buttons
     function updateBulkButtons() {
         const selectedCount = $('.student-checkbox:checked').length;
-        $('#bulkDeleteBtn').prop('disabled', selectedCount === 0);
-        $('#bulkSendBtn').prop('disabled', selectedCount === 0);
-        $('#bulkDeleteBtn').html(selectedCount > 0 ? `<i class="fas fa-trash me-1"></i> Delete (${selectedCount})` : '<i class="fas fa-trash me-1"></i> Delete Selected');
-        $('#bulkSendBtn').html(selectedCount > 0 ? `<i class="fas fa-paper-plane me-1"></i> Send (${selectedCount})` : '<i class="fas fa-paper-plane me-1"></i> Send Certificates');
+        $('#bulkDeleteBtn').prop('disabled', selectedCount === 0)
+            .html(selectedCount > 0 ? `<i class="fas fa-trash me-1"></i> Delete (${selectedCount})` : '<i class="fas fa-trash me-1"></i> Delete Selected');
+        $('#bulkSendBtn').prop('disabled', selectedCount === 0)
+            .html(selectedCount > 0 ? `<i class="fas fa-paper-plane me-1"></i> Send (${selectedCount})` : '<i class="fas fa-paper-plane me-1"></i> Send Certificates');
     }
 
+    // Select all checkboxes
     $('#selectAll').click(function() {
         $('.student-checkbox').prop('checked', this.checked);
         updateBulkButtons();
     });
+
     $('.student-checkbox').change(updateBulkButtons);
 
     // Single delete
@@ -194,23 +196,22 @@ $(document).ready(function() {
         });
     });
 
-    // Bulk delete
-    $('#bulkDeleteBtn').click(function() {
-        const studentIds = $('.student-checkbox:checked').map(function(){ return $(this).val(); }).get();
-        if(!studentIds.length || !confirm(`Delete ${studentIds.length} students?`)) return;
+    // Function to handle bulk actions with progress
+    function processBulkAction(studentIds, ajaxUrl, progressModalId, progressBarClass, progressTextId, statusMessagesId, successMessage, reloadOnFinish = false) {
+        const modal = new bootstrap.Modal(document.getElementById(progressModalId));
+        modal.show();
 
-        const deleteModal = new bootstrap.Modal(document.getElementById('deleteProgressModal'));
-        deleteModal.show();
-        const progressBar = $('#deleteProgressModal .progress-bar');
-        const progressText = $('#delete-progress-text');
-        const statusMessages = $('#delete-status-messages');
+        const progressBar = $(`#${progressModalId} ${progressBarClass}`);
+        const progressText = $(`#${progressModalId} ${progressTextId}`);
+        const statusMessages = $(`#${progressModalId} ${statusMessagesId}`);
+
         let processed = 0;
         statusMessages.empty();
 
         studentIds.forEach((id, index) => {
             setTimeout(() => {
                 $.ajax({
-                    url: "{% url 'bulk_delete_students' %}",
+                    url: ajaxUrl.replace('STUDENT_ID', id),
                     type: 'POST',
                     headers: { 'X-CSRFToken': csrftoken },
                     contentType: 'application/json',
@@ -219,51 +220,59 @@ $(document).ready(function() {
                         processed++;
                         const perc = Math.round((processed/studentIds.length)*100);
                         progressBar.css('width', perc + '%').attr('aria-valuenow', perc);
-                        progressText.text(`Deleting... ${perc}%`);
-                        statusMessages.append(`<div class="text-success">Deleted student ID: ${id}</div>`);
-                        if(processed === studentIds.length) setTimeout(()=>location.reload(),1000);
+                        progressText.text(`Processing... ${perc}%`);
+                        statusMessages.append(`<div class="text-success">${successMessage.replace('STUDENT_ID', id).replace('STUDENT_NAME', resp?.student_name || '')}</div>`);
+                        if(processed === studentIds.length) {
+                            setTimeout(() => {
+                                modal.hide();
+                                if(reloadOnFinish) location.reload();
+                            }, 1000);
+                        }
                     },
-                    error: function(){ processed++; statusMessages.append(`<div class="text-danger">Failed student ID: ${id}</div>`); }
+                    error: function() {
+                        processed++;
+                        statusMessages.append(`<div class="text-danger">Failed student ID: ${id}</div>`);
+                        if(processed === studentIds.length) {
+                            setTimeout(() => { modal.hide(); }, 1000);
+                        }
+                    }
                 });
-            }, index*300);
+            }, index * 300);
         });
+    }
+
+    // Bulk delete
+    $('#bulkDeleteBtn').click(function() {
+        const studentIds = $('.student-checkbox:checked').map(function(){ return $(this).val(); }).get();
+        if(!studentIds.length || !confirm(`Delete ${studentIds.length} students?`)) return;
+
+        processBulkAction(
+            studentIds,
+            "{% url 'bulk_delete_students' %}",      // ajaxUrl
+            'deleteProgressModal',                   // modal ID
+            '.progress-bar',                         // progress bar selector
+            '#delete-progress-text',                 // progress text selector
+            '#delete-status-messages',               // status messages selector
+            'Deleted student ID: STUDENT_ID',       // success message
+            true                                     // reload after finish
+        );
     });
 
     // Bulk send certificates
-    $('#bulkSendBtn').click(function(){
+    $('#bulkSendBtn').click(function() {
         const studentIds = $('.student-checkbox:checked').map(function(){ return $(this).val(); }).get();
         if(!studentIds.length || !confirm(`Send certificates to ${studentIds.length} students?`)) return;
 
-        const progressModal = new bootstrap.Modal(document.getElementById('progressModal'));
-        progressModal.show();
-        const progressBar = $('#progressModal .progress-bar');
-        const progressText = $('#progress-text');
-        const statusMessages = $('#status-messages');
-        let processed = 0;
-        statusMessages.empty();
-
-        studentIds.forEach((id,index)=>{
-            setTimeout(()=>{
-                $.ajax({
-                    url:`/students/${id}/send-certificate/`,
-                    type:'POST',
-                    headers:{'X-CSRFToken':csrftoken},
-                    success:function(resp){
-                        processed++;
-                        const perc = Math.round((processed/studentIds.length)*100);
-                        progressBar.css('width',perc+'%').attr('aria-valuenow',perc);
-                        progressText.text(`Processing... ${perc}%`);
-                        statusMessages.append(`<div class="text-success">Sent to ${resp.student_name}</div>`);
-                    },
-                    error:function(){
-                        processed++;
-                        statusMessages.append(`<div class="text-danger">Failed student ID: ${id}</div>`);
-                    }
-                });
-            }, index*500);
-        });
+        processBulkAction(
+            studentIds,
+            "/students/STUDENT_ID/send-certificate/",  // ajaxUrl (replace STUDENT_ID dynamically)
+            'progressModal',                            // modal ID
+            '.progress-bar',                            // progress bar selector
+            '#progress-text',                           // progress text selector
+            '#status-messages',                         // status messages selector
+            'Sent to STUDENT_NAME'                       // success message
+        );
     });
-
 });
 </script>
 {% endblock %}

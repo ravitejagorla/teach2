@@ -13,11 +13,13 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET, require_POST
 from django.views.generic import ListView, CreateView, UpdateView
 from django.core.files.storage import default_storage
+from django.core.mail import send_mail
 
 from .models import Student
 from .forms import StudentForm, ImportCSVForm
 from templates_app.models import CertificateTemplate
 from .utils import generate_certificate, generate_simple_certificate, send_certificate_email
+from reports.models import EmailReport  # ✅ Added for logging
 
 logger = logging.getLogger(__name__)
 
@@ -35,19 +37,45 @@ def assign_template(student_or_form, organization, specialization):
         student_or_form.template = template
     return template
 
+
 def generate_and_send_certificate(student):
     """Generate a certificate and send via email. Returns a status dict."""
     try:
+        # ✅ Gmail-only restriction
+        if not student.email or not student.email.lower().endswith("@gmail.com"):
+            EmailReport.objects.create(
+                student=student,
+                status='failed',
+                error_message='Email not sent — only Gmail addresses are allowed'
+            )
+            return {'status': 'failed', 'message': 'Only Gmail addresses are allowed'}
+
         certificate_path = generate_certificate(student) or generate_simple_certificate(student)
         if not certificate_path:
+            EmailReport.objects.create(
+                student=student,
+                status='failed',
+                error_message='Certificate generation failed'
+            )
             return {'status': 'failed', 'message': 'Certificate generation failed'}
 
         if send_certificate_email(student, certificate_path):
+            EmailReport.objects.create(student=student, status='success')
             return {'status': 'success', 'student_name': student.full_name}
         else:
+            EmailReport.objects.create(
+                student=student,
+                status='failed',
+                error_message='Email sending failed'
+            )
             return {'status': 'failed', 'message': 'Email sending failed'}
     except Exception as e:
         logger.exception(f"Error sending certificate for student {student.id}")
+        EmailReport.objects.create(
+            student=student,
+            status='failed',
+            error_message=str(e)
+        )
         return {'status': 'failed', 'message': 'Unexpected error'}
 
 # -----------------------------
@@ -206,14 +234,34 @@ def export_students(request):
 @require_POST
 def send_certificate(request, student_id):
     student = get_object_or_404(Student, id=student_id)
+
+    if not student.email or not student.email.lower().endswith("@gmail.com"):
+        EmailReport.objects.create(
+            student=student,
+            status='failed',
+            error_message='Only Gmail addresses are allowed'
+        )
+        return JsonResponse({"status": "failed", "message": "Only Gmail addresses are allowed."})
+
     cert_path = generate_certificate(student) or generate_simple_certificate(student)
     if not cert_path:
+        EmailReport.objects.create(
+            student=student,
+            status='failed',
+            error_message='Certificate generation failed'
+        )
         return JsonResponse({"status": "failed", "message": "Certificate generation failed."})
 
     email_sent = send_certificate_email(student, cert_path)
     if email_sent:
+        EmailReport.objects.create(student=student, status='success')
         return JsonResponse({"status": "success", "student_name": student.full_name})
     else:
+        EmailReport.objects.create(
+            student=student,
+            status='failed',
+            error_message='Email sending failed'
+        )
         return JsonResponse({"status": "failed", "message": "Email sending failed."})
 
 
@@ -270,10 +318,10 @@ def get_specializations(request):
     courses = CertificateTemplate.objects.filter(organization=org, is_active=True).values_list('course', flat=True).distinct()
     return JsonResponse({'specializations': list(specs), 'courses': list(courses)})
 
-# views.py
-from django.core.mail import send_mail
-from django.conf import settings
 
+# -----------------------------
+# Student Self-Register View
+# -----------------------------
 class StudentSelfRegisterView(CreateView):
     model = Student
     form_class = StudentForm
@@ -281,23 +329,22 @@ class StudentSelfRegisterView(CreateView):
     success_url = reverse_lazy('student_self_register')
 
     def form_valid(self, form):
-        # Assign template automatically
         assign_template(
             form.instance,
             form.cleaned_data.get("organization"),
             form.cleaned_data.get("specialization")
         )
-
         response = super().form_valid(form)
-
-        
         self.notify_admin(form.instance)
-
         messages.success(self.request, "Your details have been submitted successfully!")
         return response
 
     def notify_admin(self, student):
         try:
+            admin_email = settings.ADMIN_EMAIL
+            if not admin_email.lower().endswith("@gmail.com"):
+                logger.warning(f"Admin email {admin_email} is not a Gmail address. Skipping notification.")
+                return
             subject = "New Student Registration"
             message = (
                 f"A new student has registered.\n\n"
@@ -310,12 +357,6 @@ class StudentSelfRegisterView(CreateView):
                 f"Start Date: {student.start_date}\n"
                 f"End Date: {student.end_date}\n"
             )
-            send_mail(
-                subject,
-                message,
-                settings.DEFAULT_FROM_EMAIL,
-                [settings.ADMIN_EMAIL],       
-                fail_silently=True
-            )
-        except Exception as e:
+            send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [admin_email], fail_silently=True)
+        except Exception:
             logger.exception("Failed to send admin notification email")
