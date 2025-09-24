@@ -2284,3 +2284,723 @@ AttributeError: 'Settings' object has no attribute 'ADMIN_EMAIL'
 [INFO] 2025-09-22 09:17:10,421 django.server "GET /students/ HTTP/1.1" 200 26360
 [INFO] 2025-09-22 09:17:15,839 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 2107
 [INFO] 2025-09-22 09:17:15,839 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 2107
+[INFO] 2025-09-22 19:49:46,613 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-22 19:49:46,613 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-22 19:49:53,809 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-22 19:49:53,809 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-09-22 19:49:54,050 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 19:49:54,050 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 19:49:54,136 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-22 19:49:54,136 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-22 19:49:54,378 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 19:49:54,378 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 19:49:54,749 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-22 19:49:54,749 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-22 19:49:56,200 django.server "GET /static/css/style.css HTTP/1.1" 304 0
+[INFO] 2025-09-22 19:49:56,200 django.server "GET /static/css/style.css HTTP/1.1" 304 0
+[INFO] 2025-09-22 19:49:56,211 django.server "GET /static/js/scripts.js HTTP/1.1" 304 0
+[INFO] 2025-09-22 19:49:56,211 django.server "GET /static/js/scripts.js HTTP/1.1" 304 0
+[WARNING] 2025-09-22 19:49:56,599 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-22 19:49:56,599 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-22 19:49:56,601 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-22 19:49:56,601 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-22 19:50:00,690 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 19:50:00,690 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 19:50:00,785 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-22 19:50:00,785 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-22 19:50:16,239 django.server "GET /students/6/download-certificate/?type=auto HTTP/1.1" 200 250813
+[INFO] 2025-09-22 19:50:16,239 django.server "GET /students/6/download-certificate/?type=auto HTTP/1.1" 200 250813
+[INFO] 2025-09-22 19:51:47,709 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-22 19:51:47,709 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-22 19:51:49,932 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-22 19:51:49,932 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-22 19:53:47,260 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 19:53:47,260 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 19:53:47,350 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-22 19:53:47,350 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-22 19:53:56,532 django.server "GET /students/6/download-certificate/?type=auto HTTP/1.1" 200 250812
+[INFO] 2025-09-22 19:53:56,532 django.server "GET /students/6/download-certificate/?type=auto HTTP/1.1" 200 250812
+[INFO] 2025-09-22 19:54:19,827 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 68
+[INFO] 2025-09-22 19:54:19,827 django.server "POST /students/7/send-certificate/ HTTP/1.1" 200 68
+[INFO] 2025-09-22 19:54:19,830 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-22 19:54:19,830 django.server "POST /students/6/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-22 19:54:20,296 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-22 19:54:20,296 django.server "POST /students/8/send-certificate/ HTTP/1.1" 200 47
+[INFO] 2025-09-22 19:54:21,084 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-22 19:54:21,084 django.server "POST /students/10/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-22 19:54:22,611 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-22 19:54:22,611 django.server "POST /students/11/send-certificate/ HTTP/1.1" 200 44
+[INFO] 2025-09-22 19:54:22,675 django.server "POST /students/12/send-certificate/ HTTP/1.1" 200 45
+[INFO] 2025-09-22 19:54:22,675 django.server "POST /students/12/send-certificate/ HTTP/1.1" 200 45
+[WARNING] 2025-09-22 19:54:26,983 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 19:54:26,983 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 19:54:27,287 django.server "GET /reports/ HTTP/1.1" 200 75277
+[INFO] 2025-09-22 19:54:27,287 django.server "GET /reports/ HTTP/1.1" 200 75277
+[ERROR] 2025-09-22 19:54:31,358 students.utils Failed to send email to raviteja9182@gmail.com
+Traceback (most recent call last):
+  File "D:\cert\certification_system\students\utils.py", line 308, in run
+    self.email.send(fail_silently=False)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 86, in open
+    self.connection = self.connection_class(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 841, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+[ERROR] 2025-09-22 19:54:31,362 students.utils Failed to send email to rt.gorla@gmail.com
+Traceback (most recent call last):
+  File "D:\cert\certification_system\students\utils.py", line 308, in run
+    self.email.send(fail_silently=False)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 86, in open
+    self.connection = self.connection_class(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 841, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+[ERROR] 2025-09-22 19:54:31,362 students.utils Failed to send email to rt.gorla7@gmail.com
+Traceback (most recent call last):
+  File "D:\cert\certification_system\students\utils.py", line 308, in run
+    self.email.send(fail_silently=False)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 86, in open
+    self.connection = self.connection_class(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 841, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+[ERROR] 2025-09-22 19:54:31,365 students.utils Failed to send email to rt.gorla@gmail.com
+Traceback (most recent call last):
+  File "D:\cert\certification_system\students\utils.py", line 308, in run
+    self.email.send(fail_silently=False)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 86, in open
+    self.connection = self.connection_class(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 841, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+[ERROR] 2025-09-22 19:54:31,365 students.utils Failed to send email to saigoli4129@gmail.com
+Traceback (most recent call last):
+  File "D:\cert\certification_system\students\utils.py", line 308, in run
+    self.email.send(fail_silently=False)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+                       ^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\mail\backends\smtp.py", line 86, in open
+    self.connection = self.connection_class(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 841, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+[WARNING] 2025-09-22 19:55:35,358 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 19:55:35,358 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-22 19:55:35,398 django.request Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' - 1' from 'total_count - 1'
+[ERROR] 2025-09-22 19:55:35,398 django.request Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' - 1' from 'total_count - 1'
+[ERROR] 2025-09-22 19:55:35,408 django.server "GET /reports/ HTTP/1.1" 500 222042
+[ERROR] 2025-09-22 19:55:35,408 django.server "GET /reports/ HTTP/1.1" 500 222042
+[WARNING] 2025-09-22 19:56:21,759 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-22 19:56:21,759 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-22 19:56:22,032 django.server "GET /reports/ HTTP/1.1" 200 81205
+[INFO] 2025-09-22 19:56:22,032 django.server "GET /reports/ HTTP/1.1" 200 81205
+[INFO] 2025-09-23 06:09:02,778 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:09:02,778 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:09:07,173 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-23 06:09:07,173 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-09-23 06:09:07,307 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:09:07,307 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-23 06:09:07,328 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-23 06:09:07,328 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-23 06:09:07,428 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:09:07,428 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-23 06:09:07,571 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-23 06:09:07,571 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[WARNING] 2025-09-23 06:09:07,965 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-23 06:09:07,965 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-23 06:09:07,966 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-23 06:09:07,966 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-23 06:09:09,885 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:09:09,885 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-23 06:09:09,922 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-23 06:09:09,922 django.server "GET /students/ HTTP/1.1" 200 26360
+[WARNING] 2025-09-23 06:09:17,646 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:09:17,646 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-23 06:09:17,678 django.request Internal Server Error: /students/mt/8
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 366, in mt
+    html_content = render_to_string('certificate_template.html', {'student': student})
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' - student.start_date' from 'student.end_date - student.start_date'
+[ERROR] 2025-09-23 06:09:17,678 django.request Internal Server Error: /students/mt/8
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 366, in mt
+    html_content = render_to_string('certificate_template.html', {'student': student})
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' - student.start_date' from 'student.end_date - student.start_date'
+[ERROR] 2025-09-23 06:09:17,702 django.server "GET /students/mt/8?type=manual HTTP/1.1" 500 153982
+[ERROR] 2025-09-23 06:09:17,702 django.server "GET /students/mt/8?type=manual HTTP/1.1" 500 153982
+[INFO] 2025-09-23 06:10:18,045 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:10:18,045 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:10:19,873 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:10:19,873 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-23 06:10:21,414 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:10:21,414 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-23 06:10:21,451 django.request Internal Server Error: /students/mt/8
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 379, in mt
+    html_content = render_to_string('certificate_template.html', context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' - student.start_date' from 'student.end_date - student.start_date'
+[ERROR] 2025-09-23 06:10:21,451 django.request Internal Server Error: /students/mt/8
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 379, in mt
+    html_content = render_to_string('certificate_template.html', context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' - student.start_date' from 'student.end_date - student.start_date'
+[ERROR] 2025-09-23 06:10:21,460 django.server "GET /students/mt/8?type=manual HTTP/1.1" 500 154529
+[ERROR] 2025-09-23 06:10:21,460 django.server "GET /students/mt/8?type=manual HTTP/1.1" 500 154529
+[INFO] 2025-09-23 06:10:55,148 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 3165
+[INFO] 2025-09-23 06:10:55,148 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 3165
+[WARNING] 2025-09-23 06:13:35,284 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:13:35,284 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-23 06:13:35,300 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-23 06:13:35,300 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-23 06:13:35,338 django.server "GET /static/css/style.css HTTP/1.1" 304 0
+[INFO] 2025-09-23 06:13:35,338 django.server "GET /static/css/style.css HTTP/1.1" 304 0
+[INFO] 2025-09-23 06:13:35,342 django.server "GET /static/js/scripts.js HTTP/1.1" 304 0
+[INFO] 2025-09-23 06:13:35,342 django.server "GET /static/js/scripts.js HTTP/1.1" 304 0
+[INFO] 2025-09-23 06:13:42,450 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 4081
+[INFO] 2025-09-23 06:13:42,450 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 4081
+[INFO] 2025-09-23 06:16:37,925 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:16:37,925 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:16:40,985 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:16:40,985 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:17:13,809 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:17:13,809 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:18:27,268 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:18:27,268 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-23 06:18:49,209 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:18:49,209 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-23 06:18:49,242 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-23 06:18:49,242 django.server "GET /students/ HTTP/1.1" 200 26360
+[INFO] 2025-09-23 06:18:55,473 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 3456
+[INFO] 2025-09-23 06:18:55,473 django.server "GET /students/mt/8?type=manual HTTP/1.1" 200 3456
+[INFO] 2025-09-23 06:21:18,732 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:21:18,732 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:21:20,308 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:21:20,308 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:23:02,527 django.utils.autoreload D:\cert\certification_system\students\urls.py changed, reloading.
+[INFO] 2025-09-23 06:23:02,527 django.utils.autoreload D:\cert\certification_system\students\urls.py changed, reloading.
+[INFO] 2025-09-23 06:23:03,895 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:23:03,895 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:23:48,633 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:23:48,633 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:23:50,077 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:23:50,077 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:23:58,247 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:23:58,247 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:23:59,775 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:23:59,775 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:24:03,843 django.utils.autoreload D:\cert\certification_system\students\urls.py changed, reloading.
+[INFO] 2025-09-23 06:24:03,843 django.utils.autoreload D:\cert\certification_system\students\urls.py changed, reloading.
+[INFO] 2025-09-23 06:24:05,307 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:24:05,307 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:27:29,302 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:27:29,302 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:27:31,344 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:27:31,344 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:29:09,898 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:29:09,898 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:30:52,160 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:30:52,160 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:30:53,884 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:30:53,884 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:05,819 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:05,819 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:07,459 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:07,459 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:23,130 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:23,130 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:25,184 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:25,184 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:34,905 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:34,905 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:37,671 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:37,671 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:39,137 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:39,137 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:40,524 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:40,524 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:44,004 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:44,004 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:45,521 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:45,521 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:49,330 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:49,330 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:50,714 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:50,714 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:52,166 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:52,166 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:53,706 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:53,706 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:55,105 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:55,105 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:56,536 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:56,536 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:33:59,088 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:33:59,088 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-23 06:34:00,674 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:34:00,674 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:34:14,852 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:34:14,852 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:34:36,474 django.server "GET /students/register HTTP/1.1" 301 0
+[INFO] 2025-09-23 06:34:36,474 django.server "GET /students/register HTTP/1.1" 301 0
+[INFO] 2025-09-23 06:34:36,656 django.server "GET /students/register/ HTTP/1.1" 200 6377
+[INFO] 2025-09-23 06:34:36,656 django.server "GET /students/register/ HTTP/1.1" 200 6377
+[ERROR] 2025-09-23 06:35:16,788 students.views Failed to send admin notification email
+Traceback (most recent call last):
+  File "D:\cert\certification_system\students\views.py", line 306, in notify_admin
+    admin_email = settings.ADMIN_EMAIL
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\conf\__init__.py", line 83, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'ADMIN_EMAIL'
+[INFO] 2025-09-23 06:35:16,807 django.server "POST /students/register/ HTTP/1.1" 200 80
+[INFO] 2025-09-23 06:35:16,807 django.server "POST /students/register/ HTTP/1.1" 200 80
+[WARNING] 2025-09-23 06:35:29,355 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:35:29,355 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-23 06:35:29,404 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-23 06:35:29,404 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-23 06:35:38,148 django.server "GET /students/13/download-certificate/?type=auto HTTP/1.1" 200 145701
+[INFO] 2025-09-23 06:35:38,148 django.server "GET /students/13/download-certificate/?type=auto HTTP/1.1" 200 145701
+[INFO] 2025-09-23 06:35:54,274 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2031
+[INFO] 2025-09-23 06:35:54,274 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2031
+[INFO] 2025-09-23 06:37:11,343 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:11,343 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:12,890 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:12,890 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:16,924 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:16,924 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:18,328 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:18,328 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:21,265 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:21,265 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:22,767 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:22,767 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:25,723 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:25,723 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:27,255 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:27,255 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:29,244 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:29,244 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:37:30,592 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:37:30,592 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:38:29,272 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:38:29,272 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:38:30,809 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:38:30,809 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:40:05,514 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:40:05,514 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-23 06:40:07,024 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-23 06:40:07,024 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-23 06:40:17,121 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-23 06:40:17,121 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-23 06:40:17,150 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-23 06:40:17,150 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-23 06:40:24,045 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2740
+[INFO] 2025-09-23 06:40:24,045 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2740

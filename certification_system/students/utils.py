@@ -10,10 +10,29 @@ from django.core.mail import EmailMessage
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from reports.models import EmailReport
+from templates_app.models import CertificateTemplate
 import logging
 logger = logging.getLogger(__name__)
 
+# -----------------------------
+# Helper Functions
+# -----------------------------
+def assign_template(student_or_form, organization, specialization):
+    """
+    Assign the first active template for the given organization and specialization.
+    """
+    template = CertificateTemplate.objects.filter(
+        organization=organization,
+        specialization=specialization,
+        is_active=True
+    ).first()
+    if template:
+        student_or_form.template = template
+    return template
 
+def is_gmail(email):
+    """Check if email is a Gmail address."""
+    return email and email.lower().endswith("@gmail.com")
 
 class EmailThread(threading.Thread):
     """
@@ -110,7 +129,7 @@ def generate_certificate(student):
 
             c.setFont("Helvetica-Bold", 14)
             c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
-            c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m   /%Y')}")
+            c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
             c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
 
             # Timestamp

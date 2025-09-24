@@ -10,8 +10,14 @@ urlpatterns = [
     path('<int:student_id>/send-certificate/', views.send_certificate, name='send_certificate'),
     path('<int:student_id>/download-certificate/', views.download_certificate, name='download_certificate'),
     path('<int:pk>/delete/', views.student_delete, name='student_delete'),
-    path('students/bulk-delete/', views.bulk_delete_students, name='bulk_delete_students'),
-    path('students/bulk-send/', views.bulk_send_certificates, name='bulk_send_certificates'),
-    path('students/register/', views.StudentSelfRegisterView.as_view(), name='student_self_register'),
-    path('mt/<int:pk>', views.mt, name='mt'),
+    
+    # Bulk operations
+    path('bulk-delete/', views.bulk_delete_students, name='bulk_delete_students'),
+    path('bulk-send/', views.bulk_send_certificates, name='bulk_send_certificates'),
+
+    # Self registration
+    path('register/', views.StudentSelfRegisterView.as_view(), name='student_self_register'),
+
+    # MT / manual template
+    path('mt/<int:pk>/', views.mt, name='mt'),
 ]

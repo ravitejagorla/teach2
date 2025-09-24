@@ -2,81 +2,103 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Certificate</title>
+    <title>Internship Offer Letter</title>
     <style>
+        /* Force A4 page size for wkhtmltopdf */
+        @page {
+            size: A4 portrait;
+            margin: 2cm;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            width: 8.5in;
-            height: 11in;
+            margin: 0; /* handled by @page */
+            line-height: 1.6;
+            font-size: 14px;
         }
-        .certificate {
-            border: 20px solid #0C4DA2;
-            padding: 40px;
-            text-align: center;
-            height: 100%;
+
+        #offer-letter {
+            width: 100%;
+            max-width: 100%;
             box-sizing: border-box;
-            position: relative;
         }
-        .header {
-            margin-bottom: 40px;
-        }
-        .title {
-            font-size: 36px;
+
+        .company-name {
+            font-size: 20px;
             font-weight: bold;
-            color: #0C4DA2;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .letter-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
             margin-bottom: 20px;
         }
-        .subtitle {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 60px;
+
+        .date {
+            text-align: right;
+            margin-bottom: 30px;
         }
+
         .recipient {
-            font-size: 28px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
-        .message {
-            font-size: 18px;
-            margin-bottom: 40px;
-            line-height: 1.6;
+
+        .body-text {
+            margin-bottom: 20px;
+            text-align: justify;
         }
-        .footer {
-            position: absolute;
-            bottom: 40px;
-            left: 0;
-            right: 0;
-            font-size: 16px;
+
+        .opportunities-list {
+            margin: 15px 0;
+            padding-left: 20px;
         }
+
         .signature {
-            margin-top: 60px;
+            margin-top: 50px;
+        }
+
+        ul {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="certificate">
-        <div class="header">
-            <div class="title">CERTIFICATE OF COMPLETION</div>
-            <div class="subtitle">{% if student.template %}{{ student.template.course }}{% else %}{{ student.specialization }}{% endif %}</div>
+    <div id="offer-letter">
+        <div class="company-name">
+            {{ student.institution|default:"RAMANASOFT Consulting Services" }}
         </div>
-        
+
+        <div class="letter-title">Internship Offer Letter</div>
+
+        <div class="date">
+            {{ student.start_date|date:"d/m/Y" }}
+        </div>
+
         <div class="recipient">
-            This certifies that <strong>{{ student.full_name }}</strong>
+            Dear <strong>{{ student.full_name }},</strong>
         </div>
-        
-        <div class="message">
-            has successfully completed the {{ student.specialization }} course<br>
-            offered by {% if student.template %}{{ student.template.organization }}{% else %}{{ student.organization }}{% endif %}<br>
-            from {{ student.start_date }} to {{ student.end_date }}
+
+        <div class="body-text">
+            We are delighted to offer you a <strong>{{ months }} month{{ months|pluralize }}</strong> internship opportunity with our company.
+            You will be joining us as a <strong>{{ student.specialization }}</strong> intern, gaining hands-on experience.
+            <br><br>
+            During your internship, you will have the opportunity to:
+            <ul class="opportunities-list">
+                <li>Work with a variety of technologies and programming languages.</li>
+                <li>Learn and apply software development methodologies such as Agile and Waterfall.</li>
+                <li>Develop coding and debugging skills.</li>
+                <li>Learn about software testing and QA processes.</li>
+                <li>Collaborate with team members on projects.</li>
+                <li>Gain exposure to the software industry and network with professionals.</li>
+            </ul>
         </div>
-        
-        <div class="footer">
-            <div>Issued on: {% now "F j, Y" %}</div>
-            <div class="signature">
-                <div>_________________________</div>
-                <div>Director, {{ student.institution }} Institution</div>
-            </div>
+
+        <div class="signature">
+            Sincerely,<br><br>
+            From <strong>{{ student.institution|default:"RamanaSoft" }}</strong>
         </div>
     </div>
 </body>

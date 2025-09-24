@@ -3,45 +3,33 @@ import json
 import logging
 from datetime import datetime
 
+import pdfkit
+from dateutil.relativedelta import relativedelta
+
 from django.conf import settings
 from django.contrib import messages
+from django.core.files.storage import default_storage
+from django.core.mail import send_mail
 from django.db.models import Q
 from django.http import JsonResponse, HttpResponse, FileResponse
 from django.shortcuts import render, redirect, get_object_or_404
+from django.template.loader import render_to_string
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET, require_POST
 from django.views.generic import ListView, CreateView, UpdateView
-from django.core.files.storage import default_storage
-from django.core.mail import send_mail
-from django.template.loader import render_to_string
 
 from .models import Student
 from .forms import StudentForm, ImportCSVForm
+from .utils import generate_certificate, generate_simple_certificate, send_certificate_email, assign_template, is_gmail
 from templates_app.models import CertificateTemplate
-from .utils import generate_certificate, generate_simple_certificate, send_certificate_email
-from reports.models import EmailReport  # ✅ Added for logging
+from reports.models import EmailReport
 
 logger = logging.getLogger(__name__)
 
 # -----------------------------
 # Helper Functions
 # -----------------------------
-def assign_template(student_or_form, organization, specialization):
-    """Assign the first active template for the given organization and specialization."""
-    template = CertificateTemplate.objects.filter(
-        organization=organization,
-        specialization=specialization,
-        is_active=True
-    ).first()
-    if template:
-        student_or_form.template = template
-    return template
-
-def is_gmail(email):
-    """Check if email is a Gmail address."""
-    return email and email.lower().endswith("@gmail.com")
-
 def generate_and_send_certificate(student):
     """Generate a certificate and send via email. Returns a status dict."""
     try:
@@ -230,35 +218,7 @@ def export_students(request):
 @require_POST
 def send_certificate(request, student_id):
     student = get_object_or_404(Student, id=student_id)
-
-    if not is_gmail(student.email):
-        EmailReport.objects.create(
-            student=student,
-            status='failed',
-            error_message='Only Gmail addresses are allowed'
-        )
-        return JsonResponse({"status": "failed", "message": "Only Gmail addresses are allowed."})
-
-    cert_path = generate_certificate(student) or generate_simple_certificate(student)
-    if not cert_path:
-        EmailReport.objects.create(
-            student=student,
-            status='failed',
-            error_message='Certificate generation failed'
-        )
-        return JsonResponse({"status": "failed", "message": "Certificate generation failed."})
-
-    email_sent = send_certificate_email(student, cert_path)
-    if email_sent:
-        EmailReport.objects.create(student=student, status='success')
-        return JsonResponse({"status": "success", "student_name": student.full_name})
-    else:
-        EmailReport.objects.create(
-            student=student,
-            status='failed',
-            error_message='Email sending failed'
-        )
-        return JsonResponse({"status": "failed", "message": "Email sending failed."})
+    return JsonResponse(generate_and_send_certificate(student))
 
 @csrf_exempt
 def bulk_send_certificates(request):
@@ -319,7 +279,7 @@ class StudentSelfRegisterView(CreateView):
     model = Student
     form_class = StudentForm
     template_name = 'students/student_self_register.html'
-    success_url = reverse_lazy('student_self_register')
+    success_url = '/students/register/'
 
     def form_valid(self, form):
         assign_template(
@@ -327,16 +287,25 @@ class StudentSelfRegisterView(CreateView):
             form.cleaned_data.get("organization"),
             form.cleaned_data.get("specialization")
         )
-        response = super().form_valid(form)
-        self.notify_admin(form.instance)
+        self.object = form.save()
+        self.notify_admin(self.object)
+
+        if self.request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({"status": "success", "message": "Thank you! Your registration was successful."})
+
         messages.success(self.request, "Your details have been submitted successfully!")
-        return response
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        if self.request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({"status": "error", "errors": form.errors}, status=400)
+        return super().form_invalid(form)
 
     def notify_admin(self, student):
         try:
             admin_email = settings.ADMIN_EMAIL
             if not is_gmail(admin_email):
-                logger.warning(f"Admin email {admin_email} is not a Gmail address. Skipping notification.")
+                logger.warning(f"Admin email {admin_email} is not Gmail. Skipping notification.")
                 return
             subject = "New Student Registration"
             message = (
@@ -357,32 +326,48 @@ class StudentSelfRegisterView(CreateView):
 # -----------------------------
 # MT View: Download Certificate or Manual Template
 # -----------------------------
+from dateutil.relativedelta import relativedelta
+import pdfkit
+from django.shortcuts import get_object_or_404
+from django.template.loader import render_to_string
+from django.http import HttpResponse
+from .models import Student  # Make sure you import your Student model
+
 def mt(request, pk):
     student = get_object_or_404(Student, pk=pk)
-    download_type = request.GET.get('type', 'auto')  # 'auto' for PDF, 'manual' for HTML template
 
-    if download_type == 'manual':
-        # Download HTML template
-        html_content = render_to_string('certificate_template.html', {'student': student})
+    # Calculate internship duration in months
+    months = 0
+    if student.start_date and student.end_date:
+        delta = relativedelta(student.end_date, student.start_date)
+        months = delta.years * 12 + delta.months
+
+    context = {'student': student, 'months': months}
+    html_content = render_to_string('certificate_template.html', context)
+
+    # Option to download as HTML
+    if request.GET.get('type') == 'manual':
         response = HttpResponse(html_content, content_type='text/html')
-        filename = f"{student.full_name}_manual_template.html"
-        response['Content-Disposition'] = f'attachment; filename="{filename}"'
+        response['Content-Disposition'] = f'attachment; filename="{student.full_name}_Offer_Letter.html"'
         return response
-    else:
-        # Download generated PDF certificate
-        cert_path = generate_certificate(student) or generate_simple_certificate(student)
-        if not cert_path:
-            messages.error(request, 'Failed to generate certificate.')
-            return redirect('student_list')
 
-        filename = f"{student.certificate_id}_{student.full_name}.pdf"
-        try:
-            return FileResponse(
-                default_storage.open(cert_path, 'rb'),
-                as_attachment=True,
-                filename=filename
-            )
-        except Exception:
-            logger.exception("Certificate download error")
-            messages.error(request, 'Error downloading certificate.')
-            return redirect('student_list')
+    # Configure wkhtmltopdf
+    config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+    options = {
+        'page-size': 'A4',
+        'orientation': 'Portrait',
+        'margin-top': '2cm',
+        'margin-bottom': '2cm',
+        'margin-left': '2cm',
+        'margin-right': '2cm',
+        'encoding': 'UTF-8',
+        'no-outline': None,
+        'zoom': '1.0',  # ensures scaling matches A4
+    }
+
+    # Generate PDF
+    pdf = pdfkit.from_string(html_content, False, configuration=config, options=options)
+
+    response = HttpResponse(pdf, content_type='application/pdf')
+    response['Content-Disposition'] = f'attachment; filename="{student.full_name}_Offer_Letter.pdf"'
+    return response
