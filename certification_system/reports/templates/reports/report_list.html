@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% block content %}
 <div class="container mt-4">
 
@@ -11,7 +12,7 @@
     <!-- Success Reports -->
     <h4 class="mt-4">Success Reports</h4>
     <div class="table-responsive">
-        <table id="success-table" class="table table-striped table-hover">
+        <table id="success-table" class="table table-striped table-hover table-bordered">
             <thead>
                 <tr>
                     <th>Certificate ID</th>
@@ -46,7 +47,7 @@
                     </td>
                 </tr>
                 {% empty %}
-                <tr><td colspan="8" class="text-center">No success reports.</td></tr>
+                <tr><td colspan="7" class="text-center">No success reports.</td></tr>
                 {% endfor %}
             </tbody>
         </table>
@@ -55,7 +56,7 @@
     <!-- Failed Reports -->
     <h4 class="mt-4">Failed Reports</h4>
     <div class="table-responsive">
-        <table id="failed-table" class="table table-striped table-hover">
+        <table id="failed-table" class="table table-striped table-hover table-bordered">
             <thead>
                 <tr>
                     <th>Certificate ID</th>
@@ -104,15 +105,24 @@
 {% block extra_js %}
 <script>
 $(document).ready(function() {
+    // Apply DataTables to both tables
     $('#success-table, #failed-table').DataTable({
-        pageLength: 5,
-        lengthMenu: [[5,10,20,-1],[5,10,20,"All"]],
-        order: [[4,'desc']],
+        pageLength: 10,
+        lengthMenu: [[5,10,25,50,-1],[5,10,25,50,"All"]],
+        order: [[4,'desc']], // Default order by Sent At column
         columnDefs: [
-            { orderable: false, targets: 7 }  // Actions column not sortable
+            { orderable: false, targets: -1 } // Disable sort for last column (Actions)
         ],
         responsive: true,
-        autoWidth: false
+        autoWidth: false,
+        language: {
+            search: "🔍 Search:",
+            lengthMenu: "Show _MENU_ entries per page",
+            zeroRecords: "No matching records found",
+            info: "Showing _START_ to _END_ of _TOTAL_ entries",
+            infoEmpty: "No records available",
+            infoFiltered: "(filtered from _MAX_ total entries)"
+        }
     });
 });
 </script>

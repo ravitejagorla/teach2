@@ -334,8 +334,6 @@ config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkh
 
 def mt(request, pk):
     student = get_object_or_404(Student, pk=pk)
-
-    # Calculate internship duration in months
     months = 0
     if student.start_date and student.end_date:
         delta = relativedelta(student.end_date, student.start_date)
