@@ -323,15 +323,14 @@ class StudentSelfRegisterView(CreateView):
         except Exception:
             logger.exception("Failed to send admin notification email")
 
-# -----------------------------
-# MT View: Download Certificate or Manual Template
-# -----------------------------
 from dateutil.relativedelta import relativedelta
 import pdfkit
 from django.shortcuts import get_object_or_404
 from django.template.loader import render_to_string
 from django.http import HttpResponse
-from .models import Student  # Make sure you import your Student model
+from .models import Student
+config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+
 
 def mt(request, pk):
     student = get_object_or_404(Student, pk=pk)
@@ -345,13 +344,7 @@ def mt(request, pk):
     context = {'student': student, 'months': months}
     html_content = render_to_string('certificate_template.html', context)
 
-    # Option to download as HTML
-    if request.GET.get('type') == 'manual':
-        response = HttpResponse(html_content, content_type='text/html')
-        response['Content-Disposition'] = f'attachment; filename="{student.full_name}_Offer_Letter.html"'
-        return response
-
-    # Configure wkhtmltopdf
+    # PDF options
     config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
     options = {
         'page-size': 'A4',
@@ -362,10 +355,9 @@ def mt(request, pk):
         'margin-right': '2cm',
         'encoding': 'UTF-8',
         'no-outline': None,
-        'zoom': '1.0',  # ensures scaling matches A4
+        'zoom': '1.0',
     }
 
-    # Generate PDF
     pdf = pdfkit.from_string(html_content, False, configuration=config, options=options)
 
     response = HttpResponse(pdf, content_type='application/pdf')

@@ -2,25 +2,29 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Internship Offer Letter</title>
+    <title>Internship Completion Certificate</title>
     <style>
-        /* Force A4 page size for wkhtmltopdf */
         @page {
             size: A4 portrait;
             margin: 2cm;
         }
 
-        body {
+        html, body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            margin: 0; /* handled by @page */
             line-height: 1.6;
             font-size: 14px;
         }
 
-        #offer-letter {
-            width: 100%;
-            max-width: 100%;
+        #certificate {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 2cm auto;
+            padding: 20px;
             box-sizing: border-box;
+            border: 1px solid #ccc; /* optional: shows page edge */
         }
 
         .company-name {
@@ -30,7 +34,7 @@
             margin-bottom: 10px;
         }
 
-        .letter-title {
+        .title {
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -47,11 +51,11 @@
         }
 
         .body-text {
-            margin-bottom: 20px;
             text-align: justify;
+            margin-bottom: 20px;
         }
 
-        .opportunities-list {
+        .course-list {
             margin: 15px 0;
             padding-left: 20px;
         }
@@ -59,41 +63,38 @@
         .signature {
             margin-top: 50px;
         }
-
-        ul {
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
-    <div id="offer-letter">
+    <div id="certificate">
         <div class="company-name">
             {{ student.institution|default:"RAMANASOFT Consulting Services" }}
         </div>
 
-        <div class="letter-title">Internship Offer Letter</div>
+        <div class="title">Internship Completion Certificate</div>
 
         <div class="date">
-            {{ student.start_date|date:"d/m/Y" }}
+            {{ student.end_date|date:"d/m/Y" }}
         </div>
 
         <div class="recipient">
-            Dear <strong>{{ student.full_name }},</strong>
+            This is to certify that <strong>{{ student.full_name }}</strong> has successfully completed a 
+            <strong>{{ months }} month{{ months|pluralize }}</strong> internship with us as a 
+            <strong>{{ student.specialization }}</strong> intern.
         </div>
 
         <div class="body-text">
-            We are delighted to offer you a <strong>{{ months }} month{{ months|pluralize }}</strong> internship opportunity with our company.
-            You will be joining us as a <strong>{{ student.specialization }}</strong> intern, gaining hands-on experience.
-            <br><br>
-            During your internship, you will have the opportunity to:
-            <ul class="opportunities-list">
+            During the internship, {{ student.full_name }} contributed to various projects, gained practical experience,
+            and demonstrated professionalism and dedication. As part of this internship, the intern had the opportunity to:
+            <ul class="course-list">
                 <li>Work with a variety of technologies and programming languages.</li>
                 <li>Learn and apply software development methodologies such as Agile and Waterfall.</li>
                 <li>Develop coding and debugging skills.</li>
-                <li>Learn about software testing and QA processes.</li>
-                <li>Collaborate with team members on projects.</li>
+                <li>Learn about software testing and quality assurance processes.</li>
+                <li>Collaborate with team members on projects and contribute to software development.</li>
                 <li>Gain exposure to the software industry and network with professionals.</li>
             </ul>
+            We recognize the effort and contributions of the intern and wish them success in their future endeavors.
         </div>
 
         <div class="signature">

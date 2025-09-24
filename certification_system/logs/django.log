@@ -3004,3 +3004,269 @@ AttributeError: 'Settings' object has no attribute 'ADMIN_EMAIL'
 [INFO] 2025-09-23 06:40:17,150 django.server "GET /students/ HTTP/1.1" 200 28136
 [INFO] 2025-09-23 06:40:24,045 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2740
 [INFO] 2025-09-23 06:40:24,045 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2740
+[INFO] 2025-09-24 12:13:35,903 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:13:35,903 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:13:39,851 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-24 12:13:39,851 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-09-24 12:13:39,953 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:13:39,953 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:13:39,965 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-24 12:13:39,965 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-24 12:13:40,091 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:13:40,091 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:13:40,305 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-24 12:13:40,305 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-24 12:13:40,462 django.server "GET /static/css/style.css HTTP/1.1" 304 0
+[INFO] 2025-09-24 12:13:40,462 django.server "GET /static/css/style.css HTTP/1.1" 304 0
+[INFO] 2025-09-24 12:13:40,476 django.server "GET /static/js/scripts.js HTTP/1.1" 304 0
+[INFO] 2025-09-24 12:13:40,476 django.server "GET /static/js/scripts.js HTTP/1.1" 304 0
+[WARNING] 2025-09-24 12:13:40,883 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-24 12:13:40,883 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-24 12:13:40,883 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-24 12:13:40,883 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-24 12:13:43,360 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:13:43,360 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:13:43,495 django.server "GET /reports/ HTTP/1.1" 200 81205
+[INFO] 2025-09-24 12:13:43,495 django.server "GET /reports/ HTTP/1.1" 200 81205
+[INFO] 2025-09-24 12:18:27,055 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:18:27,055 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:18:29,656 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:18:29,656 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-24 12:18:47,613 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:18:47,613 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:18:47,669 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:18:47,669 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:18:54,880 django.server "GET /students/mt/8/?type=manual HTTP/1.1" 200 2866
+[INFO] 2025-09-24 12:18:54,880 django.server "GET /students/mt/8/?type=manual HTTP/1.1" 200 2866
+[INFO] 2025-09-24 12:19:19,455 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:19:19,455 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:19:21,566 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:19:21,566 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-24 12:19:27,171 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:19:27,171 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:19:27,218 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:19:27,218 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:19:38,550 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2865
+[INFO] 2025-09-24 12:19:38,550 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2865
+[INFO] 2025-09-24 12:20:40,135 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:20:40,135 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:20:42,190 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:20:42,190 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-24 12:20:48,137 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:20:48,137 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:20:48,174 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:20:48,174 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:20:52,849 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2865
+[INFO] 2025-09-24 12:20:52,849 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2865
+[INFO] 2025-09-24 12:22:48,260 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:22:48,260 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:22:49,951 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:22:49,951 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-24 12:22:53,373 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:22:53,373 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:22:53,415 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:22:53,415 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:22:58,189 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 3157
+[INFO] 2025-09-24 12:22:58,189 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 3157
+[WARNING] 2025-09-24 12:23:50,172 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:23:50,172 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:23:50,201 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:23:50,201 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:23:55,441 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2708
+[INFO] 2025-09-24 12:23:55,441 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 2708
+[INFO] 2025-09-24 12:25:26,243 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:25:26,243 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:25:27,925 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:25:27,925 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:26:23,005 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:26:23,005 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:26:24,816 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:26:24,816 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-24 12:26:25,922 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:26:25,922 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-24 12:26:25,945 django.request Internal Server Error: /students/mt/13/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\configuration.py", line 35, in __init__
+    with open(self.wkhtmltopdf) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 346, in mt
+    config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\api.py", line 86, in configuration
+    return Configuration(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\configuration.py", line 38, in __init__
+    raise IOError('No wkhtmltopdf executable found: "%s"\n'
+OSError: No wkhtmltopdf executable found: "C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
+If this file exists please check that this process can read it or you can pass path to it manually in method call, check README. Otherwise please install wkhtmltopdf - https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf
+[ERROR] 2025-09-24 12:26:25,945 django.request Internal Server Error: /students/mt/13/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\configuration.py", line 35, in __init__
+    with open(self.wkhtmltopdf) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 346, in mt
+    config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\api.py", line 86, in configuration
+    return Configuration(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\configuration.py", line 38, in __init__
+    raise IOError('No wkhtmltopdf executable found: "%s"\n'
+OSError: No wkhtmltopdf executable found: "C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
+If this file exists please check that this process can read it or you can pass path to it manually in method call, check README. Otherwise please install wkhtmltopdf - https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf
+[ERROR] 2025-09-24 12:26:25,945 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 500 89601
+[ERROR] 2025-09-24 12:26:25,945 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 500 89601
+[WARNING] 2025-09-24 12:26:30,238 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:26:30,238 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:26:30,256 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:26:30,256 django.server "GET /students/ HTTP/1.1" 200 28136
+[WARNING] 2025-09-24 12:26:34,009 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:26:34,009 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-24 12:26:34,045 django.request Internal Server Error: /students/mt/13/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\configuration.py", line 35, in __init__
+    with open(self.wkhtmltopdf) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 346, in mt
+    config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\api.py", line 86, in configuration
+    return Configuration(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\configuration.py", line 38, in __init__
+    raise IOError('No wkhtmltopdf executable found: "%s"\n'
+OSError: No wkhtmltopdf executable found: "C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
+If this file exists please check that this process can read it or you can pass path to it manually in method call, check README. Otherwise please install wkhtmltopdf - https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf
+[ERROR] 2025-09-24 12:26:34,045 django.request Internal Server Error: /students/mt/13/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\configuration.py", line 35, in __init__
+    with open(self.wkhtmltopdf) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cert\certification_system\students\views.py", line 346, in mt
+    config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\api.py", line 86, in configuration
+    return Configuration(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\pdfkit\configuration.py", line 38, in __init__
+    raise IOError('No wkhtmltopdf executable found: "%s"\n'
+OSError: No wkhtmltopdf executable found: "C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
+If this file exists please check that this process can read it or you can pass path to it manually in method call, check README. Otherwise please install wkhtmltopdf - https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf
+[ERROR] 2025-09-24 12:26:34,045 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 500 89464
+[ERROR] 2025-09-24 12:26:34,045 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 500 89464
+[INFO] 2025-09-24 12:29:11,299 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:29:11,299 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:29:13,617 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:29:13,617 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:29:16,924 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:29:16,924 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-24 12:29:18,602 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:29:18,602 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-24 12:29:50,945 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-24 12:29:50,945 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-09-24 12:29:50,961 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:29:50,961 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:29:50,980 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-24 12:29:50,980 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-24 12:29:51,012 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:29:51,012 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:29:51,027 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-24 12:29:51,027 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[WARNING] 2025-09-24 12:29:52,777 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:29:52,777 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:29:52,795 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:29:52,795 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:30:00,349 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 21068
+[INFO] 2025-09-24 12:30:00,349 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 21068
+[WARNING] 2025-09-24 12:33:27,594 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:33:27,594 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:33:27,611 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:33:27,611 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:33:32,861 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 17727
+[INFO] 2025-09-24 12:33:32,861 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 17727
+[WARNING] 2025-09-24 12:35:38,915 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:35:38,915 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:35:38,915 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:35:38,915 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:35:44,136 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 19126
+[INFO] 2025-09-24 12:35:44,136 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 19126
+[WARNING] 2025-09-24 12:44:02,264 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:44:02,264 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:44:02,292 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:44:02,292 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:44:08,411 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 31071
+[INFO] 2025-09-24 12:44:08,411 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 31071
+[WARNING] 2025-09-24 12:46:00,901 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:46:00,901 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:46:00,923 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:46:00,923 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:46:06,609 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 23809
+[INFO] 2025-09-24 12:46:06,609 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 23809
+[WARNING] 2025-09-24 12:47:15,459 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:47:15,459 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:47:15,483 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:47:15,483 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:47:21,345 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 34142
+[INFO] 2025-09-24 12:47:21,345 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 34142
+[WARNING] 2025-09-24 12:52:15,711 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:52:15,711 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:52:15,742 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:52:15,742 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:52:22,215 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 29188
+[INFO] 2025-09-24 12:52:22,215 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 29188
+[WARNING] 2025-09-24 12:55:21,657 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:55:21,657 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:55:21,677 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:55:21,677 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:55:26,932 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 18429
+[INFO] 2025-09-24 12:55:26,932 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 18429
+[WARNING] 2025-09-24 12:57:07,534 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-24 12:57:07,534 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-24 12:57:07,558 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:57:07,558 django.server "GET /students/ HTTP/1.1" 200 28136
+[INFO] 2025-09-24 12:57:13,115 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 21082
+[INFO] 2025-09-24 12:57:13,115 django.server "GET /students/mt/13/?type=manual HTTP/1.1" 200 21082

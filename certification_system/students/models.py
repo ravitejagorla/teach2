@@ -48,5 +48,3 @@ class Student(models.Model):
     def has_template(self):
         """Check if student has a valid template assigned"""
         return self.template is not None and self.template.is_active
-
-
