@@ -19,5 +19,5 @@ urlpatterns = [
     path('register/', views.StudentSelfRegisterView.as_view(), name='student_self_register'),
 
     # MT / manual template
-    path('mt/<int:pk>/', views.mt, name='mt'),
+    path('mt/<int:student_id>/', views.mt, name='mt'),
 ]

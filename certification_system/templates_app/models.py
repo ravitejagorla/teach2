@@ -17,3 +17,16 @@ class CertificateTemplate(models.Model):
     
     def __str__(self):
         return self.name
+    
+class Asset(models.Model):
+    institute = models.ForeignKey(
+        CertificateTemplate, 
+        on_delete=models.CASCADE, 
+        related_name='assets'
+    )
+    logo = models.FileField(upload_to='logos/', blank=True, null=True)
+    signature = models.FileField(upload_to='signatures/', blank=True, null=True)
+    stamp = models.FileField(upload_to='stamps/', blank=True, null=True)
+    
+    def __str__(self):
+        return f"{self.institute.name}"

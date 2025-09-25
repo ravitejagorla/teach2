@@ -323,41 +323,119 @@ class StudentSelfRegisterView(CreateView):
         except Exception:
             logger.exception("Failed to send admin notification email")
 
-from dateutil.relativedelta import relativedelta
-import pdfkit
-from django.shortcuts import get_object_or_404
-from django.template.loader import render_to_string
+from io import BytesIO
 from django.http import HttpResponse
-from .models import Student
-config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import cm
+from dateutil.relativedelta import relativedelta
+from students.models import Student
+from templates_app.models import Asset
 
 
-def mt(request, pk):
-    student = get_object_or_404(Student, pk=pk)
+def mt(request, student_id):
+    student = Student.objects.get(id=student_id)
+
+    # Calculate internship duration
     months = 0
     if student.start_date and student.end_date:
         delta = relativedelta(student.end_date, student.start_date)
         months = delta.years * 12 + delta.months
+        if months == 0:
+            months = 1  # Minimum 1 month
 
-    context = {'student': student, 'months': months}
-    html_content = render_to_string('certificate_template.html', context)
+    # Assets (logo, signature, stamp, etc.)
+    assets = Asset.objects.filter(institute__name=student.institution).first()
 
-    # PDF options
-    config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
-    options = {
-        'page-size': 'A4',
-        'orientation': 'Portrait',
-        'margin-top': '2cm',
-        'margin-bottom': '2cm',
-        'margin-left': '2cm',
-        'margin-right': '2cm',
-        'encoding': 'UTF-8',
-        'no-outline': None,
-        'zoom': '1.0',
-    }
+    # Create PDF
+    buffer = BytesIO()
+    p = canvas.Canvas(buffer, pagesize=A4)
+    width, height = A4
 
-    pdf = pdfkit.from_string(html_content, False, configuration=config, options=options)
+    # Margins
+    left_margin = 2 * cm
+    right_margin = 2 * cm
+    top_margin = 2 * cm
+    bottom_margin = 2 * cm
 
-    response = HttpResponse(pdf, content_type='application/pdf')
-    response['Content-Disposition'] = f'attachment; filename="{student.full_name}_Offer_Letter.pdf"'
-    return response
+    # ---------------- HEADER ----------------
+    # Logo top-left
+    if assets and assets.logo:
+        p.drawImage(
+            assets.logo.path,
+            left_margin,
+            height - top_margin - 40,
+            width=100,
+            preserveAspectRatio=True,
+            mask="auto",
+        )
+
+    # ---------------- TITLE ----------------
+    p.setFont("Helvetica-Bold", 16)
+    p.drawCentredString(width / 2, height - top_margin - 80, "Internship Completion Certificate")
+
+    # ---------------- DATE ----------------
+    if student.end_date:
+        p.setFont("Helvetica", 12)
+        p.drawRightString(
+            width - right_margin,
+            height - top_margin - 100,
+            student.end_date.strftime("%d/%m/%Y"),
+        )
+
+    # ---------------- BODY ----------------
+    text = p.beginText(left_margin, height - top_margin - 140)
+    text.setFont("Helvetica", 12)
+    text.setLeading(18)
+
+    text.textLine(f"Dear {student.full_name},")
+    text.textLine("")
+    text.textLine(f"We are delighted to certify that you have successfully completed a {months} ")
+    text.textLine(f"month{'s' if months > 1 else ''} internship with us as a {student.specialization} intern.")
+    text.textLine("")
+    text.textLine("During your internship, you had the opportunity to:")
+    text.textLine(" • Work with a variety of technologies and programming languages.")
+    text.textLine(" • Learn and apply software development methodologies such as Agile and Waterfall.")
+    text.textLine(" • Develop coding and debugging skills.")
+    text.textLine(" • Learn about software testing and quality assurance processes.")
+    text.textLine(" • Collaborate with team members on projects and contribute to development.")
+    text.textLine(" • Gain exposure to the software industry and network with professionals.")
+    text.textLine("")
+    text.textLine("We believe this internship has provided you with a valuable opportunity to ")
+    text.textLine("expand your skills, gain practical experience, and build your professional network.")
+    p.drawText(text)
+
+    # ---------------- SIGNATURE ----------------
+    sig_y = bottom_margin
+    if assets and assets.signature:
+        p.drawImage(
+            assets.signature.path,
+            left_margin,
+            sig_y + 70,
+            width=100,
+            preserveAspectRatio=True,
+            mask="auto",
+        )
+
+    p.setFont("Helvetica", 12)
+    p.drawString(left_margin, sig_y + 260 , "Sincerely,")
+    p.setFont("Helvetica-Bold", 12)
+    p.drawString(left_margin, sig_y + 240, f"From {student.institution or 'RamanaSoft'}")
+
+    # ---------------- STAMP ----------------
+    if assets and assets.stamp:
+        p.drawImage(
+            assets.stamp.path,
+            left_margin,
+            bottom_margin + 70,
+            width=100,
+            preserveAspectRatio=True,
+            mask="auto",
+        )
+
+    # Finish
+    p.showPage()
+    p.save()
+    buffer.seek(0)
+
+    return HttpResponse(buffer, content_type="application/pdf")

@@ -79,9 +79,11 @@
                                 {% if student.template and student.template.is_active %}
                                 <button class="btn btn-sm btn-success download-btn" 
                                         data-student-id="{{ student.id }}" 
+                                        data-template-id="{{ student.template.id }}"
                                         title="Download Certificate or Template">
                                     <i class="fas fa-download"></i>
                                 </button>
+
                                 {% else %}
                                 <button class="btn btn-sm btn-outline-secondary" title="No Template Available" disabled>
                                     <i class="fas fa-ban"></i>
@@ -313,7 +315,10 @@ $(document).ready(function() {
 
     $('#downloadManual').click(function() {
         if (!selectedStudentId) return;
-        window.location.href = "{% url 'mt' 0 %}".replace('0', selectedStudentId) + '?type=manual';
+        const templateId = $(`.download-btn[data-student-id="${selectedStudentId}"]`).data('template-id');
+        if (!templateId) { alert('No template assigned for this student.'); return; }
+        const url = "{% url 'mt' 0 %}".replace('0', selectedStudentId);
+        window.location.href = url + '?type=manual';
         selectedStudentId = null;
         bootstrap.Modal.getInstance(document.getElementById('downloadChoiceModal')).hide();
     });

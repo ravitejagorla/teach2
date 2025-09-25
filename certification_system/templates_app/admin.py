@@ -1,29 +1,21 @@
 from django.contrib import admin
-from .models import CertificateTemplate
+from .models import CertificateTemplate, Asset
+
+# Inline for Asset so it shows up within CertificateTemplate
+class AssetInline(admin.TabularInline):
+    model = Asset
+    extra = 1  # Number of extra blank forms
+    fields = ('logo', 'signature', 'stamp')
 
 @admin.register(CertificateTemplate)
 class CertificateTemplateAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'specialization',
-        'organization',
-        'course',
-        'template_type',
-        'is_active',
-        'created_at',
-    )
-    list_filter = ('organization', 'course', 'template_type', 'is_active')
+    list_display = ('name', 'specialization', 'organization', 'course', 'template_type', 'created_at', 'is_active')
+    list_filter = ('template_type', 'is_active', 'created_at')
     search_fields = ('name', 'specialization', 'organization', 'course')
-    readonly_fields = ('created_at',)
-    ordering = ('-created_at',)
-    actions = ['make_active', 'make_inactive']
+    inlines = [AssetInline]
 
-    def make_active(self, request, queryset):
-        updated = queryset.update(is_active=True)
-        self.message_user(request, f"{updated} template(s) marked as active.")
-    make_active.short_description = "Mark selected templates as active"
-
-    def make_inactive(self, request, queryset):
-        updated = queryset.update(is_active=False)
-        self.message_user(request, f"{updated} template(s) marked as inactive.")
-    make_inactive.short_description = "Mark selected templates as inactive"
+@admin.register(Asset)
+class AssetAdmin(admin.ModelAdmin):
+    list_display = ('institute', 'logo', 'signature', 'stamp')
+    list_filter = ('institute',)
+    search_fields = ('institute__name',)

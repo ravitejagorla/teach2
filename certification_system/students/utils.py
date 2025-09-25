@@ -69,6 +69,7 @@ def generate_certificate(student):
         page_size = landscape(letter) if student.template.template_type == 'landscape' else portrait(letter)
         c = canvas.Canvas(buffer, pagesize=page_size)
         width, height = page_size
+        font = "Helvetica"
 
         # Draw template background
         if template_file_path.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
@@ -96,14 +97,14 @@ def generate_certificate(student):
             end_x, end_y = scale_x(110), scale_y(1150)
             cert_x, cert_y = scale_x(110), scale_y(1200)
             # Draw content
-            c.setFont("Helvetica-Bold", 28)
+            c.setFont(f"{font}-Bold", 28)
             c.setFillColor(Color(0, 0, 0, 1))
             c.drawCentredString(name_x, name_y, student.full_name)
 
-            c.setFont("Helvetica", 20)
+            c.setFont(font, 20)
             c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
 
-            c.setFont("Helvetica-Bold", 14)
+            c.setFont(f"{font}-Bold", 14)
             c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
             c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
             c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
@@ -119,14 +120,14 @@ def generate_certificate(student):
             end_x, end_y = scale_x(110), scale_y(1150)
             cert_x, cert_y = scale_x(110), scale_y(1200)
             # Draw content
-            c.setFont("Helvetica-Bold", 28)
+            c.setFont(f"{font}-Bold", 28)
             c.setFillColor(Color(0, 0, 0, 1))   
             c.drawCentredString(name_x, name_y, student.full_name)
 
-            c.setFont("Helvetica", 20)  
+            c.setFont(f"{font}", 20)  
             c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
 
-            c.setFont("Helvetica-Bold", 14)
+            c.setFont(f"{font}-Bold", 14)
             c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
             c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
             c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
@@ -142,14 +143,14 @@ def generate_certificate(student):
             end_x, end_y = scale_x(110), scale_y(1150)
             cert_x, cert_y = scale_x(110), scale_y(1200)
             # Draw content
-            c.setFont("Helvetica-Bold", 28)
+            c.setFont(f"{font}-Bold", 28)
             c.setFillColor(Color(0, 0, 0, 1))
             c.drawCentredString(name_x, name_y, student.full_name)
 
-            c.setFont("Helvetica", 20)
+            c.setFont(font, 20)
             c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
 
-            c.setFont("Helvetica-Bold", 14)
+            c.setFont(f"{font}-Bold", 14)
             c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
             c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
             c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
@@ -165,14 +166,14 @@ def generate_certificate(student):
             end_x, end_y = scale_x(400), scale_y(1200)
             cert_x, cert_y = scale_x(400), scale_y(1250)
             # Draw content
-            c.setFont("Helvetica-Bold", 28)
+            c.setFont(f"{font}-Bold", 28)
             c.setFillColor(Color(0, 0, 0, 1))
             c.drawCentredString(name_x, name_y, student.full_name)
 
-            c.setFont("Helvetica", 20)
+            c.setFont(font, 20)
             c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
 
-            c.setFont("Helvetica-Bold", 14)
+            c.setFont(f"{font}-Bold", 14)
             c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
             c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
             c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
@@ -188,14 +189,14 @@ def generate_certificate(student):
             end_x, end_y = scale_x(140), scale_y(1280)
             cert_x, cert_y = scale_x(140), scale_y(1330)
             # Draw content
-            c.setFont("Helvetica-Bold", 28)
+            c.setFont(f"{font}-Bold", 28)
             c.setFillColor(Color(0, 0, 0, 1))
             c.drawCentredString(name_x, name_y, student.full_name)
 
-            c.setFont("Helvetica", 18)
+            c.setFont(font, 18)
             c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
 
-            c.setFont("Helvetica-Bold", 12)
+            c.setFont(f"{font}-Bold", 12)
             c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
             c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
             c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
@@ -211,14 +212,14 @@ def generate_certificate(student):
             end_x, end_y = scale_x(140), scale_y(1140)
             cert_x, cert_y = scale_x(140), scale_y(1180)
             # Draw content
-            c.setFont("Helvetica-Bold", 28)
+            c.setFont(f"{font}-Bold", 28)
             c.setFillColor(Color(0, 0, 0, 1))
             c.drawCentredString(name_x, name_y, student.full_name)
     
-            c.setFont("Helvetica", 20)
+            c.setFont(font, 20)
             c.drawCentredString(course_x, course_y, f"To be recognized as a {student.course} - {student.specialization}")
     
-            c.setFont("Helvetica-Bold", 14)
+            c.setFont(f"{font}-Bold", 14)
             c.drawString(start_x, start_y, f"Start Date : {student.start_date.strftime('%d/%m/%Y')}")
             c.drawString(end_x, end_y, f"End Date : {student.end_date.strftime('%d/%m/%Y')}")
             c.drawString(cert_x, cert_y, f"Certification Id : {student.certificate_id}")
@@ -258,7 +259,7 @@ def generate_simple_certificate(student):
         buffer = io.BytesIO()
         c = canvas.Canvas(buffer, pagesize=letter)
         width, height = letter
-
+        font = "Helvetica"
         # Background
         c.setFillColorRGB(0.95, 0.95, 0.95)
         c.rect(0, 0, width, height, fill=1)
@@ -267,29 +268,29 @@ def generate_simple_certificate(student):
         c.rect(20, 20, width-40, height-40, stroke=1, fill=0)
 
         # Title
-        c.setFont("Helvetica-Bold", 24)
+        c.setFont(f"{font}-Bold", 24)
         c.drawCentredString(width/2, height-100, "CERTIFICATE OF COMPLETION")
         c.line(50, height-120, width-50, height-120)
 
-        c.setFont("Helvetica-Bold", 20)
+        c.setFont(f"{font}-Bold", 20)
         c.drawCentredString(width/2, height-180, f"This certifies that {student.full_name}")
-        c.setFont("Helvetica", 16)
+        c.setFont(f"{font}", 16)
         c.drawCentredString(width/2, height-220, f"has successfully completed {student.specialization}")
         c.drawCentredString(width/2, height-260, f"at {student.organization}")
         c.drawCentredString(width/2, height-300, f"from {student.start_date.strftime('%B %d, %Y')} to {student.end_date.strftime('%B %d, %Y')}")
 
-        c.setFont("Helvetica-Oblique", 14)
+        c.setFont(f"{font}-Oblique", 14)
         c.drawCentredString(width/2, height-340, f"Certificate ID: {student.certificate_id}")
 
         current_date = datetime.now().strftime("%B %d, %Y")
         c.drawCentredString(width/2, height-380, f"Date: {current_date}")
 
-        c.setFont("Helvetica", 12)
+        c.setFont(font, 12)
         c.drawCentredString(width/2, 150, "_________________________")
         c.drawCentredString(width/2, 130, "Authorized Signature")
 
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        c.setFont("Helvetica-Oblique", 10)
+        c.setFont(f"{font}-Oblique", 10)
         c.drawString(50, 50, f"Generated on: {current_time}")
 
         c.save()
