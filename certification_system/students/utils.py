@@ -1,4 +1,3 @@
-import os
 import io
 import threading
 from datetime import datetime
