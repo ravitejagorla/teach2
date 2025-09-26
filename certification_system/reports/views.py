@@ -131,3 +131,42 @@ def report_resend(request, pk):
     report.save()
 
     return redirect('report_list')
+
+import csv
+from django.http import HttpResponse
+from .models import EmailReport
+
+def report_export(request):
+    """Export all email reports (success & failed) as CSV."""
+    # Create the HTTP response with CSV content
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="email_reports.csv"'
+
+    writer = csv.writer(response)
+    
+    # Write header row
+    writer.writerow([
+        'Certificate ID',
+        'Student Name',
+        'Email',
+        'Status',
+        'Sent At',
+        'Error Message',
+        'Retry Count'
+    ])
+
+    # Fetch all reports ordered by sent_at
+    reports = EmailReport.objects.select_related('student').order_by('-sent_at')
+
+    for report in reports:
+        writer.writerow([
+            report.student.certificate_id,
+            report.student.full_name,
+            report.student.email,
+            report.status,
+            report.sent_at.strftime("%Y-%m-%d %H:%M") if report.sent_at else '',
+            report.error_message or '',
+            report.retry_count
+        ])
+
+    return response

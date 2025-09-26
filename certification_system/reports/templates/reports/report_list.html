@@ -3,11 +3,29 @@
 {% block content %}
 <div class="container mt-4">
 
-    <h2>Email Reports</h2>
-    <p>Total: <span class="badge bg-primary">{{ total_count }}</span>
-       Success: <span class="badge bg-success">{{ success_count }}</span>
-       Failed: <span class="badge bg-danger">{{ failed_count }}</span>
-    </p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded mb-4 p-3">
+    <div class="container-fluid">
+
+        <!-- Left side: Title -->
+        <span class="navbar-brand mb-0 h4">Email Reports</span>
+
+        <!-- Middle: Counts -->
+        <div class="ms-3 d-flex align-items-center">
+            <span class="me-3">Total: <span class="badge bg-primary">{{ total_count }}</span></span>
+            <span class="me-3">Success: <span class="badge bg-success">{{ success_count }}</span></span>
+            <span class="me-3">Failed: <span class="badge bg-danger">{{ failed_count }}</span></span>
+        </div>
+
+        <!-- Right side: Export button -->
+        <div class="ms-auto">
+            <a href="{% url 'report_export' %}" class="btn btn-success btn-sm">
+                <i class="fas fa-download me-1"></i> Export
+            </a>
+        </div>
+
+    </div>
+</nav>
+
 
     <!-- Success Reports -->
     <h4 class="mt-4">Success Reports</h4>
@@ -41,13 +59,15 @@
                             <i class="fas fa-rotate-right"></i>
                         </a>
                         <a href="{% url 'report_delete' report.id %}" class="btn btn-sm btn-danger" title="Delete"
-                           onclick="return confirm('Are you sure you want to delete this report?');">
+                            onclick="return confirm('Are you sure you want to delete this report?');">
                             <i class="fas fa-trash"></i>
                         </a>
                     </td>
                 </tr>
                 {% empty %}
-                <tr><td colspan="7" class="text-center">No success reports.</td></tr>
+                <tr>
+                    <td colspan="7" class="text-center">No success reports.</td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>
@@ -87,13 +107,15 @@
                             <i class="fas fa-rotate-right"></i>
                         </a>
                         <a href="{% url 'report_delete' report.id %}" class="btn btn-sm btn-danger" title="Delete"
-                           onclick="return confirm('Are you sure you want to delete this report?');">
+                            onclick="return confirm('Are you sure you want to delete this report?');">
                             <i class="fas fa-trash"></i>
                         </a>
                     </td>
                 </tr>
                 {% empty %}
-                <tr><td colspan="8" class="text-center">No failed reports.</td></tr>
+                <tr>
+                    <td colspan="8" class="text-center">No failed reports.</td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>
@@ -104,27 +126,27 @@
 
 {% block extra_js %}
 <script>
-$(document).ready(function() {
-    $.fn.dataTable.ext.errMode = 'none';
-    // Apply DataTables to both tables
-    $('#success-table, #failed-table').DataTable({
-        pageLength: 10,
-        lengthMenu: [[5,10,25,50,-1],[5,10,25,50,"All"]],
-        order: [[4,'desc']], // Default order by Sent At column
-        columnDefs: [
-            { orderable: false, targets: -1 } // Disable sort for last column (Actions)
-        ],
-        responsive: true,
-        autoWidth: false,
-        language: {
-            search: "🔍 Search:",
-            lengthMenu: "Show _MENU_ entries per page",
-            zeroRecords: "No matching records found",
-            info: "Showing _START_ to _END_ of _TOTAL_ entries",
-            infoEmpty: "No records available",
-            infoFiltered: "(filtered from _MAX_ total entries)"
-        }
+    $(document).ready(function () {
+        $.fn.dataTable.ext.errMode = 'none';
+        // Apply DataTables to both tables
+        $('#success-table, #failed-table').DataTable({
+            pageLength: 10,
+            lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+            order: [[4, 'desc']], // Default order by Sent At column
+            columnDefs: [
+                { orderable: false, targets: -1 } // Disable sort for last column (Actions)
+            ],
+            responsive: true,
+            autoWidth: false,
+            language: {
+                search: "🔍 Search:",
+                lengthMenu: "Show _MENU_ entries per page",
+                zeroRecords: "No matching records found",
+                info: "Showing _START_ to _END_ of _TOTAL_ entries",
+                infoEmpty: "No records available",
+                infoFiltered: "(filtered from _MAX_ total entries)"
+            }
+        });
     });
-});
 </script>
 {% endblock %}

@@ -129,6 +129,7 @@ def student_delete(request, pk):
 def bulk_delete_students(request):
     if request.method == 'POST':
         try:
+            deleted_count = 0
             data = json.loads(request.body)
             student_ids = data.get('student_ids', [])
             deleted_count = Student.objects.filter(pk__in=student_ids).delete()[0]
