@@ -105,6 +105,7 @@
 {% block extra_js %}
 <script>
 $(document).ready(function() {
+    $.fn.dataTable.ext.errMode = 'none';
     // Apply DataTables to both tables
     $('#success-table, #failed-table').DataTable({
         pageLength: 10,
