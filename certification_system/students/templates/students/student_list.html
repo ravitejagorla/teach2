@@ -1,31 +1,42 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="h3 mb-0">Students</h1>
-    <div>
-        <a href="{% url 'student_create' %}" class="btn btn-primary btn-sm me-2">
-            <i class="fas fa-plus me-1"></i> Add Student
-        </a>
-        <button class="btn btn-outline-secondary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#importModal">
-            <i class="fas fa-upload me-1"></i> Import
-        </button>
-        <a href="{% url 'student_export' %}" class="btn btn-outline-success btn-sm me-2">
-            <i class="fas fa-download me-1"></i> Export
-        </a>
-        <button id="bulkDeleteBtn" class="btn btn-danger btn-sm me-2" disabled>
-            <i class="fas fa-trash me-1"></i> Delete Selected
-        </button>
-        <button id="bulkSendBtn" class="btn btn-warning btn-sm" disabled>
-            <i class="fas fa-paper-plane me-1"></i> Send Certificates
-        </button>
-    </div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light m-3">
+  <div class="container-fluid">
+    <a class="navbar-brand h3 mb-0" href="#">Students</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#studentNavbar" aria-controls="studentNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div class="alert alert-info d-flex align-items-center" role="alert">
+    <div class="collapse navbar-collapse" id="studentNavbar">
+      <div class="navbar-nav ms-auto">
+        <a href="{% url 'student_create' %}" class="btn btn-primary btn-sm me-2 mb-1">
+          <i class="fas fa-plus me-1"></i> Add Student
+        </a>
+        <button class="btn btn-primary btn-sm me-2 mb-1" data-bs-toggle="modal" data-bs-target="#createModal">
+          <i class="fas fa-plus me-1"></i> Add Student
+        </button>
+        <button class="btn btn-outline-secondary btn-sm me-2 mb-1" data-bs-toggle="modal" data-bs-target="#importModal">
+          <i class="fas fa-upload me-1"></i> Import
+        </button>
+        <a href="{% url 'student_export' %}" class="btn btn-outline-success btn-sm me-2 mb-1">
+          <i class="fas fa-download me-1"></i> Export
+        </a>
+        <button id="bulkDeleteBtn" class="btn btn-danger btn-sm me-2 mb-1" disabled>
+          <i class="fas fa-trash me-1"></i> Delete Selected
+        </button>
+        <button id="bulkSendBtn" class="btn btn-warning btn-sm mb-1" disabled>
+          <i class="fas fa-paper-plane me-1"></i> Send Certificates
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <div class="alert alert-info d-flex align-items-center" role="alert">
     <i class="fas fa-info-circle me-2"></i>
     <div>Select students using checkboxes and use bulk actions to delete or send certificates</div>
-</div>
+</div> -->
 
 <div class="card">
     <div class="card-body p-2">
