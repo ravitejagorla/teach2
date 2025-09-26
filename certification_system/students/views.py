@@ -127,16 +127,16 @@ def student_delete(request, pk):
 
 @csrf_exempt
 def bulk_delete_students(request):
-    if request.method != 'POST':
-        return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
-    try:
-        data = json.loads(request.body)
-        student_ids = data.get('student_ids', [])
-        deleted_count, _ = Student.objects.filter(id__in=student_ids).delete()
-        return JsonResponse({'status': 'success', 'message': f'Successfully deleted {deleted_count} students'})
-    except Exception:
-        logger.exception("Bulk delete error")
-        return JsonResponse({'status': 'error', 'message': 'Internal server error'}, status=500)
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            student_ids = data.get('student_ids', [])
+            deleted_count = Student.objects.filter(pk__in=student_ids).delete()[0]
+            return JsonResponse({'status': 'success', 'message': f'Successfully deleted {deleted_count} students'})
+        except Exception as e:
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+
 
 # -----------------------------
 # CSV Import/Export
@@ -150,11 +150,12 @@ def import_students(request):
             try:
                 decoded_file = csv_file.read().decode('utf-8').splitlines()
                 reader = csv.DictReader(decoded_file)
-                students_to_create = []
+                imported_count = 0
 
                 for row in reader:
                     if not row.get('Full Name') or not row.get('Mobile'):
                         continue
+
                     try:
                         start_date = datetime.strptime(row['Start Date'], '%m/%d/%Y').date()
                         end_date = datetime.strptime(row['End Date'], '%m/%d/%Y').date()
@@ -168,7 +169,7 @@ def import_students(request):
                         is_active=True
                     ).first()
 
-                    students_to_create.append(Student(
+                    Student.objects.create(
                         full_name=row.get('Full Name'),
                         email=row.get('Email'),
                         mobile=row.get('Mobile'),
@@ -179,17 +180,17 @@ def import_students(request):
                         start_date=start_date,
                         end_date=end_date,
                         template=template
-                    ))
+                    )
+                    imported_count += 1
 
-                Student.objects.bulk_create(students_to_create)
-                messages.success(request, f"Successfully imported {len(students_to_create)} students!")
+                messages.success(request, f"Successfully imported {imported_count} students!")
                 return redirect('student_list')
 
-            except Exception:
-                logger.exception("CSV import error")
-                messages.error(request, "Error importing CSV.")
+            except Exception as e:
+                messages.error(request, f"Error importing CSV: {str(e)}")
     else:
         form = ImportCSVForm()
+
     return render(request, 'students/import.html', {'form': form})
 
 def export_students(request):

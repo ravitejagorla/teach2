@@ -23,7 +23,7 @@ class ReportListView(TemplateView):
         context['failed_reports'] = EmailReport.objects.filter(status='failed').order_by('-sent_at')
 
         # Counts
-        context['total_count'] = EmailReport.objects.count() - 1
+        context['total_count'] = EmailReport.objects.count()
         context['success_count'] = context['success_reports'].count()
         context['failed_count'] = context['failed_reports'].count()
 
