@@ -242,3 +242,263 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 [WARNING] 2025-09-26 16:57:07,063 django.security.SuspiciousSession Session data corrupted
 [INFO] 2025-09-26 16:57:07,099 django.server "GET /students/create/ HTTP/1.1" 200 9514
 [INFO] 2025-09-26 16:57:07,099 django.server "GET /students/create/ HTTP/1.1" 200 9514
+[INFO] 2025-09-26 17:00:21,779 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:00:21,779 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-26 17:04:28,337 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:04:28,337 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:04:28,376 django.server "GET /students/ HTTP/1.1" 200 32448
+[INFO] 2025-09-26 17:04:28,376 django.server "GET /students/ HTTP/1.1" 200 32448
+[WARNING] 2025-09-26 17:04:35,532 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:04:35,532 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:04:35,576 django.server "POST /students/create/ HTTP/1.1" 200 11582
+[INFO] 2025-09-26 17:04:35,576 django.server "POST /students/create/ HTTP/1.1" 200 11582
+[WARNING] 2025-09-26 17:04:35,609 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:04:35,609 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:04:35,655 django.server "GET /students/ HTTP/1.1" 200 32448
+[INFO] 2025-09-26 17:04:35,655 django.server "GET /students/ HTTP/1.1" 200 32448
+[WARNING] 2025-09-26 17:04:59,037 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:04:59,037 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:04:59,058 django.server "GET /students/ HTTP/1.1" 200 32448
+[INFO] 2025-09-26 17:04:59,058 django.server "GET /students/ HTTP/1.1" 200 32448
+[WARNING] 2025-09-26 17:06:15,956 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:06:15,956 django.security.SuspiciousSession Session data corrupted
+[ERROR] 2025-09-26 17:06:16,119 django.request Internal Server Error: /students/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: students/_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: students/_form.html
+[ERROR] 2025-09-26 17:06:16,119 django.request Internal Server Error: /students/
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: students/_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "C:\Users\gorla\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: students/_form.html
+[ERROR] 2025-09-26 17:06:16,138 django.server "GET /students/ HTTP/1.1" 500 166599
+[ERROR] 2025-09-26 17:06:16,138 django.server "GET /students/ HTTP/1.1" 500 166599
+[WARNING] 2025-09-26 17:06:38,389 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:06:38,389 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:06:38,403 django.server "GET /students/ HTTP/1.1" 200 40023
+[INFO] 2025-09-26 17:06:38,403 django.server "GET /students/ HTTP/1.1" 200 40023
+[WARNING] 2025-09-26 17:06:46,988 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:06:46,988 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:06:47,026 django.server "GET /students/ HTTP/1.1" 200 40023
+[INFO] 2025-09-26 17:06:47,026 django.server "GET /students/ HTTP/1.1" 200 40023
+[WARNING] 2025-09-26 17:07:09,965 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:07:09,965 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:07:10,015 django.server "GET /students/ HTTP/1.1" 200 36543
+[INFO] 2025-09-26 17:07:10,015 django.server "GET /students/ HTTP/1.1" 200 36543
+[WARNING] 2025-09-26 17:08:59,757 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:08:59,757 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:08:59,770 django.server "GET /students/ HTTP/1.1" 200 36046
+[INFO] 2025-09-26 17:08:59,770 django.server "GET /students/ HTTP/1.1" 200 36046
+[WARNING] 2025-09-26 17:12:53,802 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:12:53,802 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:12:53,815 django.server "GET /students/ HTTP/1.1" 200 30225
+[INFO] 2025-09-26 17:12:53,815 django.server "GET /students/ HTTP/1.1" 200 30225
+[WARNING] 2025-09-26 17:12:55,766 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:12:55,766 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:12:55,776 django.server "GET /students/create/ HTTP/1.1" 200 9514
+[INFO] 2025-09-26 17:12:55,776 django.server "GET /students/create/ HTTP/1.1" 200 9514
+[WARNING] 2025-09-26 17:13:02,141 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:13:02,141 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:13:02,179 django.server "GET /students/ HTTP/1.1" 200 30225
+[INFO] 2025-09-26 17:13:02,179 django.server "GET /students/ HTTP/1.1" 200 30225
+[WARNING] 2025-09-26 17:13:18,364 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:13:18,364 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:13:18,368 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-26 17:13:18,368 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-26 17:13:18,402 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:13:18,402 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:13:18,425 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4569
+[INFO] 2025-09-26 17:13:18,425 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4569
+[WARNING] 2025-09-26 17:13:20,219 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:13:20,219 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:13:20,226 django.server "GET /templates/ HTTP/1.1" 200 14425
+[INFO] 2025-09-26 17:13:20,226 django.server "GET /templates/ HTTP/1.1" 200 14425
+[INFO] 2025-09-26 17:13:23,044 django.server "GET /templates/3/detail/ HTTP/1.1" 200 1609
+[INFO] 2025-09-26 17:13:23,044 django.server "GET /templates/3/detail/ HTTP/1.1" 200 1609
+[INFO] 2025-09-26 17:13:23,070 django.server "GET /media/certificate_templates/ihub_cc_tGfe3wa.jpg HTTP/1.1" 200 666402
+[INFO] 2025-09-26 17:13:23,070 django.server "GET /media/certificate_templates/ihub_cc_tGfe3wa.jpg HTTP/1.1" 200 666402
+[WARNING] 2025-09-26 17:14:36,571 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:14:36,571 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:14:36,589 django.server "GET /students/ HTTP/1.1" 200 30225
+[INFO] 2025-09-26 17:14:36,589 django.server "GET /students/ HTTP/1.1" 200 30225
+[WARNING] 2025-09-26 17:14:40,760 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:14:40,760 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:14:40,763 django.server "GET /templates/ HTTP/1.1" 200 14425
+[INFO] 2025-09-26 17:14:40,763 django.server "GET /templates/ HTTP/1.1" 200 14425
+[WARNING] 2025-09-26 17:14:50,125 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:14:50,125 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:14:50,133 django.server "GET /students/ HTTP/1.1" 200 30225
+[INFO] 2025-09-26 17:14:50,133 django.server "GET /students/ HTTP/1.1" 200 30225
+[WARNING] 2025-09-26 17:16:17,883 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 17:16:17,883 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 17:16:17,900 django.server "GET /students/ HTTP/1.1" 200 29825
+[INFO] 2025-09-26 17:16:17,900 django.server "GET /students/ HTTP/1.1" 200 29825
+[INFO] 2025-09-26 17:19:19,636 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:19,636 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:22,017 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:22,017 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:30,794 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:30,794 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:32,381 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:32,381 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:34,533 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:34,533 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:36,318 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:36,318 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:37,936 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:37,936 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:39,851 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:39,851 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:46,813 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:46,813 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:19:48,446 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:19:48,446 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:00,737 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:00,737 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:02,707 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:02,707 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:06,294 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:06,294 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:08,068 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:08,068 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:15,908 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:15,908 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:17,612 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:17,612 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:31,885 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:31,885 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:33,669 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:33,669 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:37,052 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:37,052 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:20:38,838 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:20:38,838 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:21:42,847 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:21:42,847 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:21:44,466 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:21:44,466 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:21:52,296 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:21:52,296 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-26 17:21:54,030 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 17:21:54,030 django.utils.autoreload Watching for file changes with StatReloader

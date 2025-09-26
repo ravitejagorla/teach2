@@ -382,6 +382,7 @@ from templates_app.models import Asset
 
 def mt(request, student_id):
     student = Student.objects.get(id=student_id)
+    
 
     # Calculate internship duration
     months = 0
@@ -398,6 +399,7 @@ def mt(request, student_id):
     buffer = BytesIO()
     p = canvas.Canvas(buffer, pagesize=A4)
     width, height = A4
+    font = "Helvetica"
 
     # Margins
     left_margin = 2 * cm
@@ -418,12 +420,12 @@ def mt(request, student_id):
         )
 
     # ---------------- TITLE ----------------
-    p.setFont("Helvetica-Bold", 16)
+    p.setFont(f"{font}-Bold", 16)
     p.drawCentredString(width / 2, height - top_margin - 80, "Internship Completion Certificate")
 
     # ---------------- DATE ----------------
     if student.end_date:
-        p.setFont("Helvetica", 12)
+        p.setFont(font, 12)
         p.drawRightString(
             width - right_margin,
             height - top_margin - 100,
@@ -432,7 +434,7 @@ def mt(request, student_id):
 
     # ---------------- BODY ----------------
     text = p.beginText(left_margin, height - top_margin - 140)
-    text.setFont("Helvetica", 12)
+    text.setFont(font, 12)
     text.setLeading(18)
 
     text.textLine(f"Dear {student.full_name},")
@@ -464,9 +466,9 @@ def mt(request, student_id):
             mask="auto",
         )
 
-    p.setFont("Helvetica", 12)
+    p.setFont(font, 12)
     p.drawString(left_margin, sig_y + 260 , "Sincerely,")
-    p.setFont("Helvetica-Bold", 12)
+    p.setFont(f"{font}-Bold", 12)
     p.drawString(left_margin, sig_y + 240, f"From {student.institution or 'RamanaSoft'}")
 
     # ---------------- STAMP ----------------
