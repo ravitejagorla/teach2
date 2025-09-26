@@ -33,9 +33,7 @@
             <table id="students-table" class="table table-sm table-striped table-hover table-bordered" style="font-size: 0.85rem;">
                 <thead class="table-light">
                     <tr>
-                        <th width="40">
-                            <input type="checkbox" id="selectAll">
-                        </th>
+                        <th width="40"><input type="checkbox" id="selectAll"></th>
                         <th width="40">S.No</th>
                         <th width="120">Cert ID</th>
                         <th>Full Name</th>
@@ -47,7 +45,7 @@
                         <th width="150">Institution</th>
                         <th width="90">Start Date</th>
                         <th width="90">End Date</th>
-                        <th width="160" class="text-center">Actions</th>
+                        <th width="200" class="text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,13 +75,20 @@
                                 </button>
 
                                 {% if student.template and student.template.is_active %}
+                                <!-- Download -->
                                 <button class="btn btn-sm btn-success download-btn" 
                                         data-student-id="{{ student.id }}" 
                                         data-template-id="{{ student.template.id }}"
                                         title="Download Certificate or Template">
                                     <i class="fas fa-download"></i>
                                 </button>
-
+                                <!-- Send -->
+                                <button class="btn btn-sm btn-warning send-btn" 
+                                        data-student-id="{{ student.id }}" 
+                                        data-template-id="{{ student.template.id }}"
+                                        title="Send Certificate">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
                                 {% else %}
                                 <button class="btn btn-sm btn-outline-secondary" title="No Template Available" disabled>
                                     <i class="fas fa-ban"></i>
@@ -105,73 +110,73 @@
 
 <!-- Progress Modal for Sending Certificates -->
 <div class="modal fade" id="progressModal" tabindex="-1" aria-labelledby="progressModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Sending Certificates</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <div class="text-center mb-3">
-                    <div class="spinner-border text-success" role="status"></div>
-                </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
-                         role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div class="text-center"><span id="progress-text">Processing... 0%</span></div>
-                <div id="status-messages" class="mt-3 small"></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
+    <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Sending Certificates</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-    </div>
+        <div class="modal-body">
+            <div class="text-center mb-3"><div class="spinner-border text-success" role="status"></div></div>
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                     style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="text-center"><span id="progress-text">Processing... 0%</span></div>
+            <div id="status-messages" class="mt-3 small"></div>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+    </div></div>
 </div>
 
 <!-- Progress Modal for Bulk Delete -->
 <div class="modal fade" id="deleteProgressModal" tabindex="-1" aria-labelledby="deleteProgressModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Deleting Students</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <div class="text-center mb-3">
-                    <div class="spinner-border text-danger" role="status"></div>
-                </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" 
-                         role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div class="text-center"><span id="delete-progress-text">Processing... 0%</span></div>
-                <div id="delete-status-messages" class="mt-3 small"></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
+    <div class="modal-dialog"><div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Deleting Students</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-    </div>
+        <div class="modal-body">
+            <div class="text-center mb-3"><div class="spinner-border text-danger" role="status"></div></div>
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+                     style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="text-center"><span id="delete-progress-text">Processing... 0%</span></div>
+            <div id="delete-status-messages" class="mt-3 small"></div>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+    </div></div>
 </div>
 
 <!-- Modal for Download Choice -->
 <div class="modal fade" id="downloadChoiceModal" tabindex="-1" aria-labelledby="downloadChoiceModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Download Certificate</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body text-center">
-        <p>Choose the type of download:</p>
-        <button id="downloadGenerated" class="btn btn-success me-2">Generated Certificate PDF</button>
-        <button id="downloadManual" class="btn btn-info">Manual Template</button>
-      </div>
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Download Certificate</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
     </div>
-  </div>
+    <div class="modal-body text-center">
+      <p>Choose the type of download:</p>
+      <button id="downloadGenerated" class="btn btn-success me-2">Generated Certificate PDF</button>
+      <button id="downloadManual" class="btn btn-info">Manual Template</button>
+    </div>
+  </div></div>
 </div>
 
+<!-- Modal for Send Choice -->
+<div class="modal fade" id="sendChoiceModal" tabindex="-1" aria-labelledby="sendChoiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Send Certificate</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body text-center">
+      <p>Choose the type of certificate to send:</p>
+      <button id="sendGenerated" class="btn btn-success me-2">Generated Certificate</button>
+      <button id="sendManual" class="btn btn-info">Manual Template</button>
+    </div>
+  </div></div>
+</div>
 {% endblock %}
 
 {% block extra_js %}
@@ -179,7 +184,6 @@
 $(document).ready(function() {
     const csrftoken = '{{ csrf_token }}';
 
-    // Initialize DataTable
     $('#students-table').DataTable({
         pageLength: 25,
         lengthMenu: [[10,25,50,100,-1],[10,25,50,100,"All"]],
@@ -191,7 +195,6 @@ $(document).ready(function() {
         autoWidth: false
     });
 
-    // Update bulk action buttons
     function updateBulkButtons() {
         const selectedCount = $('.student-checkbox:checked').length;
         $('#bulkDeleteBtn').prop('disabled', selectedCount === 0)
@@ -200,56 +203,43 @@ $(document).ready(function() {
             .html(selectedCount > 0 ? `<i class="fas fa-paper-plane me-1"></i> Send (${selectedCount})` : '<i class="fas fa-paper-plane me-1"></i> Send Certificates');
     }
 
-    // Select all checkboxes
     $('#selectAll').click(function() {
         $('.student-checkbox').prop('checked', this.checked);
         updateBulkButtons();
     });
-
     $('.student-checkbox').change(updateBulkButtons);
 
-    // Single delete
     $('.delete-btn').click(function() {
         const studentId = $(this).data('id');
         if (!confirm('Are you sure you want to delete this student?')) return;
-
         $.post(`/students/${studentId}/delete/`, {}, function(resp){
             if(resp.status === 'success') location.reload();
             else alert('Error deleting student.');
         });
     });
 
-    // Function to handle bulk actions with progress
     function processBulkAction(studentIds, ajaxUrl, progressModalId, progressBarClass, progressTextId, statusMessagesId, successMessage, reloadOnFinish = false) {
         const modal = new bootstrap.Modal(document.getElementById(progressModalId));
         modal.show();
-
         const progressBar = $(`#${progressModalId} ${progressBarClass}`);
         const progressText = $(`#${progressModalId} ${progressTextId}`);
         const statusMessages = $(`#${progressModalId} ${statusMessagesId}`);
-
         let processed = 0;
         statusMessages.empty();
-
         studentIds.forEach((id, index) => {
             setTimeout(() => {
                 $.ajax({
                     url: ajaxUrl.replace('STUDENT_ID', id),
                     type: 'POST',
                     headers: { 'X-CSRFToken': csrftoken },
-                    contentType: 'application/json',
-                    data: JSON.stringify({ student_ids: [id] }),
                     success: function(resp){
                         processed++;
                         const perc = Math.round((processed/studentIds.length)*100);
                         progressBar.css('width', perc + '%').attr('aria-valuenow', perc);
                         progressText.text(`Processing... ${perc}%`);
-                        statusMessages.append(`<div class="text-success">${successMessage.replace('STUDENT_ID', id).replace('STUDENT_NAME', resp?.student_name || '')}</div>`);
+                        statusMessages.append(`<div class="text-success">${successMessage.replace('STUDENT_NAME', resp?.student_name || '')}</div>`);
                         if(processed === studentIds.length) {
-                            setTimeout(() => {
-                                modal.hide();
-                                if(reloadOnFinish) location.reload();
-                            }, 1000);
+                            setTimeout(() => { modal.hide(); if(reloadOnFinish) location.reload(); }, 1000);
                         }
                     },
                     error: function() {
@@ -264,63 +254,72 @@ $(document).ready(function() {
         });
     }
 
-    // Bulk delete
     $('#bulkDeleteBtn').click(function() {
         const studentIds = $('.student-checkbox:checked').map(function(){ return $(this).val(); }).get();
         if(!studentIds.length || !confirm(`Delete ${studentIds.length} students?`)) return;
-
-        processBulkAction(
-            studentIds,
-            "{% url 'bulk_delete_students' %}",      // ajaxUrl
-            'deleteProgressModal',                   // modal ID
-            '.progress-bar',                         // progress bar selector
-            '#delete-progress-text',                 // progress text selector
-            '#delete-status-messages',               // status messages selector
-            'Deleted student ID: STUDENT_ID',       // success message
-            true                                     // reload after finish
-        );
+        processBulkAction(studentIds, "{% url 'bulk_delete_students' %}", 'deleteProgressModal',
+            '.progress-bar', '#delete-progress-text', '#delete-status-messages', 'Deleted STUDENT_NAME', true);
     });
 
-    // Bulk send certificates
-    $('#bulkSendBtn').click(function() {
-        const studentIds = $('.student-checkbox:checked').map(function(){ return $(this).val(); }).get();
-        if(!studentIds.length || !confirm(`Send certificates to ${studentIds.length} students?`)) return;
-
-        processBulkAction(
-            studentIds,
-            "/students/STUDENT_ID/send-certificate/",  // ajaxUrl (replace STUDENT_ID dynamically)
-            'progressModal',                            // modal ID
-            '.progress-bar',                            // progress bar selector
-            '#progress-text',                           // progress text selector
-            '#status-messages',                         // status messages selector
-            'Sent to STUDENT_NAME'                       // success message
-        );
-    });
-
-    // Download choice modal logic
+    // --- Download Choice ---
     let selectedStudentId = null;
-
     $(document).on('click', '.download-btn', function() {
         selectedStudentId = $(this).data('student-id');
-        const modal = new bootstrap.Modal(document.getElementById('downloadChoiceModal'));
-        modal.show();
+        new bootstrap.Modal(document.getElementById('downloadChoiceModal')).show();
     });
-
     $('#downloadGenerated').click(function() {
-        if (!selectedStudentId) return;
         window.location.href = "{% url 'download_certificate' 0 %}".replace('0', selectedStudentId) + '?type=auto';
         selectedStudentId = null;
         bootstrap.Modal.getInstance(document.getElementById('downloadChoiceModal')).hide();
     });
-
     $('#downloadManual').click(function() {
-        if (!selectedStudentId) return;
         const templateId = $(`.download-btn[data-student-id="${selectedStudentId}"]`).data('template-id');
-        if (!templateId) { alert('No template assigned for this student.'); return; }
-        const url = "{% url 'mt' 0 %}".replace('0', selectedStudentId);
-        window.location.href = url + '?type=manual';
+        if (!templateId) { alert('No template assigned.'); return; }
+        window.location.href = "{% url 'mt' 0 %}".replace('0', selectedStudentId) + '?type=manual';
         selectedStudentId = null;
         bootstrap.Modal.getInstance(document.getElementById('downloadChoiceModal')).hide();
+    });
+
+    // --- Send Choice (Single + Bulk) ---
+    let sendStudentIds = [];
+    let isBulkSend = false;
+    $(document).on('click', '.send-btn', function() {
+        sendStudentIds = [$(this).data('student-id')];
+        isBulkSend = false;
+        new bootstrap.Modal(document.getElementById('sendChoiceModal')).show();
+    });
+    $('#bulkSendBtn').click(function() {
+        sendStudentIds = $('.student-checkbox:checked').map(function(){ return $(this).val(); }).get();
+        if(!sendStudentIds.length) return;
+        isBulkSend = true;
+        new bootstrap.Modal(document.getElementById('sendChoiceModal')).show();
+    });
+
+    $('#sendGenerated').click(function() {
+        if (!sendStudentIds.length) return;
+        if (isBulkSend) {
+            processBulkAction(sendStudentIds, "/students/STUDENT_ID/send-certificate/?type=auto", 'progressModal',
+                '.progress-bar', '#progress-text', '#status-messages', 'Sent Generated Certificate to STUDENT_NAME');
+        } else {
+            $.post(`/students/${sendStudentIds[0]}/send-certificate/?type=auto`, {}, function(resp){
+                alert(`Sent Generated Certificate to ${resp.student_name}`);
+            });
+        }
+        bootstrap.Modal.getInstance(document.getElementById('sendChoiceModal')).hide();
+        sendStudentIds = [];
+    });
+    $('#sendManual').click(function() {
+        if (!sendStudentIds.length) return;
+        if (isBulkSend) {
+            processBulkAction(sendStudentIds, "/students/STUDENT_ID/send-certificate/?type=manual", 'progressModal',
+                '.progress-bar', '#progress-text', '#status-messages', 'Sent Manual Template to STUDENT_NAME');
+        } else {
+            $.post(`/students/${sendStudentIds[0]}/send-certificate/?type=manual`, {}, function(resp){
+                alert(`Sent Manual Template to ${resp.student_name}`);
+            });
+        }
+        bootstrap.Modal.getInstance(document.getElementById('sendChoiceModal')).hide();
+        sendStudentIds = [];
     });
 });
 </script>

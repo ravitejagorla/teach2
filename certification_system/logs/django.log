@@ -2574,3 +2574,98 @@ AttributeError: 'Student' object has no attribute 'months'
 [INFO] 2025-09-25 16:01:01,945 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
 [INFO] 2025-09-25 16:01:03,296 django.utils.autoreload Watching for file changes with StatReloader
 [INFO] 2025-09-25 16:01:03,296 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-25 17:37:44,799 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-25 17:37:44,799 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-25 17:37:49,837 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-25 17:37:49,837 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-09-25 17:37:49,910 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-25 17:37:49,910 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-25 17:37:49,928 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-25 17:37:49,928 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-25 17:37:50,103 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-25 17:37:50,103 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-25 17:37:50,418 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-25 17:37:50,418 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[WARNING] 2025-09-25 17:37:51,022 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-25 17:37:51,022 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-25 17:37:51,024 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-25 17:37:51,024 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-25 17:37:52,774 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-25 17:37:52,774 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-25 17:37:52,828 django.server "GET /students/ HTTP/1.1" 200 19576
+[INFO] 2025-09-25 17:37:52,828 django.server "GET /students/ HTTP/1.1" 200 19576
+[INFO] 2025-09-25 17:37:58,252 django.server "GET /students/mt/1/?type=manual HTTP/1.1" 200 40812
+[INFO] 2025-09-25 17:37:58,252 django.server "GET /students/mt/1/?type=manual HTTP/1.1" 200 40812
+[WARNING] 2025-09-25 17:44:08,393 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-25 17:44:08,393 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-25 17:44:08,393 django.server "GET /students/ HTTP/1.1" 200 21066
+[INFO] 2025-09-25 17:44:08,393 django.server "GET /students/ HTTP/1.1" 200 21066
+[INFO] 2025-09-25 17:44:15,863 django.server "POST /students/1/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:44:15,863 django.server "POST /students/1/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:44:20,827 students.utils Email successfully sent to rt.gorla7@gmail.com
+[WARNING] 2025-09-25 17:44:27,912 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-25 17:44:27,912 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-25 17:44:27,975 django.server "GET /students/create/ HTTP/1.1" 200 9402
+[INFO] 2025-09-25 17:44:27,975 django.server "GET /students/create/ HTTP/1.1" 200 9402
+[INFO] 2025-09-25 17:45:05,244 django.server "POST /students/create/ HTTP/1.1" 302 0
+[INFO] 2025-09-25 17:45:05,244 django.server "POST /students/create/ HTTP/1.1" 302 0
+[WARNING] 2025-09-25 17:45:05,261 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-25 17:45:05,261 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-25 17:45:05,281 django.server "GET /students/ HTTP/1.1" 200 23719
+[INFO] 2025-09-25 17:45:05,281 django.server "GET /students/ HTTP/1.1" 200 23719
+[INFO] 2025-09-25 17:45:15,460 django.server "POST /students/1/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:45:15,460 django.server "POST /students/1/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:45:16,110 django.server "POST /students/2/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:45:16,110 django.server "POST /students/2/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:45:16,143 django.server "POST /students/3/send-certificate/?type=manual HTTP/1.1" 200 47
+[INFO] 2025-09-25 17:45:16,143 django.server "POST /students/3/send-certificate/?type=manual HTTP/1.1" 200 47
+[INFO] 2025-09-25 17:45:20,078 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-25 17:45:20,796 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-25 17:45:24,900 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-25 17:48:58,065 django.server "POST /students/1/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:48:58,065 django.server "POST /students/1/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:48:58,900 django.server "POST /students/2/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:48:58,900 django.server "POST /students/2/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:48:58,914 django.server "POST /students/3/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-09-25 17:48:58,914 django.server "POST /students/3/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-09-25 17:49:02,496 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-25 17:49:03,316 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-25 17:49:07,813 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-25 17:51:07,717 django.server "POST /students/1/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:51:07,717 django.server "POST /students/1/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:51:08,455 django.server "POST /students/2/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:51:08,455 django.server "POST /students/2/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:51:08,468 django.server "POST /students/3/send-certificate/?type=manual HTTP/1.1" 200 47
+[INFO] 2025-09-25 17:51:08,468 django.server "POST /students/3/send-certificate/?type=manual HTTP/1.1" 200 47
+[INFO] 2025-09-25 17:51:12,240 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-25 17:51:12,899 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-25 17:51:17,114 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-25 17:52:14,183 django.server "GET /students/mt/3/?type=manual HTTP/1.1" 200 40803
+[INFO] 2025-09-25 17:52:14,183 django.server "GET /students/mt/3/?type=manual HTTP/1.1" 200 40803
+[INFO] 2025-09-25 17:52:23,211 django.server "GET /students/2/download-certificate/?type=auto HTTP/1.1" 200 833896
+[INFO] 2025-09-25 17:52:23,211 django.server "GET /students/2/download-certificate/?type=auto HTTP/1.1" 200 833896
+[INFO] 2025-09-25 17:54:42,937 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-25 17:54:42,937 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-25 17:54:45,024 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-25 17:54:45,024 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-25 17:55:13,986 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-25 17:55:13,986 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-25 17:55:16,063 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-25 17:55:16,063 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-25 17:55:24,573 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-25 17:55:24,573 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-25 17:55:24,610 django.server "GET /students/ HTTP/1.1" 200 23386
+[INFO] 2025-09-25 17:55:24,610 django.server "GET /students/ HTTP/1.1" 200 23386
+[INFO] 2025-09-25 17:55:32,791 django.server "POST /students/1/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:55:32,791 django.server "POST /students/1/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:55:32,981 django.server "POST /students/2/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:55:32,981 django.server "POST /students/2/send-certificate/?type=manual HTTP/1.1" 200 56
+[INFO] 2025-09-25 17:55:33,356 django.server "POST /students/3/send-certificate/?type=manual HTTP/1.1" 200 47
+[INFO] 2025-09-25 17:55:33,356 django.server "POST /students/3/send-certificate/?type=manual HTTP/1.1" 200 47
+[INFO] 2025-09-25 17:55:36,602 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-25 17:55:37,568 students.utils Email successfully sent to rt.gorla7@gmail.com
+[INFO] 2025-09-25 17:55:38,162 students.utils Email successfully sent to rt.gorla@gmail.com
+[WARNING] 2025-09-25 17:58:13,390 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-25 17:58:13,390 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-25 17:58:13,487 django.server "GET /reports/ HTTP/1.1" 200 45480
+[INFO] 2025-09-25 17:58:13,487 django.server "GET /reports/ HTTP/1.1" 200 45480

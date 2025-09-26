@@ -216,9 +216,48 @@ def export_students(request):
 # Certificate Views
 # -----------------------------
 @require_POST
+@require_POST
 def send_certificate(request, student_id):
     student = get_object_or_404(Student, id=student_id)
-    return JsonResponse(generate_and_send_certificate(student))
+    cert_type = request.GET.get("type", "auto")
+
+    try:
+        if not is_gmail(student.email):
+            EmailReport.objects.create(
+                student=student,
+                status='failed',
+                error_message='Email not sent — only Gmail addresses are allowed'
+            )
+            return JsonResponse({'status': 'failed', 'message': 'Only Gmail addresses are allowed'})
+
+        if cert_type == "manual":
+            # Generate manual template using reportlab
+            buffer = mt(request, student_id).content  # reuse mt
+            filename = f"certificate_{student.id}.pdf"
+            path = f"certificates/{filename}"
+            with default_storage.open(path, 'wb') as f:
+                f.write(buffer)
+            cert_path = path
+        else:
+            # Default auto
+            cert_path = generate_certificate(student) or generate_simple_certificate(student)
+
+        if not cert_path:
+            return JsonResponse({'status': 'failed', 'message': 'Certificate generation failed'})
+
+        if send_certificate_email(student, cert_path):
+            EmailReport.objects.create(student=student, status='success')
+            return JsonResponse({'status': 'success', 'student_name': student.full_name})
+        else:
+            EmailReport.objects.create(
+                student=student,
+                status='failed',
+                error_message='Email sending failed'
+            )
+            return JsonResponse({'status': 'failed', 'message': 'Email sending failed'})
+    except Exception as e:
+        logger.exception(f"Error sending certificate for student {student.id}")
+        return JsonResponse({'status': 'failed', 'message': str(e)})
 
 @csrf_exempt
 def bulk_send_certificates(request):
@@ -245,6 +284,12 @@ def bulk_send_certificates(request):
 
 def download_certificate(request, student_id):
     student = get_object_or_404(Student, id=student_id)
+    cert_type = request.GET.get("type", "auto")
+
+    if cert_type == "manual":
+        return mt(request, student_id)  # use your reportlab certificate
+
+    # else -> default auto certificate
     cert_path = generate_certificate(student) or generate_simple_certificate(student)
     if not cert_path:
         messages.error(request, 'Failed to generate certificate.')
@@ -438,4 +483,8 @@ def mt(request, student_id):
     p.save()
     buffer.seek(0)
 
-    return HttpResponse(buffer, content_type="application/pdf")
+    # return HttpResponse(buffer, content_type="application/pdf")
+
+    response = HttpResponse(buffer, content_type="application/pdf")
+    response["Content-Disposition"] = f'attachment; filename="certificate_{student.id}.pdf"'
+    return response
