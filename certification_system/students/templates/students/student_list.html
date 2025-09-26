@@ -7,9 +7,9 @@
         <a href="{% url 'student_create' %}" class="btn btn-primary btn-sm me-2">
             <i class="fas fa-plus me-1"></i> Add Student
         </a>
-        <a href="{% url 'student_import' %}" class="btn btn-outline-secondary btn-sm me-2">
+        <button class="btn btn-outline-secondary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#importModal">
             <i class="fas fa-upload me-1"></i> Import
-        </a>
+        </button>
         <a href="{% url 'student_export' %}" class="btn btn-outline-success btn-sm me-2">
             <i class="fas fa-download me-1"></i> Export
         </a>
@@ -134,6 +134,33 @@
     </div>
 </div>
 
+<div class="modal fade" id="importModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form id="importForm" method="post" enctype="multipart/form-data" action="{% url 'student_import' %}">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h5 class="modal-title">Import Students</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="csvFile" class="form-label">Choose CSV File</label>
+                        <input type="file" class="form-control" id="csvFile" name="file" accept=".csv" required>
+                    </div>
+                    <div class="form-text">CSV must include headers: Full Name, Email, Mobile, Specialization, Course,
+                        Organization, Institution, Start Date, End Date</div>
+                    <div id="importStatus" class="mt-2"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- Progress Modal for Bulk Delete -->
 <div class="modal fade" id="deleteProgressModal" tabindex="-1" aria-labelledby="deleteProgressModalLabel"
     aria-hidden="true">
@@ -194,6 +221,9 @@
         </div>
     </div>
 </div>
+
+
+
 {% endblock %}
 
 {% block extra_js %}
@@ -231,7 +261,7 @@
             const studentId = $(this).data('id');
             $.post(`/students/${studentId}/delete/`, {}, function (resp) {
                 if (resp.status === 'success') location.reload();
-                
+
             });
         });
 
@@ -270,10 +300,26 @@
                 }, index * 300);
             });
         }
-        
+        // --------------------------
+        // Import via AJAX
+        // --------------------------
+        $('#importForm').submit(function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            $('#importStatus').html('<div class="spinner-border spinner-border-sm me-2"></div>Uploading...');
+            $.ajax({
+                url: $(this).attr('action'),
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (resp) { location.reload(); },
+                error: function (xhr) { $('#importStatus').html(`<div class="alert alert-danger">Error: ${xhr.responseText}</div>`); }
+            });
+        });
         $('#bulkDeleteBtn').click(function () {
             const studentIds = $('.student-checkbox:checked').map(function () { return $(this).val(); }).get();
-            
+
 
             const modal = new bootstrap.Modal(document.getElementById('deleteProgressModal'));
             modal.show();
@@ -345,7 +391,7 @@
                     '.progress-bar', '#progress-text', '#status-messages', 'Sent Generated Certificate to STUDENT_NAME');
             } else {
                 $.post(`/students/${sendStudentIds[0]}/send-certificate/?type=auto`, {}, function (resp) {
-                    
+
                 });
             }
             bootstrap.Modal.getInstance(document.getElementById('sendChoiceModal')).hide();
@@ -358,7 +404,7 @@
                     '.progress-bar', '#progress-text', '#status-messages', 'Sent Manual Template to STUDENT_NAME');
             } else {
                 $.post(`/students/${sendStudentIds[0]}/send-certificate/?type=manual`, {}, function (resp) {
-                    
+
                 });
             }
             bootstrap.Modal.getInstance(document.getElementById('sendChoiceModal')).hide();

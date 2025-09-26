@@ -3933,3 +3933,110 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 [INFO] 2025-09-26 15:23:46,842 django.server "POST /login/?next=/dashboard/ HTTP/1.1" 302 0
 [INFO] 2025-09-26 15:23:46,904 django.server "GET /dashboard/ HTTP/1.1" 200 4809
 [INFO] 2025-09-26 15:23:46,904 django.server "GET /dashboard/ HTTP/1.1" 200 4809
+[INFO] 2025-09-26 15:25:19,739 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-26 15:25:19,739 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-26 15:29:27,654 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:29:27,654 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:29:27,673 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-26 15:29:27,673 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-26 15:29:27,709 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:29:27,709 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:29:27,734 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[INFO] 2025-09-26 15:29:27,734 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 4457
+[WARNING] 2025-09-26 15:29:29,809 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:29:29,809 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:29:29,823 django.server "GET /students/ HTTP/1.1" 200 28975
+[INFO] 2025-09-26 15:29:29,823 django.server "GET /students/ HTTP/1.1" 200 28975
+[WARNING] 2025-09-26 15:29:44,803 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:29:44,803 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:29:44,821 django.server "POST /students/import/ HTTP/1.1" 200 3915
+[INFO] 2025-09-26 15:29:44,821 django.server "POST /students/import/ HTTP/1.1" 200 3915
+[WARNING] 2025-09-26 15:39:50,399 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:39:50,399 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:39:50,415 django.server "GET /students/ HTTP/1.1" 200 28623
+[INFO] 2025-09-26 15:39:50,415 django.server "GET /students/ HTTP/1.1" 200 28623
+[WARNING] 2025-09-26 15:39:52,251 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:39:52,251 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:39:52,253 django.server "GET /students/import/ HTTP/1.1" 200 3781
+[INFO] 2025-09-26 15:39:52,253 django.server "GET /students/import/ HTTP/1.1" 200 3781
+[WARNING] 2025-09-26 15:40:53,862 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:40:53,862 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:40:53,876 django.server "GET /students/ HTTP/1.1" 200 25528
+[INFO] 2025-09-26 15:40:53,876 django.server "GET /students/ HTTP/1.1" 200 25528
+[INFO] 2025-09-26 15:41:03,548 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-09-26 15:41:03,548 django.server "POST /students/import/ HTTP/1.1" 302 0
+[WARNING] 2025-09-26 15:41:03,575 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:41:03,575 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:41:03,638 django.server "GET /students/ HTTP/1.1" 200 34367
+[INFO] 2025-09-26 15:41:03,638 django.server "GET /students/ HTTP/1.1" 200 34367
+[WARNING] 2025-09-26 15:41:03,685 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:41:03,685 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:41:03,734 django.server "GET /students/ HTTP/1.1" 200 34030
+[INFO] 2025-09-26 15:41:03,734 django.server "GET /students/ HTTP/1.1" 200 34030
+[INFO] 2025-09-26 15:41:18,217 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[INFO] 2025-09-26 15:41:18,217 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[WARNING] 2025-09-26 15:41:18,270 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:41:18,270 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:41:18,315 django.server "GET /students/ HTTP/1.1" 200 25528
+[INFO] 2025-09-26 15:41:18,315 django.server "GET /students/ HTTP/1.1" 200 25528
+[INFO] 2025-09-26 15:41:31,379 django.server "POST /students/78/send-certificate/?type=auto HTTP/1.1" 200 67
+[INFO] 2025-09-26 15:41:31,379 django.server "POST /students/78/send-certificate/?type=auto HTTP/1.1" 200 67
+[INFO] 2025-09-26 15:41:31,913 django.server "POST /students/75/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-26 15:41:31,913 django.server "POST /students/75/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-26 15:41:32,200 django.server "POST /students/77/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-09-26 15:41:32,200 django.server "POST /students/77/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-09-26 15:41:32,432 django.server "POST /students/76/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-26 15:41:32,432 django.server "POST /students/76/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-26 15:41:37,502 students.utils Email successfully sent to raviteja9182@gmail.com
+[INFO] 2025-09-26 15:41:37,933 students.utils Email successfully sent to rt.gorla@gmail.com
+[INFO] 2025-09-26 15:41:41,530 students.utils Email successfully sent to rt.gorla7@gmail.com
+[WARNING] 2025-09-26 15:41:51,099 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:41:51,099 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:41:51,123 django.server "GET /reports/ HTTP/1.1" 200 13792
+[INFO] 2025-09-26 15:41:51,123 django.server "GET /reports/ HTTP/1.1" 200 13792
+[WARNING] 2025-09-26 15:42:05,366 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:42:05,366 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:42:05,420 django.server "GET /reports/ HTTP/1.1" 200 13792
+[INFO] 2025-09-26 15:42:05,420 django.server "GET /reports/ HTTP/1.1" 200 13792
+[WARNING] 2025-09-26 15:43:35,248 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:43:35,248 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:43:35,265 django.server "GET /students/ HTTP/1.1" 200 28623
+[INFO] 2025-09-26 15:43:35,265 django.server "GET /students/ HTTP/1.1" 200 28623
+[WARNING] 2025-09-26 15:46:00,488 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:46:00,488 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:46:00,502 django.server "GET /students/ HTTP/1.1" 200 29657
+[INFO] 2025-09-26 15:46:00,502 django.server "GET /students/ HTTP/1.1" 200 29657
+[INFO] 2025-09-26 15:46:12,653 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-09-26 15:46:12,653 django.server "POST /students/import/ HTTP/1.1" 302 0
+[WARNING] 2025-09-26 15:46:12,679 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:46:12,679 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:46:12,729 django.server "GET /students/ HTTP/1.1" 200 39052
+[INFO] 2025-09-26 15:46:12,729 django.server "GET /students/ HTTP/1.1" 200 39052
+[WARNING] 2025-09-26 15:46:12,786 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:46:12,786 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:46:12,834 django.server "GET /students/ HTTP/1.1" 200 38715
+[INFO] 2025-09-26 15:46:12,834 django.server "GET /students/ HTTP/1.1" 200 38715
+[INFO] 2025-09-26 15:46:28,605 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-09-26 15:46:28,605 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[WARNING] 2025-09-26 15:46:29,664 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:46:29,664 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:46:29,694 django.server "GET /students/ HTTP/1.1" 200 29657
+[INFO] 2025-09-26 15:46:29,694 django.server "GET /students/ HTTP/1.1" 200 29657
+[INFO] 2025-09-26 15:46:38,588 django.server "POST /students/83/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-26 15:46:38,588 django.server "POST /students/83/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-26 15:46:39,697 django.server "POST /students/86/send-certificate/?type=auto HTTP/1.1" 200 67
+[INFO] 2025-09-26 15:46:39,697 django.server "POST /students/86/send-certificate/?type=auto HTTP/1.1" 200 67
+[INFO] 2025-09-26 15:46:39,881 django.server "POST /students/85/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-09-26 15:46:39,881 django.server "POST /students/85/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-09-26 15:46:39,925 django.server "POST /students/84/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-26 15:46:39,925 django.server "POST /students/84/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-26 15:46:42,821 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[INFO] 2025-09-26 15:46:42,821 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[WARNING] 2025-09-26 15:46:43,890 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:46:43,890 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:46:43,903 django.server "GET /students/ HTTP/1.1" 200 20848
+[INFO] 2025-09-26 15:46:43,903 django.server "GET /students/ HTTP/1.1" 200 20848
+[WARNING] 2025-09-26 15:46:47,550 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-26 15:46:47,550 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-26 15:46:47,594 django.server "GET /students/create/ HTTP/1.1" 200 9402
+[INFO] 2025-09-26 15:46:47,594 django.server "GET /students/create/ HTTP/1.1" 200 9402
