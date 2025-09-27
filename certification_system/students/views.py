@@ -375,22 +375,59 @@ from django.http import HttpResponse
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import cm
+from reportlab.lib.utils import ImageReader
 from dateutil.relativedelta import relativedelta
 from students.models import Student
 from templates_app.models import Asset
+from PIL import Image
+import requests
 
 
+# ---------------- HELPER ----------------
+def get_image_reader(field_file):
+    """
+    Returns a ReportLab-compatible ImageReader object
+    from a Django FileField (works for local and remote storage).
+    Converts to RGB if the image has transparency.
+    """
+    if not field_file:
+        return None
+
+    try:
+        # For remote storages (e.g. S3) where .path may not exist
+        file_url = field_file.url
+        if file_url.startswith("http"):
+            response = requests.get(file_url)
+            img = Image.open(BytesIO(response.content))
+        else:
+            # Local storage
+            img = Image.open(field_file.path)
+
+        # Convert RGBA/Palette to RGB to avoid ReportLab issues
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+
+        buf = BytesIO()
+        img.save(buf, format="PNG")
+        buf.seek(0)
+        return ImageReader(buf)
+
+    except Exception as e:
+        print(f"Error loading image {field_file}: {e}")
+        return None
+
+
+# ---------------- MAIN VIEW ----------------
 def mt(request, student_id):
     student = Student.objects.get(id=student_id)
-    
 
-    # Calculate internship duration
+    # Internship duration
     months = 0
     if student.start_date and student.end_date:
         delta = relativedelta(student.end_date, student.start_date)
         months = delta.years * 12 + delta.months
         if months == 0:
-            months = 1  # Minimum 1 month
+            months = 1
 
     # Assets (logo, signature, stamp, etc.)
     assets = Asset.objects.filter(institute__name=student.institution).first()
@@ -408,20 +445,20 @@ def mt(request, student_id):
     bottom_margin = 2 * cm
 
     # ---------------- HEADER ----------------
-    # Logo top-left
-    if assets and assets.logo:
+    logo = get_image_reader(assets.logo) if assets and assets.logo else None
+    if logo:
         p.drawImage(
-            assets.logo.path,
+            logo,
             left_margin,
-            height - top_margin - 40,
-            width=100,
+            height - top_margin - 180,  # lower Y to avoid clipping
+            width=120,
             preserveAspectRatio=True,
             mask="auto",
         )
 
     # ---------------- TITLE ----------------
     p.setFont(f"{font}-Bold", 16)
-    p.drawCentredString(width / 2, height - top_margin - 80, "Internship Completion Certificate")
+    p.drawCentredString(width / 2, height - top_margin - 80, f"{student.organization}")
 
     # ---------------- DATE ----------------
     if student.end_date:
@@ -433,7 +470,7 @@ def mt(request, student_id):
         )
 
     # ---------------- BODY ----------------
-    text = p.beginText(left_margin, height - top_margin - 140)
+    text = p.beginText(left_margin, height - top_margin - 160)
     text.setFont(font, 12)
     text.setLeading(18)
 
@@ -456,9 +493,10 @@ def mt(request, student_id):
 
     # ---------------- SIGNATURE ----------------
     sig_y = bottom_margin
-    if assets and assets.signature:
+    sig = get_image_reader(assets.signature) if assets and assets.signature else None
+    if sig:
         p.drawImage(
-            assets.signature.path,
+            sig,
             left_margin,
             sig_y + 70,
             width=100,
@@ -467,14 +505,15 @@ def mt(request, student_id):
         )
 
     p.setFont(font, 12)
-    p.drawString(left_margin, sig_y + 260 , "Sincerely,")
+    p.drawString(left_margin, sig_y + 260, "Sincerely,")
     p.setFont(f"{font}-Bold", 12)
     p.drawString(left_margin, sig_y + 240, f"From {student.institution or 'RamanaSoft'}")
 
     # ---------------- STAMP ----------------
-    if assets and assets.stamp:
+    stamp = get_image_reader(assets.stamp) if assets and assets.stamp else None
+    if stamp:
         p.drawImage(
-            assets.stamp.path,
+            stamp,
             left_margin,
             bottom_margin + 70,
             width=100,
@@ -486,8 +525,6 @@ def mt(request, student_id):
     p.showPage()
     p.save()
     buffer.seek(0)
-
-    # return HttpResponse(buffer, content_type="application/pdf")
 
     response = HttpResponse(buffer, content_type="application/pdf")
     response["Content-Disposition"] = f'attachment; filename="certificate_{student.id}.pdf"'

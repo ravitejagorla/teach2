@@ -576,3 +576,271 @@ django.template.exceptions.TemplateDoesNotExist: students/_form.html
 [INFO] 2025-09-27 09:51:05,684 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5081
 [INFO] 2025-09-27 09:51:10,329 django.server "GET /students/register/ HTTP/1.1" 200 6243
 [INFO] 2025-09-27 09:51:10,329 django.server "GET /students/register/ HTTP/1.1" 200 6243
+[INFO] 2025-09-27 10:36:49,885 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:36:49,885 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:36:55,335 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:36:55,335 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-09-27 10:36:55,394 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:36:55,394 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:36:55,432 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:36:55,432 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 10:36:55,585 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:36:55,585 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:36:55,645 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[INFO] 2025-09-27 10:36:55,645 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[WARNING] 2025-09-27 10:36:56,299 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-27 10:36:56,299 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-27 10:36:56,299 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-27 10:36:56,299 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-27 10:37:03,387 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:37:03,387 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:37:03,408 django.server "GET /admin/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:37:03,408 django.server "GET /admin/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 10:37:03,431 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:37:03,431 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:37:03,641 django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4178
+[INFO] 2025-09-27 10:37:03,641 django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4178
+[INFO] 2025-09-27 10:37:03,678 django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,678 django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,683 django.server "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,683 django.server "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,683 django.server "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,683 django.server "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,726 django.server "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,726 django.server "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,731 django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,733 django.server "GET /static/admin/css/login.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,731 django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,733 django.server "GET /static/admin/css/login.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,739 django.server "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:03,739 django.server "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[WARNING] 2025-09-27 10:37:13,052 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:37:13,052 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:37:15,425 django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:37:15,425 django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:37:15,663 django.server "GET /admin/ HTTP/1.1" 200 10740
+[INFO] 2025-09-27 10:37:15,663 django.server "GET /admin/ HTTP/1.1" 200 10740
+[INFO] 2025-09-27 10:37:15,730 django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:15,730 django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:15,778 django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:15,778 django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:15,778 django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:15,778 django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,704 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13179
+[INFO] 2025-09-27 10:37:21,704 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13179
+[INFO] 2025-09-27 10:37:21,751 django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,751 django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,770 django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,770 django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,770 django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,776 django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,770 django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,776 django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,785 django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,785 django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,796 django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,796 django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,803 django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,803 django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,807 django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,807 django.server "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,807 django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,807 django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,807 django.server "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,807 django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,837 django.server "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,837 django.server "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,902 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:37:21,902 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:37:21,954 django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,954 django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,962 django.server "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:21,962 django.server "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:34,071 django.server "GET /admin/templates_app/asset/1/change/ HTTP/1.1" 200 14279
+[INFO] 2025-09-27 10:37:34,071 django.server "GET /admin/templates_app/asset/1/change/ HTTP/1.1" 200 14279
+[INFO] 2025-09-27 10:37:34,121 django.server "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:34,121 django.server "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:34,126 django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:34,126 django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:34,142 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:37:34,142 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:37:34,150 django.server "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:34,150 django.server "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:34,156 django.server "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:34,156 django.server "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:54,156 django.server "POST /admin/templates_app/asset/1/change/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:37:54,156 django.server "POST /admin/templates_app/asset/1/change/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:37:54,230 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13419
+[INFO] 2025-09-27 10:37:54,230 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13419
+[INFO] 2025-09-27 10:37:54,282 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:37:54,282 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:37:54,320 django.server "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:37:54,320 django.server "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[INFO] 2025-09-27 10:38:02,385 django.server "GET /admin/templates_app/asset/2/change/ HTTP/1.1" 200 14274
+[INFO] 2025-09-27 10:38:02,385 django.server "GET /admin/templates_app/asset/2/change/ HTTP/1.1" 200 14274
+[INFO] 2025-09-27 10:38:02,447 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:38:02,447 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:38:13,106 django.server "POST /admin/templates_app/asset/2/change/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:38:13,106 django.server "POST /admin/templates_app/asset/2/change/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:38:13,164 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13402
+[INFO] 2025-09-27 10:38:13,164 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13402
+[INFO] 2025-09-27 10:38:13,234 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:38:13,234 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:38:17,313 django.server "GET /admin/templates_app/asset/add/ HTTP/1.1" 200 13215
+[INFO] 2025-09-27 10:38:17,313 django.server "GET /admin/templates_app/asset/add/ HTTP/1.1" 200 13215
+[INFO] 2025-09-27 10:38:17,374 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:38:17,374 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:38:46,231 django.server "POST /admin/templates_app/asset/add/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:38:46,231 django.server "POST /admin/templates_app/asset/add/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:38:46,299 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13972
+[INFO] 2025-09-27 10:38:46,299 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13972
+[INFO] 2025-09-27 10:38:46,353 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:38:46,353 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 10:38:57,067 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 10:38:57,067 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 10:39:04,972 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 104877
+[INFO] 2025-09-27 10:39:04,972 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 104877
+[INFO] 2025-09-27 10:40:39,377 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 10:40:39,377 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 10:40:48,401 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 104877
+[INFO] 2025-09-27 10:40:48,401 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 104877
+[INFO] 2025-09-27 10:42:59,947 django.server "GET /students/create/ HTTP/1.1" 200 10036
+[INFO] 2025-09-27 10:42:59,947 django.server "GET /students/create/ HTTP/1.1" 200 10036
+[INFO] 2025-09-27 10:43:57,270 django.server "POST /students/create/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:43:57,270 django.server "POST /students/create/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 10:43:57,321 django.server "GET /students/ HTTP/1.1" 200 34295
+[INFO] 2025-09-27 10:43:57,321 django.server "GET /students/ HTTP/1.1" 200 34295
+[INFO] 2025-09-27 10:44:09,155 django.server "GET /students/mt/111/?type=manual HTTP/1.1" 200 138329
+[INFO] 2025-09-27 10:44:09,155 django.server "GET /students/mt/111/?type=manual HTTP/1.1" 200 138329
+[INFO] 2025-09-27 10:44:27,574 django.server "GET /students/mt/109/?type=manual HTTP/1.1" 200 68298
+[INFO] 2025-09-27 10:44:27,574 django.server "GET /students/mt/109/?type=manual HTTP/1.1" 200 68298
+[INFO] 2025-09-27 10:47:08,663 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:08,663 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:10,791 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:10,791 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:18,616 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:18,616 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:20,680 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:20,680 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:24,343 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:24,343 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:26,243 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:26,243 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:33,976 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:33,976 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:35,319 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:35,319 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:38,867 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:38,867 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:47:40,613 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:47:40,613 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 10:47:46,294 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:47:46,294 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:47:46,339 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:47:46,339 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:47:54,847 django.server "GET /students/mt/107/?type=manual HTTP/1.1" 200 68308
+[INFO] 2025-09-27 10:47:54,847 django.server "GET /students/mt/107/?type=manual HTTP/1.1" 200 68308
+[WARNING] 2025-09-27 10:48:04,547 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:48:04,547 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:48:04,583 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:48:04,583 django.server "GET /students/ HTTP/1.1" 200 33958
+[WARNING] 2025-09-27 10:48:05,804 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:48:05,804 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:48:05,825 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:48:05,825 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:48:10,612 django.server "GET /students/mt/107/?type=manual HTTP/1.1" 200 68308
+[INFO] 2025-09-27 10:48:10,612 django.server "GET /students/mt/107/?type=manual HTTP/1.1" 200 68308
+[INFO] 2025-09-27 10:50:42,297 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:50:42,297 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:50:44,283 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:50:44,283 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:50:45,758 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:50:45,758 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:50:47,498 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:50:47,498 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:51:11,171 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:51:11,171 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:51:12,694 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:51:12,694 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:51:26,289 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:51:26,289 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:51:28,232 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:51:28,232 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:52:15,837 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:52:15,837 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:52:17,965 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:52:17,965 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 10:52:29,766 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:52:29,766 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:52:29,793 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:52:29,793 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:52:34,598 django.server "GET /students/mt/107/?type=manual HTTP/1.1" 200 68304
+[INFO] 2025-09-27 10:52:34,598 django.server "GET /students/mt/107/?type=manual HTTP/1.1" 200 68304
+[INFO] 2025-09-27 10:55:03,272 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:55:03,272 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:55:05,105 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:55:05,105 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 10:55:07,831 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:55:07,831 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:55:07,864 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:55:07,864 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:55:15,721 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 99275
+[INFO] 2025-09-27 10:55:15,721 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 99275
+[INFO] 2025-09-27 10:57:30,535 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:57:30,535 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:57:32,809 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:57:32,809 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:57:54,574 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:57:54,574 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:57:56,818 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:57:56,818 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 10:58:03,572 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:58:03,572 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:58:03,604 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:58:03,604 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:58:09,954 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 99274
+[INFO] 2025-09-27 10:58:09,954 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 99274
+[INFO] 2025-09-27 10:59:06,318 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:06,318 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:07,944 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:07,944 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:19,181 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:19,181 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:21,423 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:21,423 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:24,051 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:24,051 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:25,992 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:25,992 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:29,835 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:29,835 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:31,918 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:31,918 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:35,918 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:35,918 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 10:59:37,976 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 10:59:37,976 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 10:59:45,702 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 10:59:45,702 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 10:59:45,733 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:59:45,733 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 10:59:51,691 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 99270
+[INFO] 2025-09-27 10:59:51,691 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 99270
+[INFO] 2025-09-27 11:04:28,762 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 11:04:28,762 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 11:04:30,778 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 11:04:30,778 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 11:04:53,709 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:04:53,709 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:04:53,740 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 11:04:53,740 django.server "GET /students/ HTTP/1.1" 200 33958
+[INFO] 2025-09-27 11:04:59,496 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 99275
+[INFO] 2025-09-27 11:04:59,496 django.server "GET /students/mt/108/?type=manual HTTP/1.1" 200 99275
+[INFO] 2025-09-27 11:05:13,142 django.server "GET /students/107/download-certificate/?type=auto HTTP/1.1" 200 145711
+[INFO] 2025-09-27 11:05:13,142 django.server "GET /students/107/download-certificate/?type=auto HTTP/1.1" 200 145711
+[INFO] 2025-09-27 11:05:32,011 django.server "GET /students/108/download-certificate/?type=auto HTTP/1.1" 200 833895
+[INFO] 2025-09-27 11:05:32,011 django.server "GET /students/108/download-certificate/?type=auto HTTP/1.1" 200 833895
+[INFO] 2025-09-27 11:05:44,034 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 11:05:44,034 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 11:05:46,046 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 11:05:46,046 django.utils.autoreload Watching for file changes with StatReloader
