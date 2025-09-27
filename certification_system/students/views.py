@@ -449,8 +449,8 @@ def mt(request, student_id):
     if logo:
         p.drawImage(
             logo,
-            left_margin,
-            height - top_margin - 180,  # lower Y to avoid clipping
+            width - right_margin - 120,
+            height - top_margin - 180,
             width=120,
             preserveAspectRatio=True,
             mask="auto",
@@ -527,5 +527,5 @@ def mt(request, student_id):
     buffer.seek(0)
 
     response = HttpResponse(buffer, content_type="application/pdf")
-    response["Content-Disposition"] = f'attachment; filename="certificate_{student.id}.pdf"'
+    response["Content-Disposition"] = f'attachment; filename="{student.full_name}_offer_letter.pdf"'
     return response
