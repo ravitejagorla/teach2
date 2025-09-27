@@ -228,8 +228,6 @@ def generate_certificate(student):
             # current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             # c.setFont("Helvetica-Oblique", 10)
             # c.drawString(scale_x(100), scale_y(1550), f"Generated on: {current_time}")
-    
-        
 
         c.save()
         pdf_content = buffer.getvalue()
