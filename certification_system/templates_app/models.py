@@ -24,6 +24,7 @@ class Asset(models.Model):
         on_delete=models.CASCADE, 
         related_name='assets'
     )
+    font = models.CharField(max_length=100, default="Times-Roman")
     logo = models.FileField(upload_to='logos/', blank=True, null=True)
     signature = models.FileField(upload_to='signatures/', blank=True, null=True)
     stamp = models.FileField(upload_to='stamps/', blank=True, null=True)

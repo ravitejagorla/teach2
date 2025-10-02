@@ -1286,3 +1286,537 @@ AttributeError: 'Settings' object has no attribute 'ADMIN_EMAIL'
 [INFO] 2025-09-27 11:54:33,158 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
 [INFO] 2025-09-27 11:54:35,039 django.utils.autoreload Watching for file changes with StatReloader
 [INFO] 2025-09-27 11:54:35,039 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 11:55:18,910 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 11:55:18,910 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 11:57:49,644 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:57:49,644 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:57:49,679 django.server "GET /reports/ HTTP/1.1" 200 15186
+[INFO] 2025-09-27 11:57:49,679 django.server "GET /reports/ HTTP/1.1" 200 15186
+[WARNING] 2025-09-27 11:57:51,496 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:57:51,496 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:57:51,526 django.server "GET /reports/ HTTP/1.1" 200 15186
+[INFO] 2025-09-27 11:57:51,526 django.server "GET /reports/ HTTP/1.1" 200 15186
+[WARNING] 2025-09-27 11:57:52,227 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:57:52,227 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:57:52,240 django.server "GET /reports/ HTTP/1.1" 200 15186
+[INFO] 2025-09-27 11:57:52,240 django.server "GET /reports/ HTTP/1.1" 200 15186
+[WARNING] 2025-09-27 11:57:52,837 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:57:52,837 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:57:52,858 django.server "GET /reports/ HTTP/1.1" 200 15186
+[INFO] 2025-09-27 11:57:52,858 django.server "GET /reports/ HTTP/1.1" 200 15186
+[WARNING] 2025-09-27 11:57:54,337 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:57:54,337 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:57:54,368 django.server "GET /reports/ HTTP/1.1" 200 15186
+[INFO] 2025-09-27 11:57:54,368 django.server "GET /reports/ HTTP/1.1" 200 15186
+[WARNING] 2025-09-27 11:57:56,214 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:57:56,214 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:57:56,223 django.server "GET /students/ HTTP/1.1" 200 31694
+[INFO] 2025-09-27 11:57:56,223 django.server "GET /students/ HTTP/1.1" 200 31694
+[INFO] 2025-09-27 11:58:05,224 django.server "POST /students/113/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-27 11:58:05,224 django.server "POST /students/113/send-certificate/?type=auto HTTP/1.1" 200 56
+[WARNING] 2025-09-27 11:58:07,595 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:07,595 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:07,620 django.server "GET /reports/ HTTP/1.1" 200 16325
+[INFO] 2025-09-27 11:58:07,620 django.server "GET /reports/ HTTP/1.1" 200 16325
+[WARNING] 2025-09-27 11:58:10,267 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:10,267 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:10,290 django.server "GET /reports/ HTTP/1.1" 200 16325
+[INFO] 2025-09-27 11:58:10,290 django.server "GET /reports/ HTTP/1.1" 200 16325
+[INFO] 2025-09-27 11:58:10,948 students.utils Email successfully sent to rt.gorla@gmail.com
+[WARNING] 2025-09-27 11:58:11,050 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:11,050 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:11,079 django.server "GET /reports/ HTTP/1.1" 200 17464
+[INFO] 2025-09-27 11:58:11,079 django.server "GET /reports/ HTTP/1.1" 200 17464
+[WARNING] 2025-09-27 11:58:11,977 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:11,977 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:11,997 django.server "GET /reports/ HTTP/1.1" 200 17464
+[INFO] 2025-09-27 11:58:11,997 django.server "GET /reports/ HTTP/1.1" 200 17464
+[WARNING] 2025-09-27 11:58:13,651 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:13,651 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:13,681 django.server "GET /reports/ HTTP/1.1" 200 17464
+[INFO] 2025-09-27 11:58:13,681 django.server "GET /reports/ HTTP/1.1" 200 17464
+[WARNING] 2025-09-27 11:58:23,891 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:23,891 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:23,928 django.server "GET /reports/ HTTP/1.1" 200 17464
+[INFO] 2025-09-27 11:58:23,928 django.server "GET /reports/ HTTP/1.1" 200 17464
+[WARNING] 2025-09-27 11:58:27,529 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:27,529 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:27,531 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 11:58:27,531 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 11:58:27,545 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:27,545 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:27,580 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[INFO] 2025-09-27 11:58:27,580 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[WARNING] 2025-09-27 11:58:28,959 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:28,959 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:28,979 django.server "GET /students/ HTTP/1.1" 200 31694
+[INFO] 2025-09-27 11:58:28,979 django.server "GET /students/ HTTP/1.1" 200 31694
+[INFO] 2025-09-27 11:58:40,474 django.server "POST /students/114/send-certificate/?type=auto HTTP/1.1" 200 56
+[INFO] 2025-09-27 11:58:40,474 django.server "POST /students/114/send-certificate/?type=auto HTTP/1.1" 200 56
+[WARNING] 2025-09-27 11:58:42,313 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:42,313 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:42,349 django.server "GET /reports/ HTTP/1.1" 200 18605
+[INFO] 2025-09-27 11:58:42,349 django.server "GET /reports/ HTTP/1.1" 200 18605
+[WARNING] 2025-09-27 11:58:45,997 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:45,997 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:46,038 django.server "GET /reports/ HTTP/1.1" 200 18605
+[INFO] 2025-09-27 11:58:46,038 django.server "GET /reports/ HTTP/1.1" 200 18605
+[WARNING] 2025-09-27 11:58:46,778 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:46,778 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:46,820 django.server "GET /reports/ HTTP/1.1" 200 18605
+[INFO] 2025-09-27 11:58:46,820 django.server "GET /reports/ HTTP/1.1" 200 18605
+[WARNING] 2025-09-27 11:58:47,996 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:47,996 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:48,018 django.server "GET /reports/ HTTP/1.1" 200 18605
+[INFO] 2025-09-27 11:58:48,018 django.server "GET /reports/ HTTP/1.1" 200 18605
+[WARNING] 2025-09-27 11:58:48,669 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:48,669 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:48,704 django.server "GET /reports/ HTTP/1.1" 200 18605
+[INFO] 2025-09-27 11:58:48,704 django.server "GET /reports/ HTTP/1.1" 200 18605
+[INFO] 2025-09-27 11:58:49,643 students.utils Email successfully sent to rt.gorla7@gmail.com
+[WARNING] 2025-09-27 11:58:57,426 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:58:57,426 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:58:57,450 django.server "GET /students/ HTTP/1.1" 200 31694
+[INFO] 2025-09-27 11:58:57,450 django.server "GET /students/ HTTP/1.1" 200 31694
+[INFO] 2025-09-27 11:59:05,018 django.server "POST /students/115/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-09-27 11:59:05,018 django.server "POST /students/115/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-09-27 11:59:09,595 students.utils Email successfully sent to raviteja9182@gmail.com
+[WARNING] 2025-09-27 11:59:10,636 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:59:10,636 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:59:10,668 django.server "GET /reports/ HTTP/1.1" 200 22014
+[INFO] 2025-09-27 11:59:10,668 django.server "GET /reports/ HTTP/1.1" 200 22014
+[WARNING] 2025-09-27 11:59:17,542 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:59:17,542 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:59:17,593 django.server "GET /reports/ HTTP/1.1" 200 22014
+[INFO] 2025-09-27 11:59:17,593 django.server "GET /reports/ HTTP/1.1" 200 22014
+[WARNING] 2025-09-27 11:59:18,887 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:59:18,887 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:59:18,927 django.server "GET /reports/ HTTP/1.1" 200 22014
+[INFO] 2025-09-27 11:59:18,927 django.server "GET /reports/ HTTP/1.1" 200 22014
+[WARNING] 2025-09-27 11:59:24,402 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:59:24,402 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:59:24,436 django.server "GET /reports/ HTTP/1.1" 200 22014
+[INFO] 2025-09-27 11:59:24,436 django.server "GET /reports/ HTTP/1.1" 200 22014
+[WARNING] 2025-09-27 11:59:25,976 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 11:59:25,976 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 11:59:26,017 django.server "GET /reports/ HTTP/1.1" 200 22014
+[INFO] 2025-09-27 11:59:26,017 django.server "GET /reports/ HTTP/1.1" 200 22014
+[WARNING] 2025-09-27 12:00:05,376 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 12:00:05,376 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 12:00:05,416 django.server "GET /reports/ HTTP/1.1" 200 22014
+[INFO] 2025-09-27 12:00:05,416 django.server "GET /reports/ HTTP/1.1" 200 22014
+[WARNING] 2025-09-27 12:00:06,446 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 12:00:06,446 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 12:00:06,459 django.server "GET /reports/ HTTP/1.1" 200 22014
+[INFO] 2025-09-27 12:00:06,459 django.server "GET /reports/ HTTP/1.1" 200 22014
+[WARNING] 2025-09-27 12:09:07,251 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 12:09:07,251 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 12:09:07,252 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 12:09:07,252 django.server "GET /students/ HTTP/1.1" 200 31698
+[WARNING] 2025-09-27 12:09:08,294 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 12:09:08,294 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 12:09:08,307 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 12:09:08,307 django.server "GET /students/ HTTP/1.1" 200 31698
+[WARNING] 2025-09-27 12:09:16,494 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 12:09:16,494 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 12:09:16,520 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 12:09:16,520 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 12:09:23,402 django.server "GET /students/register/ HTTP/1.1" 200 6243
+[INFO] 2025-09-27 12:09:23,402 django.server "GET /students/register/ HTTP/1.1" 200 6243
+[INFO] 2025-09-27 13:50:38,339 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:50:38,339 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:50:43,339 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-27 13:50:43,339 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-09-27 13:50:43,464 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:50:43,464 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:50:43,485 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 13:50:43,485 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 13:50:43,610 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:50:43,610 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:50:43,735 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[INFO] 2025-09-27 13:50:43,735 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[WARNING] 2025-09-27 13:50:44,346 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-27 13:50:44,346 django.request Not Found: /favicon.ico
+[WARNING] 2025-09-27 13:50:44,348 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-27 13:50:44,348 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-09-27 13:50:47,792 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:50:47,792 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:50:47,817 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 13:50:47,817 django.server "GET /students/ HTTP/1.1" 200 31698
+[INFO] 2025-09-27 13:50:53,508 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-09-27 13:50:53,508 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[WARNING] 2025-09-27 13:50:54,553 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:50:54,553 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:50:54,557 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-09-27 13:50:54,557 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-09-27 13:52:18,050 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:52:18,050 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:52:19,691 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:52:19,691 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:52:21,371 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:52:21,371 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:52:22,963 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:52:22,963 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:52:34,936 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:52:34,936 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:52:36,412 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:52:36,412 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 13:52:44,690 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:52:44,690 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:52:44,697 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-09-27 13:52:44,697 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-09-27 13:52:54,820 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 13:52:54,820 django.server "POST /students/import/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 13:52:54,843 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:52:54,843 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:52:54,848 django.server "GET /students/ HTTP/1.1" 200 23206
+[INFO] 2025-09-27 13:52:54,848 django.server "GET /students/ HTTP/1.1" 200 23206
+[INFO] 2025-09-27 13:53:06,915 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 13:53:06,915 django.server "POST /students/import/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 13:53:06,936 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:53:06,936 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:53:06,948 django.server "GET /students/ HTTP/1.1" 200 32035
+[INFO] 2025-09-27 13:53:06,948 django.server "GET /students/ HTTP/1.1" 200 32035
+[INFO] 2025-09-27 13:54:54,919 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 13:54:54,919 django.server "POST /students/import/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 13:54:54,936 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:54:54,936 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:54:54,970 django.server "GET /students/ HTTP/1.1" 200 45641
+[INFO] 2025-09-27 13:54:54,970 django.server "GET /students/ HTTP/1.1" 200 45641
+[WARNING] 2025-09-27 13:54:55,009 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:54:55,009 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:54:55,044 django.server "GET /students/ HTTP/1.1" 200 45304
+[INFO] 2025-09-27 13:54:55,044 django.server "GET /students/ HTTP/1.1" 200 45304
+[INFO] 2025-09-27 13:56:31,592 django.server "GET /students/export/ HTTP/1.1" 200 1524
+[INFO] 2025-09-27 13:56:31,592 django.server "GET /students/export/ HTTP/1.1" 200 1524
+[INFO] 2025-09-27 13:56:54,166 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:56:54,166 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:56:55,746 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:56:55,746 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:56:57,327 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:56:57,327 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:56:58,691 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:56:58,691 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:57:04,089 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:57:04,089 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:57:05,756 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:57:05,756 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:57:08,452 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:57:08,452 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 13:57:09,902 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 13:57:09,902 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 13:58:01,751 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:58:01,751 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:58:01,788 django.server "GET /students/ HTTP/1.1" 200 45304
+[INFO] 2025-09-27 13:58:01,788 django.server "GET /students/ HTTP/1.1" 200 45304
+[INFO] 2025-09-27 13:58:03,980 django.server "GET /students/export/ HTTP/1.1" 200 1539
+[INFO] 2025-09-27 13:58:03,980 django.server "GET /students/export/ HTTP/1.1" 200 1539
+[INFO] 2025-09-27 13:58:38,718 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-09-27 13:58:38,718 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[WARNING] 2025-09-27 13:58:39,769 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:58:39,769 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:58:39,769 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-09-27 13:58:39,769 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-09-27 13:58:49,338 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 13:58:49,338 django.server "POST /students/import/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 13:58:49,354 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:58:49,354 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:58:49,374 django.server "GET /students/ HTTP/1.1" 200 36562
+[INFO] 2025-09-27 13:58:49,374 django.server "GET /students/ HTTP/1.1" 200 36562
+[WARNING] 2025-09-27 13:59:11,219 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:59:11,219 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:59:11,219 django.server "GET /reports/ HTTP/1.1" 200 7434
+[INFO] 2025-09-27 13:59:11,219 django.server "GET /reports/ HTTP/1.1" 200 7434
+[WARNING] 2025-09-27 13:59:13,686 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:59:13,686 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:59:13,704 django.server "GET /students/ HTTP/1.1" 200 36225
+[INFO] 2025-09-27 13:59:13,704 django.server "GET /students/ HTTP/1.1" 200 36225
+[WARNING] 2025-09-27 13:59:26,778 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 13:59:26,778 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 13:59:26,786 django.server "GET /students/ HTTP/1.1" 200 36225
+[INFO] 2025-09-27 13:59:26,786 django.server "GET /students/ HTTP/1.1" 200 36225
+[INFO] 2025-09-27 14:49:41,644 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 14:49:41,644 django.utils.autoreload D:\cert\certification_system\students\views.py changed, reloading.
+[INFO] 2025-09-27 14:49:44,199 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:49:44,199 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:52:15,187 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:52:15,187 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:20,154 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:20,154 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:21,469 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:21,469 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:22,786 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:22,786 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:23,631 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:23,631 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:28,105 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:28,105 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:29,364 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:29,364 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:31,764 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:31,764 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:33,935 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:33,935 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:38,804 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:38,804 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:39,809 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:39,809 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:43,170 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:43,170 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:44,767 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:44,767 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:48,274 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:48,274 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:49,993 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:49,993 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:52,765 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:52,765 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:53:55,931 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:53:55,931 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:57:42,252 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:57:42,252 django.utils.autoreload D:\cert\certification_system\templates_app\models.py changed, reloading.
+[INFO] 2025-09-27 14:57:44,246 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:57:44,246 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:58:27,377 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 14:58:27,377 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:00:17,807 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:00:17,807 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:00:19,652 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:00:19,652 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:00:47,769 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:00:47,769 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:00:49,429 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:00:49,429 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:00:52,782 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:00:52,782 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:00:54,969 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:00:54,969 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:00:57,628 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:00:57,628 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:00:59,217 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:00:59,217 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:04,171 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:04,171 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:05,880 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:05,880 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:13,614 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:13,614 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:15,941 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:15,941 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:28,142 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:28,142 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:29,663 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:29,663 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:41,783 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:41,783 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:43,723 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:43,723 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:47,740 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:47,740 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:49,873 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:49,873 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:54,689 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:54,689 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:56,379 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:56,379 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:01:59,279 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:01:59,279 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:02:00,684 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:02:00,684 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:02:05,626 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:02:05,626 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:02:07,292 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:02:07,292 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:12:53,007 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:12:53,007 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:12:54,707 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:12:54,707 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:14:05,150 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:14:05,150 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:14:07,249 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:14:07,249 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:14:10,171 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:14:10,171 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 15:14:12,059 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:14:12,059 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 15:14:50,063 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 15:14:50,063 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 15:14:50,105 django.server "GET /admin/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 15:14:50,105 django.server "GET /admin/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 15:14:50,133 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 15:14:50,133 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 15:14:50,511 django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4178
+[INFO] 2025-09-27 15:14:50,511 django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4178
+[WARNING] 2025-09-27 15:15:00,346 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 15:15:00,346 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 15:15:02,452 django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 15:15:02,452 django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 15:15:02,550 django.server "GET /admin/ HTTP/1.1" 200 11808
+[INFO] 2025-09-27 15:15:02,550 django.server "GET /admin/ HTTP/1.1" 200 11808
+[INFO] 2025-09-27 15:15:15,113 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13771
+[INFO] 2025-09-27 15:15:15,113 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 13771
+[INFO] 2025-09-27 15:15:15,214 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 15:15:15,214 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 15:15:40,773 django.utils.autoreload D:\cert\certification_system\templates_app\admin.py changed, reloading.
+[INFO] 2025-09-27 15:15:40,773 django.utils.autoreload D:\cert\certification_system\templates_app\admin.py changed, reloading.
+[INFO] 2025-09-27 15:15:42,340 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:15:42,340 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:15:49,999 django.utils.autoreload D:\cert\certification_system\templates_app\admin.py changed, reloading.
+[INFO] 2025-09-27 15:15:49,999 django.utils.autoreload D:\cert\certification_system\templates_app\admin.py changed, reloading.
+[INFO] 2025-09-27 15:15:52,069 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:15:52,069 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:16:40,045 django.utils.autoreload D:\cert\certification_system\templates_app\admin.py changed, reloading.
+[INFO] 2025-09-27 15:16:40,045 django.utils.autoreload D:\cert\certification_system\templates_app\admin.py changed, reloading.
+[INFO] 2025-09-27 15:16:41,527 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 15:16:41,527 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 15:16:48,043 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 15:16:48,043 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 15:16:48,059 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 15:16:48,059 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 302 0
+[WARNING] 2025-09-27 15:16:48,071 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 15:16:48,071 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 15:16:48,119 django.server "GET /admin/login/?next=/admin/templates_app/asset/ HTTP/1.1" 200 4218
+[INFO] 2025-09-27 15:16:48,119 django.server "GET /admin/login/?next=/admin/templates_app/asset/ HTTP/1.1" 200 4218
+[WARNING] 2025-09-27 15:16:59,546 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 15:16:59,546 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 15:17:01,663 django.server "POST /admin/login/?next=/admin/templates_app/asset/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 15:17:01,663 django.server "POST /admin/login/?next=/admin/templates_app/asset/ HTTP/1.1" 302 0
+[INFO] 2025-09-27 15:17:01,808 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 14024
+[INFO] 2025-09-27 15:17:01,808 django.server "GET /admin/templates_app/asset/ HTTP/1.1" 200 14024
+[INFO] 2025-09-27 15:17:01,880 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 15:17:01,880 django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[INFO] 2025-09-27 16:23:31,934 django.server "GET /students/ HTTP/1.1" 200 36229
+[INFO] 2025-09-27 16:23:31,934 django.server "GET /students/ HTTP/1.1" 200 36229
+[INFO] 2025-09-27 16:23:39,436 django.server "GET /students/127/download-certificate/?type=auto HTTP/1.1" 200 2155
+[INFO] 2025-09-27 16:23:39,436 django.server "GET /students/127/download-certificate/?type=auto HTTP/1.1" 200 2155
+[INFO] 2025-09-27 16:24:12,781 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 16:24:12,781 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 16:24:14,667 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 16:24:14,667 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 16:24:24,666 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 16:24:24,666 django.utils.autoreload D:\cert\certification_system\students\utils.py changed, reloading.
+[INFO] 2025-09-27 16:24:26,211 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-09-27 16:24:26,211 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-09-27 16:24:32,009 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-09-27 16:24:32,009 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-09-27 16:24:32,047 django.server "GET /students/ HTTP/1.1" 200 36225
+[INFO] 2025-09-27 16:24:32,047 django.server "GET /students/ HTTP/1.1" 200 36225
+[INFO] 2025-09-27 16:24:36,336 django.server "GET /students/127/download-certificate/?type=auto HTTP/1.1" 200 145711
+[INFO] 2025-09-27 16:24:36,336 django.server "GET /students/127/download-certificate/?type=auto HTTP/1.1" 200 145711
+[INFO] 2025-10-01 09:29:28,955 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-10-01 09:29:28,955 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-10-01 09:29:35,349 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-10-01 09:29:35,349 django.server "GET / HTTP/1.1" 302 0
+[WARNING] 2025-10-01 09:29:35,466 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-10-01 09:29:35,466 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-10-01 09:29:35,504 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-10-01 09:29:35,504 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[WARNING] 2025-10-01 09:29:35,692 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-10-01 09:29:35,692 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-10-01 09:29:36,000 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[INFO] 2025-10-01 09:29:36,000 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[INFO] 2025-10-01 09:29:36,084 django.server "GET /static/css/style.css HTTP/1.1" 304 0
+[INFO] 2025-10-01 09:29:36,084 django.server "GET /static/css/style.css HTTP/1.1" 304 0
+[INFO] 2025-10-01 09:29:36,090 django.server "GET /static/js/scripts.js HTTP/1.1" 304 0
+[INFO] 2025-10-01 09:29:36,090 django.server "GET /static/js/scripts.js HTTP/1.1" 304 0
+[WARNING] 2025-10-01 09:29:36,609 django.request Not Found: /favicon.ico
+[WARNING] 2025-10-01 09:29:36,609 django.request Not Found: /favicon.ico
+[WARNING] 2025-10-01 09:29:36,613 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-10-01 09:29:36,613 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-10-01 09:29:39,244 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-10-01 09:29:39,244 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-10-01 09:29:39,323 django.server "GET /students/ HTTP/1.1" 200 36225
+[INFO] 2025-10-01 09:29:39,323 django.server "GET /students/ HTTP/1.1" 200 36225
+[WARNING] 2025-10-01 09:32:33,467 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-10-01 09:32:33,467 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-10-01 09:32:33,518 django.server "GET /students/create/ HTTP/1.1" 200 10032
+[INFO] 2025-10-01 09:32:33,518 django.server "GET /students/create/ HTTP/1.1" 200 10032
+[WARNING] 2025-10-01 09:32:50,579 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-10-01 09:32:50,579 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-10-01 09:32:50,596 django.server "GET /students/create/ HTTP/1.1" 200 10032
+[INFO] 2025-10-01 09:32:50,596 django.server "GET /students/create/ HTTP/1.1" 200 10032
+[INFO] 2025-10-01 09:33:01,900 django.utils.autoreload C:\Users\gorla\OneDrive\Documents\2025\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-10-01 09:33:01,900 django.utils.autoreload C:\Users\gorla\OneDrive\Documents\2025\cert\certification_system\reports\views.py changed, reloading.
+[INFO] 2025-10-01 09:33:04,356 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-10-01 09:33:04,356 django.utils.autoreload Watching for file changes with StatReloader
+[WARNING] 2025-10-01 09:34:26,993 django.security.SuspiciousSession Session data corrupted
+[WARNING] 2025-10-01 09:34:26,993 django.security.SuspiciousSession Session data corrupted
+[INFO] 2025-10-01 09:34:27,073 django.server "GET /students/127/edit/ HTTP/1.1" 200 10141
+[INFO] 2025-10-01 09:34:27,073 django.server "GET /students/127/edit/ HTTP/1.1" 200 10141
+[INFO] 2025-10-02 13:05:01,740 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-10-02 13:05:01,740 django.utils.autoreload Watching for file changes with StatReloader
+[INFO] 2025-10-02 13:05:08,093 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:05:08,093 django.server "GET / HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:05:08,162 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:05:08,162 django.server "GET /dashboard/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:05:08,586 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[INFO] 2025-10-02 13:05:08,586 django.server "GET /login/?next=/dashboard/ HTTP/1.1" 200 5087
+[WARNING] 2025-10-02 13:05:09,488 django.request Not Found: /favicon.ico
+[WARNING] 2025-10-02 13:05:09,488 django.request Not Found: /favicon.ico
+[WARNING] 2025-10-02 13:05:09,518 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[WARNING] 2025-10-02 13:05:09,518 django.server "GET /favicon.ico HTTP/1.1" 404 4188
+[INFO] 2025-10-02 13:05:11,614 django.server "GET /students/ HTTP/1.1" 200 36225
+[INFO] 2025-10-02 13:05:11,614 django.server "GET /students/ HTTP/1.1" 200 36225
+[INFO] 2025-10-02 13:05:16,513 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[INFO] 2025-10-02 13:05:16,513 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[INFO] 2025-10-02 13:05:17,583 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-10-02 13:05:17,583 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-10-02 13:05:27,097 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:05:27,097 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:05:27,136 django.server "GET /students/ HTTP/1.1" 200 23206
+[INFO] 2025-10-02 13:05:27,136 django.server "GET /students/ HTTP/1.1" 200 23206
+[INFO] 2025-10-02 13:05:37,574 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:05:37,574 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:05:37,632 django.server "GET /students/ HTTP/1.1" 200 32035
+[INFO] 2025-10-02 13:05:37,632 django.server "GET /students/ HTTP/1.1" 200 32035
+[INFO] 2025-10-02 13:07:33,295 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:07:33,295 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:07:33,377 django.server "GET /students/ HTTP/1.1" 200 45665
+[INFO] 2025-10-02 13:07:33,377 django.server "GET /students/ HTTP/1.1" 200 45665
+[INFO] 2025-10-02 13:07:33,489 django.server "GET /students/ HTTP/1.1" 200 45327
+[INFO] 2025-10-02 13:07:33,489 django.server "GET /students/ HTTP/1.1" 200 45327
+[INFO] 2025-10-02 13:07:46,452 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-10-02 13:07:46,452 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-10-02 13:07:47,520 django.server "GET /students/ HTTP/1.1" 200 31674
+[INFO] 2025-10-02 13:07:47,520 django.server "GET /students/ HTTP/1.1" 200 31674
+[INFO] 2025-10-02 13:08:04,600 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[INFO] 2025-10-02 13:08:04,600 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[INFO] 2025-10-02 13:08:05,639 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-10-02 13:08:05,639 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-10-02 13:08:13,851 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:08:13,851 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:08:13,934 django.server "GET /students/ HTTP/1.1" 200 45641
+[INFO] 2025-10-02 13:08:13,934 django.server "GET /students/ HTTP/1.1" 200 45641
+[INFO] 2025-10-02 13:10:04,254 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-10-02 13:10:04,254 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-10-02 13:10:05,309 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-10-02 13:10:05,309 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-10-02 13:10:15,234 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:10:15,234 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:10:15,309 django.server "GET /students/ HTTP/1.1" 200 45641
+[INFO] 2025-10-02 13:10:15,309 django.server "GET /students/ HTTP/1.1" 200 45641
+[INFO] 2025-10-02 13:10:58,625 django.server "GET /students/export/ HTTP/1.1" 200 1668
+[INFO] 2025-10-02 13:10:58,625 django.server "GET /students/export/ HTTP/1.1" 200 1668
+[INFO] 2025-10-02 13:11:45,786 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-10-02 13:11:45,786 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 68
+[INFO] 2025-10-02 13:11:46,857 django.server "GET /students/ HTTP/1.1" 200 24875
+[INFO] 2025-10-02 13:11:46,857 django.server "GET /students/ HTTP/1.1" 200 24875
+[INFO] 2025-10-02 13:11:52,323 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[INFO] 2025-10-02 13:11:52,323 django.server "POST /students/bulk-delete/ HTTP/1.1" 200 67
+[INFO] 2025-10-02 13:11:53,375 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-10-02 13:11:53,375 django.server "GET /students/ HTTP/1.1" 200 22869
+[INFO] 2025-10-02 13:12:03,887 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:12:03,887 django.server "POST /students/import/ HTTP/1.1" 302 0
+[INFO] 2025-10-02 13:12:03,973 django.server "GET /students/ HTTP/1.1" 200 45641
+[INFO] 2025-10-02 13:12:03,973 django.server "GET /students/ HTTP/1.1" 200 45641
+[INFO] 2025-10-02 13:12:33,423 django.server "POST /students/168/delete/ HTTP/1.1" 200 21
+[INFO] 2025-10-02 13:12:33,423 django.server "POST /students/168/delete/ HTTP/1.1" 200 21
+[INFO] 2025-10-02 13:12:33,521 django.server "GET /students/ HTTP/1.1" 200 45286
+[INFO] 2025-10-02 13:12:33,521 django.server "GET /students/ HTTP/1.1" 200 45286
+[INFO] 2025-10-02 13:15:11,697 django.server "POST /students/170/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-10-02 13:15:11,697 django.server "POST /students/170/send-certificate/?type=auto HTTP/1.1" 200 47
+[INFO] 2025-10-02 13:15:14,744 django.server "GET /students/ HTTP/1.1" 200 45286
+[INFO] 2025-10-02 13:15:14,744 django.server "GET /students/ HTTP/1.1" 200 45286
+[INFO] 2025-10-02 13:15:16,810 django.server "GET /reports/ HTTP/1.1" 200 8427
+[INFO] 2025-10-02 13:15:16,810 django.server "GET /reports/ HTTP/1.1" 200 8427
+[INFO] 2025-10-02 13:15:17,130 students.utils Email successfully sent to raviteja9182@gmail.com

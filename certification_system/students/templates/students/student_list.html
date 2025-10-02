@@ -243,8 +243,8 @@
 {% block extra_js %}
 <script>
     function copyRegistrationURL() {
-        const url = "http://127.0.0.1:8000/students/register/";
-        navigator.clipboard.writeText(url)
+        const url = "{% url 'student_self_register' %}";
+        navigator.clipboard.writeText(window.location.origin + url)
             .then(() => {
                 const btn = document.getElementById('copyBtn');
                 // Add animation class

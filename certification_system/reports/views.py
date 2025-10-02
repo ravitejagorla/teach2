@@ -79,7 +79,7 @@ def report_resend(request, pk):
         report.save()
         return redirect('report_list')
 
-    # 2️⃣ Validate email format
+    # 2️⃣ Validate email format   
     try:
         validate_email(student.email)
     except ValidationError:

@@ -9,7 +9,7 @@ from django.core.mail import EmailMessage
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from reports.models import EmailReport
-from templates_app.models import CertificateTemplate
+from templates_app.models import CertificateTemplate, Asset
 import logging
 logger = logging.getLogger(__name__)
 
@@ -64,6 +64,7 @@ def generate_certificate(student):
         return None
 
     try:
+        propertys = Asset.objects.filter(institute__name=student.institution).first()
         buffer = io.BytesIO()
         template_file_path = student.template.template_file.path
         page_size = landscape(letter) if student.template.template_type == 'landscape' else portrait(letter)

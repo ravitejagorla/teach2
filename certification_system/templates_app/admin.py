@@ -16,6 +16,6 @@ class CertificateTemplateAdmin(admin.ModelAdmin):
 
 @admin.register(Asset)
 class AssetAdmin(admin.ModelAdmin):
-    list_display = ('institute', 'logo', 'signature', 'stamp')
+    list_display = ('institute','font', 'logo', 'signature', 'stamp')
     list_filter = ('institute',)
     search_fields = ('institute__name',)

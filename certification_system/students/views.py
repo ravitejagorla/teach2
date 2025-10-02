@@ -154,26 +154,32 @@ def import_students(request):
                 imported_count = 0
 
                 for row in reader:
-                    if not row.get('Full Name') or not row.get('Mobile'):
+                    # Handle both cases (with or without Certificate Id column)
+                    full_name = row.get('Full Name') or row.get('FullName')
+                    mobile = row.get('Mobile')
+                    
+                    if not full_name or not mobile:
                         continue
 
+                    # Parse dates safely
                     try:
                         start_date = datetime.strptime(row['Start Date'], '%m/%d/%Y').date()
                         end_date = datetime.strptime(row['End Date'], '%m/%d/%Y').date()
                     except Exception:
                         continue
 
+                    # Match a template if available
                     template = CertificateTemplate.objects.filter(
-                        organization=row.get('Organization'),
-                        specialization=row.get('Specialization'),
-                        course=row.get('Course'),
+                        organization=row.get('Organization', '').strip(),
+                        specialization=row.get('Specialization', '').strip(),
+                        course=row.get('Course', '').strip(),
                         is_active=True
                     ).first()
 
                     Student.objects.create(
-                        full_name=row.get('Full Name'),
-                        email=row.get('Email'),
-                        mobile=row.get('Mobile'),
+                        full_name=full_name,
+                        email=row.get('Email', ''),
+                        mobile=mobile,
                         specialization=row.get('Specialization', ''),
                         course=row.get('Course', ''),
                         organization=row.get('Organization', ''),
@@ -194,14 +200,16 @@ def import_students(request):
 
     return render(request, 'students/import.html', {'form': form})
 
+
 def export_students(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="students.csv"'
     writer = csv.writer(response)
-    writer.writerow(['Full Name', 'Email', 'Mobile', 'Specialization', 'Course', 'Organization', 'Institution', 'Start Date', 'End Date'])
+    writer.writerow(['Certificate Id','Full Name', 'Email', 'Mobile', 'Specialization', 'Course', 'Organization', 'Institution', 'Start Date', 'End Date'])
 
     for student in Student.objects.all():
         writer.writerow([
+            student.certificate_id,
             student.full_name,
             student.email,
             student.mobile or '',
